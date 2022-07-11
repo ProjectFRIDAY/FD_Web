@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, ReactPropTypes } from 'react';
 import styled, { css } from 'styled-components';
 import MainVideo from './MainVideo';
 import Button from './Button';
+import { bool, string } from 'prop-types';
+
+MainTop.prototype = {
+  color: string,
+  backgroundColor: string,
+  border: bool,
+  gradient: bool,
+};
 
 const Friday = styled.h1`
   width: 100%;
