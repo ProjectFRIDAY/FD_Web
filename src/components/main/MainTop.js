@@ -1,15 +1,7 @@
-import React, { useState, ReactPropTypes } from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import MainVideo from './MainVideo';
 import Button from './Button';
-import { bool, string } from 'prop-types';
-
-MainTop.prototype = {
-  color: string,
-  backgroundColor: string,
-  border: bool,
-  gradient: bool,
-};
 
 const Friday = styled.h1`
   width: 100%;
@@ -25,7 +17,9 @@ function MainTop() {
       <MainVideo>
         <Friday>FRIDAY</Friday>
       </MainVideo>
-      <Button color={'white'}>10기 지원하기 →</Button>
+      <Button color={'#fff'} border={true} gradient={false}>
+        10기 지원하기 →
+      </Button>
     </>
   );
 }
