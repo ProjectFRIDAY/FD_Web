@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { darken } from 'polished';
+
 import ModalMenu from './main/ModalMenu';
+import MyLink from './main/MyLink';
 
 const FixedHeader = styled.div`
   width: 100%;
@@ -19,26 +19,6 @@ const FixedHeader = styled.div`
 const VerticalLine = styled.li`
   display: inline-block;
   margin-left: 3rem;
-`;
-
-const MyLink = styled(Link)`
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
-  :hover {
-    color: white;
-  }
-  ${props =>
-    props.navigation &&
-    css`
-      font-size: 1rem;
-      :hover {
-        color: ${darken(0.2, 'white')};
-      }
-      @media only screen and (max-width: 700px) {
-        display: none;
-      }
-    `}
 `;
 
 const MenuIcon = styled.div`
@@ -80,7 +60,9 @@ function Header() {
   return (
     <>
       <FixedHeader>
-        <MyLink to="/">FRIDAY</MyLink>
+        <MyLink to="/" navigation={false}>
+          FRIDAY
+        </MyLink>
         <ul style={{ margin: 0, display: 'inline', position: 'absolute', right: '6rem' }}>
           <VerticalLine>
             <MyLink to="/" navigation>
@@ -88,32 +70,35 @@ function Header() {
             </MyLink>
           </VerticalLine>
           <VerticalLine>
-            <MyLink to="/project" navigation>
-              PROJECT
-            </MyLink>
+            <MyLink to="/project">PROJECT</MyLink>
           </VerticalLine>
           <VerticalLine>
-            <MyLink to="/recruit" navigation>
-              RECRUIT
-            </MyLink>
+            <MyLink to="/recruit">RECRUIT</MyLink>
           </VerticalLine>
           <VerticalLine>
-            <MyLink to="/contact" navigation>
-              CONTACT
-            </MyLink>
+            <MyLink to="/contact">CONTACT</MyLink>
           </VerticalLine>
           <MenuIcon
             onClick={() => {
               menu ? setMenu(0) : setMenu(1);
-              console.log(menu);
             }}
           >
             {menu ? <MenuBar /> : <div>x</div>}
-            <ModalMenu />
           </MenuIcon>
         </ul>
       </FixedHeader>
-      {menu ? <ModalMenu /> : null}
+      {!menu ? (
+        <ModalMenu>
+          <ul>
+            <li>
+              <MyLink to="/">HOME</MyLink>
+            </li>
+            <li>PROJECT</li>
+            <li>RECRUIT</li>
+            <li>CONTACT</li>
+          </ul>
+        </ModalMenu>
+      ) : null}
     </>
   );
 }
