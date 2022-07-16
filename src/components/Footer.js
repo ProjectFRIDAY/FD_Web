@@ -46,13 +46,17 @@ export default function Footer() {
       <GradientFooter>
         <Container>FRIDAY</Container>
         <SocialContainer>
-          <MyAnchor href="" className="facebook social">
+          <MyAnchor href="" target="_blank" className="facebook social">
             <FontAwesomeIcon icon={faFacebook} size="3x" color="white" />
           </MyAnchor>
-          <MyAnchor href="https://github.com/ProjectFRIDAY" className="github social">
+          <MyAnchor href="https://github.com/ProjectFRIDAY" target="_blank" className="github social">
             <FontAwesomeIcon icon={faGithub} size="3x" color="white" />
           </MyAnchor>
-          <MyAnchor href="https://www.instagram.com/accounts/login/?next=/fri__.day/" className="instagram social">
+          <MyAnchor
+            href="https://www.instagram.com/accounts/login/?next=/fri__.day/"
+            target="_blank"
+            className="instagram social"
+          >
             <FontAwesomeIcon icon={faInstagram} size="3x" color="white" />
           </MyAnchor>
         </SocialContainer>
