@@ -31,22 +31,6 @@ const MenuIcon = styled.div`
 `;
 
 const MenuBar = styled.div`
-  ${props => {
-    const SHORT = props.short;
-    const ROTATE_ANGLE = props.rotateAngle;
-    const FADE_OUT = props.fadeOut;
-    return css`
-      ${SHORT &&
-      css`
-        width: 30px;
-      `}
-      -webkit-transform: rotate(${ROTATE_ANGLE});
-      ${FADE_OUT &&
-      css`
-        opacity: 0;
-      `}
-    `;
-  }}
   width: 35px;
   height: 4px;
   background-color: white;
@@ -138,9 +122,7 @@ function Header() {
       {!menu ? (
         <ModalMenu>
           <ul>
-            <li>
-              <MyLink to="/">HOME</MyLink>
-            </li>
+            <li>HOME</li>
             <li>PROJECT</li>
             <li>RECRUIT</li>
             <li>CONTACT</li>
