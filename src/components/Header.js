@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
-import { darken } from 'polished';
+import ModalMenu from './main/ModalMenu';
+import MyLink from './main/MyLink';
 
 const FixedHeader = styled.div`
   width: 100%;
@@ -20,53 +20,116 @@ const VerticalLine = styled.li`
   margin-left: 3rem;
 `;
 
-const MyLink = styled(Link)`
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
-  :hover {
-    color: white;
+const MenuIcon = styled.div`
+  maring: 0;
+  display: none;
+  cursor: pointer;
+  @media only screen and (max-width: 700px) {
+    position: absolute;
+    display: inline-block;
   }
+`;
+
+const MenuBar = styled.div`
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
   ${props =>
-    props.navigation &&
+    props.short &&
     css`
-      font-size: 1rem;
-      :hover {
-        color: ${darken(0.2, 'white')};
-      }
+      width: 30px;
+    `}
+  ${props =>
+    props.leftRotate &&
+    css`
+      -webkit-transform: rotate(45deg) translate(0, 14px);
+    `}
+    ${props =>
+    props.rightRotate &&
+    css`
+      -webkit-transform: rotate(-45deg) translate(0, -14px);
+    `}
+    ${props =>
+    props.fadeOut &&
+    css`
+      opacity: 0;
     `}
 `;
 
-function Header() {
-  // const [navigation, setNavigation] = useState(0);
-  // 각 url에 접속했을 때 헤더의 해당하는 네비게이션에 밑줄을 긋기 위한 state.
+// const DropDownContainer = styled.div`
+//   float: left;
+//   overflow: hidden;
+//   @media only screen and (max-width: 700px) {
+//     position: absolute;
+//     display: inline-block;
+//   }
+// `;
 
+// const DropDownContent = styled.div`
+//   display: block;
+//   position: absolute;
+//   backgroud-color: 'white';
+//   min-width: 160px;
+//   z-index: 4;
+// `;
+
+function Header() {
+  const [menu, setMenu] = useState(1);
   return (
-    <FixedHeader>
-      <MyLink to="/">FRIDAY</MyLink>
-      <ul style={{ display: 'inline', position: 'absolute', right: '6rem' }}>
-        <VerticalLine>
-          <MyLink to="/" navigation>
-            HOME
-          </MyLink>
-        </VerticalLine>
-        <VerticalLine>
-          <MyLink to="/project" navigation>
-            PROJECT
-          </MyLink>
-        </VerticalLine>
-        <VerticalLine>
-          <MyLink to="/recruit" navigation>
-            RECRUIT
-          </MyLink>
-        </VerticalLine>
-        <VerticalLine>
-          <MyLink to="/contact" navigation>
-            CONTACT
-          </MyLink>
-        </VerticalLine>
-      </ul>
-    </FixedHeader>
+    <>
+      <FixedHeader>
+        <MyLink to="/" navigation={false}>
+          FRIDAY
+        </MyLink>
+        <ul style={{ margin: 0, display: 'inline', position: 'absolute', right: '6rem' }}>
+          <VerticalLine>
+            <MyLink to="/" navigation>
+              HOME
+            </MyLink>
+          </VerticalLine>
+          <VerticalLine>
+            <MyLink to="/project">PROJECT</MyLink>
+          </VerticalLine>
+          <VerticalLine>
+            <MyLink to="/recruit">RECRUIT</MyLink>
+          </VerticalLine>
+          <VerticalLine>
+            <MyLink to="/contact">CONTACT</MyLink>
+          </VerticalLine>
+          <MenuIcon
+            onClick={() => {
+              menu ? setMenu(0) : setMenu(1);
+            }}
+          >
+            {menu ? (
+              <>
+                <MenuBar />
+                <MenuBar short />
+                <MenuBar />
+              </>
+            ) : (
+              <>
+                <MenuBar leftRotate />
+                <MenuBar fadeOut />
+                <MenuBar rightRotate />
+              </>
+            )}
+          </MenuIcon>
+        </ul>
+      </FixedHeader>
+      {!menu ? (
+        <ModalMenu>
+          <ul>
+            <li>HOME</li>
+            <li>PROJECT</li>
+            <li>RECRUIT</li>
+            <li>CONTACT</li>
+          </ul>
+        </ModalMenu>
+      ) : null}
+    </>
   );
 }
 
