@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
-
 import ModalMenu from './main/ModalMenu';
 import MyLink from './main/MyLink';
 
@@ -32,10 +31,47 @@ const MenuIcon = styled.div`
 `;
 
 const MenuBar = styled.div`
+  ${props => {
+    const SHORT = props.short;
+    const ROTATE_ANGLE = props.rotateAngle;
+    const FADE_OUT = props.fadeOut;
+    return css`
+      ${SHORT &&
+      css`
+        width: 30px;
+      `}
+      -webkit-transform: rotate(${ROTATE_ANGLE});
+      ${FADE_OUT &&
+      css`
+        opacity: 0;
+      `}
+    `;
+  }}
   width: 35px;
   height: 4px;
   background-color: white;
   margin: 6px 0;
+  transition: 0.4s;
+  ${props =>
+    props.short &&
+    css`
+      width: 30px;
+    `}
+  ${props =>
+    props.leftRotate &&
+    css`
+      -webkit-transform: rotate(45deg) translate(0, 14px);
+    `}
+    ${props =>
+    props.rightRotate &&
+    css`
+      -webkit-transform: rotate(-45deg) translate(0, -14px);
+    `}
+    ${props =>
+    props.fadeOut &&
+    css`
+      opacity: 0;
+    `}
 `;
 
 // const DropDownContainer = styled.div`
@@ -83,7 +119,19 @@ function Header() {
               menu ? setMenu(0) : setMenu(1);
             }}
           >
-            {menu ? <MenuBar /> : <div>x</div>}
+            {menu ? (
+              <>
+                <MenuBar />
+                <MenuBar short />
+                <MenuBar />
+              </>
+            ) : (
+              <>
+                <MenuBar leftRotate />
+                <MenuBar fadeOut />
+                <MenuBar rightRotate />
+              </>
+            )}
           </MenuIcon>
         </ul>
       </FixedHeader>
