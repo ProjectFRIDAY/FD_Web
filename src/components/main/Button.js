@@ -25,7 +25,7 @@ const StyledButton = styled.button`
     const GRADIENT = props.gradient;
     return css`
       /* 공통 스타일 */
-      display: inline-flex;
+      display: inline-block;
       outline: none;
       border: none;
       border-radius: 10px;
@@ -33,16 +33,14 @@ const StyledButton = styled.button`
       font-weight: bold;
       cursor: pointer;
       text-align: center;
-      padding-top: 3px;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding: 0.5rem;
       ${BORDER &&
       css`
         border: 1px solid;
         border-color: ${COLOR};
       `}
       /* 크기 */
-      height: 2.25rem;
+      height: 50%;
       font-size: 1rem;
       /* 색상 */
       background-color: ${BACKGROUND_COLOR};
