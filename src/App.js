@@ -11,6 +11,7 @@ import Header from './components/Header';
 const theme = {
   primaryColor: '#01baae',
   secondaryColor: '#000',
+  TitleFont: 'TimesNewRomanPSMT',
 };
 
 function App() {
