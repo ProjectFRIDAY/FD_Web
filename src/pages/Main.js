@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import Button from '../components/main/Button';
 import MainTop from '../components/main/MainTop';
 import Footer from '../components/Footer';
+import Review from '../components/main/review';
 
 const MainBottom = styled.div`
   margin: 20rem auto;
@@ -20,7 +21,7 @@ function Main() {
       <Animation />
       <PhilosophyText />
       <ProjectIntro />
-
+      <Review />
       <MainVideo bottom />
       <MainBottom>
         <h1>Open Up Your Ideas</h1>
