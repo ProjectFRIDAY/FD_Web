@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import MainVideo from './MainVideo';
 import Button from './Button';
+import Times from '../../assets/fonts/TimesNewRomanPSMT.ttf';
 
 const StyledH1 = styled.h1`
   width: 100%;
@@ -9,9 +10,15 @@ const StyledH1 = styled.h1`
   text-align: center;
   position: absolute;
   font-size: 15vw;
+  @font-face {
+    font-family: 'TimesNewRomanPSMT';
+    src: url('${Times}') format('truetype');
+  }
+  font-family: 'TimesNewRomanPSMT';
+  font-weight: normal;
 `;
 
-const PButton = styled(Button)`
+const MyButton = styled(Button)`
   position: absolute;
   top: 120%;
   left: 50%;
@@ -26,9 +33,9 @@ function MainTop() {
       <MainVideo>
         <StyledH1>
           FRIDAY
-          <PButton color={'#fff'} border={true} gradient={false}>
-            10기 지원하기 →
-          </PButton>
+          <MyButton color={'#fff'} border={true} gradient={false}>
+            10기 지원하기 🡒
+          </MyButton>
         </StyledH1>
       </MainVideo>
     </>
