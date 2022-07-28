@@ -40,7 +40,7 @@ const StyledButton = styled.button`
         border-color: ${COLOR};
       `}
       /* 크기 */
-      height: 50%;
+      height: auto;
       font-size: 1rem;
       /* 색상 */
       background-color: ${BACKGROUND_COLOR};
