@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const PhilosophyBox = styled.div`
   width: 80%;
-  height: 100%;
   padding: 4rem;
   margin: 4rem auto;
   border: 1px solid #01baae;
