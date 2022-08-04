@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import MyButton from './Button';
 import Icons from '../Icons';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Carousel from '../Carousel';
 
 const Container = styled.div`
   height: 40rem;
@@ -23,7 +21,7 @@ const TextContainer = styled.div`
   }
 `;
 
-const MySlider = styled(Slider)`
+const MySlider = styled(Carousel)`
   width: 100%;
 `;
 
@@ -96,7 +94,6 @@ function ProjectIntro() {
         <div>
           <MyImg src={Icons[5].src} />
         </div>
-        {/* {icons} */}
       </MySlider>
       <MyButton style={{ marginTop: '4rem' }} border color={'#01baae'} backgroundColor={'black'}>
         모든 프로젝트 보기
