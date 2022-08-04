@@ -5,7 +5,6 @@ const Positioner = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-item: center;
   height: 600px;
 `;
 
@@ -21,7 +20,6 @@ const TextContainer = styled.div`
   height: auto;
   display: inline-flex;
   flex-direction: column;
-  align-item: center;
   position: absolute;
   top: 50%;
   transform: translate(10%, -40%);
@@ -61,7 +59,7 @@ const PlainText = styled.span`
   margin: 1.5rem;
 `;
 
-function Animation() {
+function FridayAnimation() {
   return (
     <Positioner>
       <GradientBackground>
@@ -83,4 +81,4 @@ function Animation() {
   );
 }
 
-export default Animation;
+export default FridayAnimation;
