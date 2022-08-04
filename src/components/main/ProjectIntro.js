@@ -36,11 +36,6 @@ const MyImg = styled.img`
 `;
 
 function ProjectIntro() {
-  // const icons = Icons.map(icon => {
-  //   <div>
-  //     <MyImg key={icon.id} src={icon.src} />
-  //   </div>;
-  // });
   const settings = {
     className: 'center',
     centerMode: true,
@@ -80,11 +75,6 @@ function ProjectIntro() {
       <TextContainer>
         <div>
           <h1>당신이 만들고 싶은 가치있는 서비스를 만듭니다.</h1>
-          {/* <p>
-            사용자들이 유용하게 사용할 수 있는 서비스를 개발 및 출시,<br></br>
-            운영하는 것을 목표로하는 조직입니다. 열정있는 기획자, 디자이너,<br></br>
-            개발자가 하나의 팀이 되어 새로운 가치를 창출합니다.
-          </p> */}
         </div>
       </TextContainer>
       <MySlider {...settings}>
