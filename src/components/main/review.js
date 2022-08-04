@@ -1,35 +1,38 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import tempImage from '../../assets/images/momTimer.png';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Positioner = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20rem auto;
 `;
 
 const Modal = styled.div`
-  ${props => {
-    const COLUMN_START = props.columnStart;
-    const COLUMN_END = props.columnEnd;
-    const ROW_START = props.rowStart;
-    const ROW_END = props.rowEnd;
-    return css`
-      grid-column: ${COLUMN_START} / ${COLUMN_END};
-      grid-row: ${ROW_START} / ${ROW_END};
-    `;
-  }}
-  width: 15rem;
-  height: 20rem;
+  @media only screen and (min-width: 564px) {
+    ${props => {
+      const X_POSITION = props.xPosition;
+      return css`
+        transform: translate(${X_POSITION}, 0);
+      `;
+    }}
+  }
+  width: 20rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 3px 40px 0 ${props => props.theme.primaryColor};
   background: #ccc;
+  margin: 1rem;
 `;
+const ImageField = styled.img``;
 
 const TextField = styled.div`
   background: white;
@@ -37,8 +40,10 @@ const TextField = styled.div`
 `;
 
 const LeftTopText = styled.div`
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  font-size: 2vw;
+  @media only screen and (max-width: 700px) {
+    font-size: 3vw;
+  }
 `;
 
 const BackgroundText = styled.h1`
@@ -56,29 +61,41 @@ const BackgroundText = styled.h1`
   position: absolute;
 `;
 
+const MyAnimationOnScroll = styled(AnimationOnScroll)`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+`;
+
 function Review() {
   return (
     <Positioner>
-      <BackgroundText index={0}>Designer</BackgroundText>
-      <BackgroundText index={1}>Programmer</BackgroundText>
-      <BackgroundText index={2}>Management</BackgroundText>
+      <MyAnimationOnScroll
+        offset={0}
+        animatePreScroll="false"
+        animateIn="fadeInRight"
+        initiallyVisible="false"
+        animateOnce="false"
+      >
+        <BackgroundText index={0}>Designer</BackgroundText>
+        <BackgroundText index={1}>Programmer</BackgroundText>
+        <BackgroundText index={2}>Management</BackgroundText>
+      </MyAnimationOnScroll>
+
       <LeftTopText>
         <h1>FRIDAY 후기+</h1>
         <p>FRIDAY와 함께하는 이야기</p>
       </LeftTopText>
-      <Modal columnStart={3} columnEnd={4} rowStart={1} rowEnd={2}>
-        222222222
-      </Modal>
-      <Modal columnStart={2} columnEnd={3} rowStart={2} rowEnd={3}>
-        <TextField>asdaaaaaaaaaaaaaaaaaaaa</TextField>
+      <Modal xPosition={'8rem'}>222222222</Modal>
+      <Modal xPosition={'-8rem'}>
+        <ImageField src={tempImage}></ImageField>
+        <TextField></TextField>
       </Modal>
 
-      <Modal columnStart={3} columnEnd={4} rowStart={3} rowEnd={4}>
-        333333
-      </Modal>
-      <Modal columnStart={2} columnEnd={3} rowStart={4} rowEnd={5}>
-        4444444
-      </Modal>
+      <Modal xPosition={'8rem'}>333333</Modal>
+      <AnimationOnScroll animateIn="boundInLeft">
+        <h1>asdasdasd</h1>
+      </AnimationOnScroll>
     </Positioner>
   );
 }
