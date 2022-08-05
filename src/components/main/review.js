@@ -40,6 +40,7 @@ const ImageField = styled.img`
 
 const TextField = styled.div`
   height: 13rem;
+  padding: 0 1rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background: white;
@@ -47,7 +48,7 @@ const TextField = styled.div`
   text-align: center;
 `;
 
-const LeftTopText = styled.div`
+const TopText = styled.div`
   font-size: 2vw;
   @media only screen and (max-width: 700px) {
     font-size: 3vw;
@@ -80,6 +81,12 @@ const MyAnimationOnScroll = styled(ScrollAnimation)`
   left: 5rem;
 `;
 
+const BlackLine = styled.div`
+  width: 100%;
+  height: 0;
+  border: gray solid 0.1px;
+`;
+
 function Review() {
   const settings = {
     offset: 0,
@@ -96,15 +103,19 @@ function Review() {
         <BackgroundText index={1}>Development</BackgroundText>
         <BackgroundText index={2}>Management</BackgroundText>
       </MyAnimationOnScroll>
-      <LeftTopText>
+      <TopText>
         <h1>FRIDAY 후기+</h1>
         <p>FRIDAY와 함께하는 이야기</p>
-      </LeftTopText>
+      </TopText>
       <Modal xPosition={'8rem'}>
         <ImageField />
         <TextField>
           <h3>안녕하세요</h3>
-          <p>밥주세요</p>
+          <p>
+            반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다.
+          </p>
+          <BlackLine />
+          <p style={{ margin: '0.5rem', textAlign: 'left' }}>디자이너 장재균_1기</p>
         </TextField>
       </Modal>
       <Modal xPosition={'-8rem'}>
