@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
+import { menuAtom } from '../recoil/atom/menuAtom';
+import { useRecoilState } from 'recoil';
 import ModalMenu from './main/ModalMenu';
 import MyLink from './main/MyLink';
 
@@ -21,7 +23,6 @@ const VerticalLine = styled.li`
 `;
 
 const MenuIcon = styled.div`
-  maring: 0;
   display: none;
   cursor: pointer;
   @media only screen and (max-width: 700px) {
@@ -58,25 +59,8 @@ const MenuBar = styled.div`
     `}
 `;
 
-// const DropDownContainer = styled.div`
-//   float: left;
-//   overflow: hidden;
-//   @media only screen and (max-width: 700px) {
-//     position: absolute;
-//     display: inline-block;
-//   }
-// `;
-
-// const DropDownContent = styled.div`
-//   display: block;
-//   position: absolute;
-//   backgroud-color: 'white';
-//   min-width: 160px;
-//   z-index: 4;
-// `;
-
 function Header() {
-  const [menu, setMenu] = useState(1);
+  const [menu, setMenu] = useRecoilState(menuAtom);
   return (
     <>
       <FixedHeader>
@@ -85,9 +69,7 @@ function Header() {
         </MyLink>
         <ul style={{ margin: 0, display: 'inline', position: 'absolute', right: '6rem' }}>
           <VerticalLine>
-            <MyLink to="/" navigation>
-              HOME
-            </MyLink>
+            <MyLink to="/">HOME</MyLink>
           </VerticalLine>
           <VerticalLine>
             <MyLink to="/project">PROJECT</MyLink>
@@ -119,16 +101,7 @@ function Header() {
           </MenuIcon>
         </ul>
       </FixedHeader>
-      {!menu ? (
-        <ModalMenu>
-          <ul>
-            <li>HOME</li>
-            <li>PROJECT</li>
-            <li>RECRUIT</li>
-            <li>CONTACT</li>
-          </ul>
-        </ModalMenu>
-      ) : null}
+      {!menu && <ModalMenu />}
     </>
   );
 }
