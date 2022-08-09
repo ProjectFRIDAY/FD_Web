@@ -21,7 +21,7 @@ const VerticalLine = styled.li`
 `;
 
 const MenuIcon = styled.div`
-  maring: 0;
+  margin: 0;
   display: none;
   cursor: pointer;
   @media only screen and (max-width: 700px) {
