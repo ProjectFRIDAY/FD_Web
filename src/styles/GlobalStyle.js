@@ -12,6 +12,10 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+li {
+  cursor: pointer;
+}
 `;
 
 export default GlobalStyle;
