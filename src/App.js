@@ -8,6 +8,7 @@ import Project from './pages/Project';
 import Recruit from './pages/Recruit';
 import Contact from './pages/Contact';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const theme = {
   primaryColor: '#01baae',
@@ -30,6 +31,7 @@ function App() {
               <Route exact path="/contact" element={<Contact />}></Route>
               {/* <Route exact path="*" element={<NotFound />}></Route> */}
             </Routes>
+            <Footer />
           </BrowserRouter>
         </ThemeProvider>
       </RecoilRoot>
