@@ -95,7 +95,7 @@ function ProjectIntro() {
           <MyImg src={Icons[5].src} />
         </div>
       </MySlider>
-      <MyButton style={{ marginTop: '4rem' }} border color={'#01baae'} backgroundColor={'black'}>
+      <MyButton href="/project" style={{ marginTop: '4rem' }} border color={'#01baae'} backgroundColor={'black'}>
         모든 프로젝트 보기
       </MyButton>
     </Container>
