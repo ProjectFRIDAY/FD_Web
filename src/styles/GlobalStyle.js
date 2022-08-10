@@ -12,9 +12,8 @@ body {
   background-color: #000;
   color: #fff;
 }
-
-li {
-  cursor: pointer;
+.page {
+  margin-top: 4rem;
 }
 `;
 

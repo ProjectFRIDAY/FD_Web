@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Video from '../../assets/videos/tunnel.mp4';
 
 const FullVideos = styled.div`
+  position: relative;
   margin: 0;
-  margintop: 4rem;
   padding: 0;
   padding-bottom: 10rem;
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #036660 100%);
