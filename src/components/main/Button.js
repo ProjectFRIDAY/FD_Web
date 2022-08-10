@@ -17,7 +17,7 @@ Button.defaultProps = {
   border: false,
 };
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
   ${props => {
     const COLOR = props.color;
     const BACKGROUND_COLOR = props.backgroundColor;
@@ -26,6 +26,7 @@ const StyledButton = styled.button`
     return css`
       /* 공통 스타일 */
       display: inline-block;
+      text-decoration: none;
       outline: none;
       border: none;
       border-radius: 10px;
@@ -36,7 +37,7 @@ const StyledButton = styled.button`
       padding: 0.5rem;
       ${BORDER &&
       css`
-        border: 1px solid;
+        border: 2px solid;
         border-color: ${COLOR};
       `}
       /* 크기 */
