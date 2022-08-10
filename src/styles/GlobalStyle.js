@@ -12,6 +12,9 @@ body {
   background-color: #000;
   color: #fff;
 }
+.page {
+  margin-top: 4rem;
+}
 `;
 
 export default GlobalStyle;
