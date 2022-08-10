@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { menuAtom } from '../recoil/atom/menuAtom';
+import { useSetRecoilState } from 'recoil';
 
 const GradientBackground = styled.div`
   width: 100%;
@@ -36,8 +38,10 @@ const ContactBox = styled.div`
 `;
 
 function Contact() {
+  const setMenu = useSetRecoilState(menuAtom);
   return (
     <div className="page">
+      {setMenu(1)}
       <GradientBackground>
         <Layout>
           <h1 style={{ fontSize: '8vw' }}>Contact</h1>
