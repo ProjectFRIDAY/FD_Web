@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Times from '../assets/fonts/TimesNewRomanPSMT.ttf';
 import Carousel from '../components/Carousel';
+import card from '../components/main/Card';
 
 const StyledH1 = styled.h1`
   width: 100%;
@@ -40,41 +41,6 @@ const Text = styled.span`
   margin-left: 10rem;
   position: absolute;
   top: 40rem;
-`;
-
-const Card = styled.div`
-  @media only screen and (min-width: 665px) {
-    ${props => {
-      const X_POSITION = props.xPosition;
-      return css`
-        transform: translate(${X_POSITION}, 0);
-      `;
-    }}
-  }
-  width: 20rem;
-  height: 30rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  box-shadow: 0 3px 40px 0 ${props => props.theme.primaryColor};
-  background: #ccc;
-  margin: 1rem;
-`;
-
-const ImageField = styled.img`
-  height: 30rem;
-  background-color: '#ccc';
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-`;
-
-const TextField = styled.div`
-  height: 13rem;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background: white;
-  color: black;
-  text-align: center;
 `;
 
 const ProjectsSlider = styled(Carousel)`
@@ -123,10 +89,10 @@ function Project() {
       <Text>완료된 작업물</Text>
       <ProjectsSlider {...settings}>
         <div>
-          <Card>
-            <ImageField></ImageField>
-            <TextField></TextField>
-          </Card>
+          <card.Card>
+            <card.ImageField></card.ImageField>
+            <card.TextField></card.TextField>
+          </card.Card>
         </div>
       </ProjectsSlider>
     </>
