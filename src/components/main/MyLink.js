@@ -22,9 +22,6 @@ const StyledLink = styled(Link)`
       color: ${COLOR};
       font-size: 1.5rem;
       text-decoration: none;
-      :hover {
-        color: ${COLOR};
-      }
       ${NAVIGATION &&
       css`
         font-size: 1rem;

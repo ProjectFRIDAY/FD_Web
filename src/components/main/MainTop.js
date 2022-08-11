@@ -20,10 +20,11 @@ const StyledH1 = styled.h1`
 
 const MyButton = styled(Button)`
   position: absolute;
-  top: 120%;
+  margin-top: 1rem;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2vw;
+  font-size: 1.5vw;
   z-index: 1;
 `;
 
@@ -31,12 +32,16 @@ function MainTop() {
   return (
     <>
       <MainVideo>
-        <StyledH1>
-          FRIDAY
-          <MyButton color={'#fff'} border={true} gradient={false}>
-            10기 지원하기 🡒
-          </MyButton>
-        </StyledH1>
+        <StyledH1>FRIDAY</StyledH1>
+        <MyButton
+          href="https://wjsalsrb5.typeform.com/friday-apply"
+          target="_blank"
+          color={'#fff'}
+          border={true}
+          gradient={false}
+        >
+          10기 지원하기 🡒
+        </MyButton>
       </MainVideo>
     </>
   );

@@ -49,18 +49,11 @@ const ProjectsSlider = styled(Carousel)`
 
 function Project() {
   const settings = {
-    className: 'center',
-    centerMode: true,
-    centerPadding: '60px',
-    dots: false,
-    infinite: true,
+    dots: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 2,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: 'linear',
+    slidesToShow: 3,
+    slidesToScroll: 3,
     responsive: [
       {
         breakpoint: 1020,
