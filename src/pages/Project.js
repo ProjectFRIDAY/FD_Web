@@ -43,16 +43,8 @@ const Text = styled.span`
 `;
 
 const Card = styled.div`
-  @media only screen and (min-width: 665px) {
-    ${props => {
-      const X_POSITION = props.xPosition;
-      return css`
-        transform: translate(${X_POSITION}, 0);
-      `;
-    }}
-  }
-  width: 20rem;
-  height: 30rem;
+  width: 10rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -83,18 +75,11 @@ const ProjectsSlider = styled(Carousel)`
 
 function Project() {
   const settings = {
-    className: 'center',
-    centerMode: true,
-    centerPadding: '60px',
-    dots: false,
-    infinite: true,
+    dots: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 2,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: 'linear',
+    slidesToShow: 3,
+    slidesToScroll: 3,
     responsive: [
       {
         breakpoint: 1020,
@@ -123,10 +108,16 @@ function Project() {
       <Text>완료된 작업물</Text>
       <ProjectsSlider {...settings}>
         <div>
-          <Card>
-            <ImageField></ImageField>
-            <TextField></TextField>
-          </Card>
+          <Card></Card>
+        </div>
+        <div>
+          <Card></Card>
+        </div>
+        <div>
+          <Card></Card>
+        </div>
+        <div>
+          <Card></Card>
         </div>
       </ProjectsSlider>
     </>
