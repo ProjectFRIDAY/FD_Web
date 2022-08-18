@@ -1,8 +1,10 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Times from '../assets/fonts/TimesNewRomanPSMT.ttf';
-import Carousel from '../components/Carousel';
+import Icons from '../components/Icons';
 import card from '../components/main/Card';
+import Button from '../components/main/Button';
+import Modal from '../components/Modal';
 
 const StyledH1 = styled.h1`
   width: 100%;
@@ -19,7 +21,6 @@ const StyledH1 = styled.h1`
 `;
 
 const BackgroundText = styled.h1`
-  margin: 66px 0 0;
   position: relative;
   opacity: 0.37;
   top: 5rem;
@@ -35,59 +36,84 @@ const BackgroundText = styled.h1`
   color: #f1efef;
 `;
 
-const Text = styled.span`
-  font-size: 25px;
-  font-family: 'SegoeUI';
-  margin-left: 10rem;
-  position: absolute;
-  top: 40rem;
+const Text = styled.div`
+  font-family: 'TimesNewRomanPSMT';
+  background-color: rgba(0, 122, 114, 0.86);
+  padding: 1rem;
+  font-size: 45px;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  text-align: center;
 `;
 
-const ProjectsSlider = styled(Carousel)`
-  width: 100%;
+const Wrapper = styled.div`
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    display: flex;
+  }
+  justify-content: space-between;
+  display: flex;
+  margin: auto;
+  margin-bottom: 5rem;
+  width: 80%;
+  height: 50%;
+`;
+
+const MainBottom = styled.div`
+  margin: 15rem auto;
+  text-align: center;
+  font-size: 3vw;
 `;
 
 function Project() {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1020,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 760,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 443,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
   return (
     <>
       <StyledH1>FRIDAY</StyledH1>
       <BackgroundText>CREATIVE</BackgroundText>
-      <Text>완료된 작업물</Text>
-      <ProjectsSlider {...settings}>
-        <div>
-          <card.Card>
-            <card.ImageField></card.ImageField>
-            <card.TextField></card.TextField>
-          </card.Card>
-        </div>
-      </ProjectsSlider>
+      <Text>Friday Projects</Text>
+      <Wrapper>
+        <card.Card>
+          <card.ImageField src={Icons[1].src}></card.ImageField>
+          <card.TextField>플랜 다이얼</card.TextField>
+        </card.Card>
+        <card.Card>
+          <card.ImageField src={Icons[6].src}></card.ImageField>
+          <card.TextField>Friday 공식 웹사이트</card.TextField>
+        </card.Card>
+        <card.Card>
+          <card.ImageField src={Icons[0].src}></card.ImageField>
+          <card.TextField>Comento</card.TextField>
+        </card.Card>
+      </Wrapper>
+      <Wrapper>
+        <card.Card>
+          <card.ImageField src={Icons[3].src}></card.ImageField>
+          <card.TextField>엄마 타이머</card.TextField>
+        </card.Card>
+        <card.Card>
+          <card.ImageField src={Icons[4].src}></card.ImageField>
+          <card.TextField>날로</card.TextField>
+        </card.Card>
+        <card.Card>
+          <card.ImageField src={Icons[5].src}></card.ImageField>
+          <card.TextField>텍스티</card.TextField>
+        </card.Card>
+      </Wrapper>
+      <MainBottom>
+        <h1>Open Up Your Ideas</h1>
+        <Button
+          href="https://wjsalsrb5.typeform.com/friday-apply"
+          target="_blank"
+          backgroundColor={'#01baae'}
+          color={'white'}
+          gradient
+        >
+          10기 지원하기 🡒
+        </Button>
+      </MainBottom>
+      <Modal></Modal>
     </>
   );
 }
