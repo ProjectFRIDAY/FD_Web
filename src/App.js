@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from 'styled-components';
@@ -9,6 +9,7 @@ import Recruit from './pages/Recruit';
 import Contact from './pages/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 const theme = {
   primaryColor: '#01baae',
@@ -23,6 +24,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <BrowserRouter>
+            <ScrollToTop />
             <Header />
             <Routes>
               <Route exact path="/" element={<Main />}></Route>
