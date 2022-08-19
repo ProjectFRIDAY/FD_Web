@@ -37,7 +37,9 @@ function Main() {
     <div style={{ marginTop: '4rem' }}>
       {setMenu(1)}
       <MainTop />
-      <Lottie options={defaultOptions} height={800} width={800} />
+      <div style={{ background: 'linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #036660 100%)' }}>
+        <Lottie options={defaultOptions} />
+      </div>
       <PhilosophyText />
       <ProjectIntro />
       <Review />
@@ -51,7 +53,7 @@ function Main() {
             color={'white'}
             gradient
           >
-            10기 지원하기 🡒
+            10기 지원하기
           </Button>
         </MainBottom>
       </ScrollAnimation>
