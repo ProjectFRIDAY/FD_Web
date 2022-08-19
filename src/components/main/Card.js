@@ -1,14 +1,13 @@
 import styled, { css } from 'styled-components';
 
 const Card = styled.div`
-  @media only screen and (min-width: 665px) {
-    ${props => {
-      const X_POSITION = props.xPosition;
-      return css`
-        transform: translate(${X_POSITION}, 0);
-      `;
-    }}
+  @media only screen and (max-width: 800px) {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
   }
+  cursor: pointer;
   width: 20rem;
   height: 30rem;
   display: flex;
@@ -21,8 +20,7 @@ const Card = styled.div`
 
 const ImageField = styled.img`
   height: 30rem;
-  /* background-color: '#ccc'; */
-  background-color: red;
+  background-color: '#ccc';
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 `;
@@ -34,6 +32,9 @@ const TextField = styled.div`
   background: white;
   color: black;
   text-align: center;
+  padding-top: 1rem;
+  font-family: SegoeUISymbol;
+  font-size: 25px;
 `;
 
 export default { Card, TextField, ImageField };
