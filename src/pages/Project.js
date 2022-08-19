@@ -1,10 +1,13 @@
 import React from 'react';
+import { useRecoilState } from 'recoil';
+import { prjState } from '../recoil/atom';
 import styled from 'styled-components';
 import Times from '../assets/fonts/TimesNewRomanPSMT.ttf';
 import Icons from '../components/Icons';
 import card from '../components/main/Card';
 import Button from '../components/main/Button';
 import Modal from '../components/Modal';
+import { useState } from 'react';
 
 const StyledH1 = styled.h1`
   width: 100%;
@@ -68,35 +71,44 @@ const MainBottom = styled.div`
 `;
 
 function Project() {
+  const [visible, setVisible] = useState(false);
+  const [prj, setPrj] = useRecoilState(prjState);
+  const openModal = () => {
+    setVisible(true);
+  };
+  const closeModal = () => {
+    setVisible(false);
+  };
+
   return (
     <>
       <StyledH1>FRIDAY</StyledH1>
       <BackgroundText>CREATIVE</BackgroundText>
       <Text>Friday Projects</Text>
       <Wrapper>
-        <card.Card>
+        <card.Card onClick={openModal}>
           <card.ImageField src={Icons[1].src}></card.ImageField>
           <card.TextField>플랜 다이얼</card.TextField>
         </card.Card>
-        <card.Card>
+        <card.Card onClick={openModal}>
           <card.ImageField src={Icons[6].src}></card.ImageField>
           <card.TextField>Friday 공식 웹사이트</card.TextField>
         </card.Card>
-        <card.Card>
+        <card.Card onClick={openModal}>
           <card.ImageField src={Icons[0].src}></card.ImageField>
           <card.TextField>Comento</card.TextField>
         </card.Card>
       </Wrapper>
       <Wrapper>
-        <card.Card>
+        <card.Card onClick={openModal}>
           <card.ImageField src={Icons[3].src}></card.ImageField>
           <card.TextField>엄마 타이머</card.TextField>
         </card.Card>
-        <card.Card>
+        <card.Card onClick={openModal}>
           <card.ImageField src={Icons[4].src}></card.ImageField>
           <card.TextField>날로</card.TextField>
         </card.Card>
-        <card.Card>
+        <card.Card onClick={openModal}>
           <card.ImageField src={Icons[5].src}></card.ImageField>
           <card.TextField>텍스티</card.TextField>
         </card.Card>
@@ -113,7 +125,7 @@ function Project() {
           10기 지원하기 🡒
         </Button>
       </MainBottom>
-      <Modal></Modal>
+      <Modal visible={visible}></Modal>
     </>
   );
 }
