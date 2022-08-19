@@ -9,3 +9,8 @@ export const prjState = atom({
   key: 'prjState',
   default: 0,
 });
+
+export const visibleState = atom({
+  key: 'visibleState',
+  default: false,
+});

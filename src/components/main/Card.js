@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
 
 const Card = styled.div`
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
     width: 15rem;
     height: 15rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5rem;
   }
   cursor: pointer;
   width: 20rem;
