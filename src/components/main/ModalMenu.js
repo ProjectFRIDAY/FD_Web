@@ -53,6 +53,4 @@ function ModalMenu({ children, ...args }) {
   );
 }
 
-// 현재 페이지에 해당하는 네비게이션 색상 설정
-
 export default ModalMenu;
