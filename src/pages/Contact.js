@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { menuAtom } from '../recoil/atom/menuAtom';
 import { useSetRecoilState } from 'recoil';
+import Button from '../components/main/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const GradientBackground = styled.div`
   width: 100%;
@@ -17,8 +20,6 @@ const Layout = styled.div`
   margin: 1rem;
 `;
 
-const Title = styled.h1``;
-
 const ContactLayout = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -27,9 +28,9 @@ const ContactLayout = styled.div`
 `;
 
 const ContactBox = styled.div`
-  width: 20rem;
-  height: 5rem;
-  margin: 1rem;
+  width: 10rem;
+  height: 13rem;
+  margin: 5rem;
   background-color: #ccc;
   color: black;
   display: flex;
@@ -45,10 +46,38 @@ function Contact() {
       <GradientBackground>
         <Layout>
           <h1 style={{ fontSize: '8vw' }}>Contact</h1>
+          <h2>📩 fridayproj2@gmail.com</h2>
           <ContactLayout>
-            <ContactBox>메일</ContactBox>
-            <ContactBox>카카오톡</ContactBox>
-            <ContactBox>인스타그램</ContactBox>
+            <ContactBox>
+              <Button
+                href="https://www.facebook.com/day.fri.3367"
+                target="_blank"
+                className="facebook social"
+              >
+                <FontAwesomeIcon icon={faFacebook} size="8x"/>
+                <h3>@ProjectFRIDAY</h3>
+              </Button>
+            </ContactBox>
+            <ContactBox>
+              <Button
+                href="https://github.com/ProjectFRIDAY"
+                target="_blank"
+                className="github social"
+              >
+                <FontAwesomeIcon icon={faGithub} size="8x"/>
+                <h3>@FRIDAY</h3>
+              </Button>
+            </ContactBox>
+            <ContactBox>
+              <Button
+                href="https://www.instagram.com/accounts/login/?next=/fri__.day/"
+                target="_blank"
+                className="instagram social"
+              >
+                <FontAwesomeIcon icon={faInstagram} size="8x"/>
+                <h3>Friday&#40;@fri_.day&#41;</h3>
+              </Button>
+            </ContactBox>
           </ContactLayout>
         </Layout>
       </GradientBackground>
