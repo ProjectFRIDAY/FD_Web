@@ -28,7 +28,7 @@ body {
   color: #fff;
 }
 .page {
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 .title {
   font-family: 'TimesNewRomanPSMT';
