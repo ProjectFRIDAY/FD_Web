@@ -32,10 +32,10 @@ const MyAnchor = styled.a`
 
 const CopyRight = styled.div`
   width: 100%;
-  height: 1rem;
+  height: 2rem;
   text-align: center;
   color: #ccc;
-  font-size: 0.5rem;
+  font-size: 1.3rem;
 `;
 
 export default function Footer() {
