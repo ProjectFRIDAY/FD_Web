@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import Button from '../components/main/Button';
 import MainTop from '../components/main/MainTop';
 import Review from '../components/main/Review';
-import { menuAtom } from '../recoil/atom/menuAtom';
+import { menuAtom } from '../recoil/atom';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const MainBottom = styled.div`

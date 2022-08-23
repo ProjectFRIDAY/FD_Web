@@ -29,7 +29,8 @@ function MainTop() {
         <MyButton
           href="https://wjsalsrb5.typeform.com/friday-apply"
           target="_blank"
-          color={'white'}
+          color={'#01baae'}
+          backgroundColor={'#fff'}
           border={true}
           gradient={false}
         >
