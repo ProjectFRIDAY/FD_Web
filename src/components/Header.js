@@ -7,7 +7,9 @@ import MyLink from './main/MyLink';
 
 const FixedHeader = styled.div`
   width: 100%;
-  height: 4rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 1rem;
   background-color: black;
@@ -25,7 +27,7 @@ const VerticalLine = styled.li`
 const MenuIcon = styled.div`
   display: none;
   cursor: pointer;
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 800px) {
     position: absolute;
     display: inline-block;
   }
@@ -64,21 +66,29 @@ function Header() {
   return (
     <>
       <FixedHeader>
-        <MyLink to="/" navigation={false}>
+        <MyLink fontSize="1.8rem" to="/" navigation={false}>
           FRIDAY
         </MyLink>
-        <ul style={{ margin: 0, display: 'inline', position: 'absolute', right: '6rem' }}>
+        <ul style={{ margin: 0, display: 'inline', position: 'absolute', right: '5rem' }}>
           <VerticalLine>
-            <MyLink to="/">HOME</MyLink>
+            <MyLink navFontSize="1.3rem" to="/">
+              HOME
+            </MyLink>
           </VerticalLine>
           <VerticalLine>
-            <MyLink to="/project">PROJECT</MyLink>
+            <MyLink navFontSize="1.3rem" to="/project">
+              PROJECT
+            </MyLink>
           </VerticalLine>
           <VerticalLine>
-            <MyLink to="/recruit">RECRUIT</MyLink>
+            <MyLink navFontSize="1.3rem" to="/recruit">
+              RECRUIT
+            </MyLink>
           </VerticalLine>
           <VerticalLine>
-            <MyLink to="/contact">CONTACT</MyLink>
+            <MyLink navFontSize="1.3rem" to="/contact">
+              CONTACT
+            </MyLink>
           </VerticalLine>
           <MenuIcon
             onClick={() => {
