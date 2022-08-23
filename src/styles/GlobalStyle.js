@@ -34,6 +34,15 @@ body {
   font-family: 'TimesNewRomanPSMT';
   font-weight: normal;
 }
+
+.icon {
+  cursor: pointer;
+  font-size: 40px;
+  color: black;
+  position: absolute;
+  right: 0;
+  padding: 25px;
+}
 `;
 
 export default GlobalStyle;
