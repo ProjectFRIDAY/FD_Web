@@ -1,8 +1,7 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import MainVideo from './MainVideo';
 import Button from './Button';
-import Times from '../../assets/fonts/TimesNewRomanPSMT.ttf';
 
 const StyledH1 = styled.h1`
   width: 100%;
@@ -10,12 +9,6 @@ const StyledH1 = styled.h1`
   text-align: center;
   position: absolute;
   font-size: 15vw;
-  @font-face {
-    font-family: 'TimesNewRomanPSMT';
-    src: url('${Times}') format('truetype');
-  }
-  font-family: 'TimesNewRomanPSMT';
-  font-weight: normal;
 `;
 
 const MyButton = styled(Button)`
@@ -32,15 +25,16 @@ function MainTop() {
   return (
     <>
       <MainVideo>
-        <StyledH1>FRIDAY</StyledH1>
+        <StyledH1 className="title">FRIDAY</StyledH1>
         <MyButton
           href="https://wjsalsrb5.typeform.com/friday-apply"
           target="_blank"
-          color={'#fff'}
+          color={'#01baae'}
+          backgroundColor={'#fff'}
           border={true}
           gradient={false}
         >
-          10기 지원하기 🡒
+          10기 지원하기
         </MyButton>
       </MainVideo>
     </>

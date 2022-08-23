@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { menuAtom } from '../recoil/atom/menuAtom';
+import { menuAtom } from '../recoil/atom';
 import { useSetRecoilState } from 'recoil';
 import Button from '../components/main/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

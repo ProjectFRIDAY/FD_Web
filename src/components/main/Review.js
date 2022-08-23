@@ -69,7 +69,7 @@ const BackgroundText = styled.h1`
   z-index: -1;
   position: absolute;
   @media only screen and (max-width: 1060px) {
-    font-size: 15vw;
+    font-size: 13vw;
   }
   @media only screen and (max-width: 700px) {
     display: none;
@@ -102,6 +102,7 @@ function Review() {
         <BackgroundText index={0}>Designer</BackgroundText>
         <BackgroundText index={1}>Development</BackgroundText>
         <BackgroundText index={2}>Management</BackgroundText>
+        <BackgroundText index={3}>Together</BackgroundText>
       </MyAnimationOnScroll>
       <TopText>
         <h1>FRIDAY 후기+</h1>
@@ -110,30 +111,55 @@ function Review() {
       <Modal xPosition={'8rem'}>
         <ImageField />
         <TextField>
-          <h3>안녕하세요</h3>
-          <p>
-            반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다. 반갑습니다.
+          <p style={{ color: 'gray', fontSize: '13px' }}>
+            FRIDAY 활동을 하기 전에는 웹 디자인을 해보고 싶다고 막연하게만 생각했습니다. FRIDAY의 다양한 프로젝트를 통해
+            많은 디자인 경험을 쌓게 되었어요! 디자인을 제대로 한 번 해보고 싶은 분들에게 좋은 경험이 될 거예요 :)
           </p>
           <BlackLine />
-          <p style={{ margin: '0.5rem', textAlign: 'left' }}>디자이너 장재균_1기</p>
+          <p style={{ margin: '0.5rem', textAlign: 'left' }}>
+            <b>김민아님 (디자이너, 1기)</b>
+          </p>
         </TextField>
       </Modal>
       <Modal xPosition={'-8rem'}>
         <ImageField />
-        <TextField>asd</TextField>
+        <TextField>
+          <p style={{ color: 'gray', fontSize: '13px' }}>
+            목적 없는 열정은 FRIDAY를 만난 후 명확한 비전이 되었습니다. 드넓은 개발 세상 속 FRIDAY에서의 경험은 제
+            여정의 이정표가 되었습니다. 당장 진로가 정해지지 않았더라도 주저하지 말고 일단 지원해 보세요.
+          </p>
+
+          <BlackLine />
+          <p style={{ margin: '0.5rem', textAlign: 'left' }}>
+            <b>송승환님 (개발자, 1기)</b>
+          </p>
+        </TextField>
       </Modal>
 
       <Modal xPosition={'8rem'}>
         <ImageField />
         <TextField>
-          <h3></h3>
           <p style={{ color: 'gray', fontSize: '13px' }}>
-            “sw 앱 개발의 프로젝트 매니징” PM팀의 주 업무입니다:) 말만 들어도 저 같은 문과생이 쉽게 경험할 수 있는
-            과정이 아니기에 저와 pm팀 모두에게 무엇과도 바꿀 수 없는 매우 값진 시간이 된 것 같아요 !!
+            “sw 앱 개발의 프로젝트 매니징” PM 팀의 주 업무입니다:) 말만 들어도 저 같은 문과생이 쉽게 경험할 수 있는
+            과정이 아니기에 저와 PM 팀 모두에게 무엇과도 바꿀 수 없는 매우 값진 시간이 된 것 같아요.
           </p>
           <BlackLine />
           <p style={{ margin: '0.5rem', textAlign: 'left' }}>
-            <b>도원희님, PM</b>
+            <b>도원희님 (PM, 1기)</b>
+          </p>
+        </TextField>
+      </Modal>
+      <Modal xPosition={'-8rem'}>
+        <ImageField />
+        <TextField>
+          <p style={{ color: 'gray', fontSize: '13px' }}>
+            프로젝트의 A부터 Z까지 함께할 수 있고, 자신의 파트와 상관없이 피드백을 공유하고 수용한다는 게 가장 큰
+            장점이라고 생각해요. 열정 있는 사람들이 모여 하나의 프로덕트를 완성해나가는 과정에 함께하고 싶으시다면, 지금
+            바로 지원하세요!
+          </p>
+          <BlackLine />
+          <p style={{ margin: '0.5rem', textAlign: 'left' }}>
+            <b>송진영님 (개발자, 1기)</b>
           </p>
         </TextField>
       </Modal>
