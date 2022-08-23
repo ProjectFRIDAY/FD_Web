@@ -17,8 +17,6 @@ const Layout = styled.div`
   margin: 1rem;
 `;
 
-const Title = styled.h1``;
-
 const ContactLayout = styled.div`
   display: flex;
   flex-wrap: wrap;
