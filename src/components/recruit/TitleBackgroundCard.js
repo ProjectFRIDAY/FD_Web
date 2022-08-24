@@ -32,12 +32,12 @@ function TitleBackgroundCard() {
         }}
         color={'black'}
         gradient
-        border
+        border={false}
         backgroundColor={'white'}
         href="https://wjsalsrb5.typeform.com/friday-apply"
         target="_blank"
       >
-        2기 지원하기
+        4기 지원하기
       </Button>
     </div>
   );
