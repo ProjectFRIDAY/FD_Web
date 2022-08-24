@@ -30,9 +30,9 @@ function MainTop() {
           href="https://wjsalsrb5.typeform.com/friday-apply"
           target="_blank"
           color={'#01baae'}
-          backgroundColor={'#fff'}
+          backgroundColor={'white'}
           border={true}
-          gradient={false}
+          gradient={true}
         >
           10기 지원하기
         </MyButton>
