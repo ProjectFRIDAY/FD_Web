@@ -3,14 +3,12 @@ import styled, { css } from 'styled-components';
 const Card = styled.div`
   @media only screen and (max-width: 1000px) {
     width: 15rem;
-    height: 15rem;
-    display: flex;
-    flex-direction: column;
+    height: 25rem;
     margin-bottom: 5rem;
   }
   cursor: pointer;
   width: 20rem;
-  height: 30rem;
+  height: 27rem;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -20,14 +18,17 @@ const Card = styled.div`
 `;
 
 const ImageField = styled.img`
-  height: 30rem;
+  height: 20rem;
   background-color: '#ccc';
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 `;
 
 const TextField = styled.div`
-  height: 5rem;
+  @media only screen and (max-width: 1000px) {
+    font-size: 23px;
+    padding-bottom: 20px;
+  }
   background: white;
   color: black;
   text-align: center;
@@ -38,6 +39,11 @@ const TextField = styled.div`
 `;
 
 const TagField = styled.div`
+  @media only screen and (max-width: 1000px) {
+    display: block;
+  }
+  align-items: center;
+  display: flex;
   background: white;
   height: 5rem;
   color: black;
@@ -50,9 +56,9 @@ const Tag = styled.span`
   font-family: SegoeUISymbol;
   font-size: 15px;
   border-radius: 5px;
-  padding: 5px;
-  margin-right: 5px;
-  background-color: #c2e3ea;
+  padding-right: 7px;
+  font-weight: 600;
+  text-shadow: #01baae 0 0 10px;
 `;
 
 export default { Card, TextField, ImageField, TagField, Tag };
