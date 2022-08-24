@@ -34,7 +34,7 @@ function MainTop() {
           border={true}
           gradient={true}
         >
-          10기 지원하기
+          4기 지원하기
         </MyButton>
       </MainVideo>
     </>
