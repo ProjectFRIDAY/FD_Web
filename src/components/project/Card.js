@@ -27,15 +27,32 @@ const ImageField = styled.img`
 `;
 
 const TextField = styled.div`
-  height: 13rem;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  height: 5rem;
   background: white;
   color: black;
   text-align: center;
   padding-top: 1rem;
   font-family: SegoeUISymbol;
+  font-weight: 800;
   font-size: 25px;
 `;
 
-export default { Card, TextField, ImageField };
+const TagField = styled.div`
+  background: white;
+  height: 5rem;
+  color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 20px;
+`;
+
+const Tag = styled.span`
+  font-family: SegoeUISymbol;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  background-color: #c2e3ea;
+`;
+
+export default { Card, TextField, ImageField, TagField, Tag };
