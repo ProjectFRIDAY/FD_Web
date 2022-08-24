@@ -67,7 +67,7 @@ function RecruitAreaCard() {
             개발자
           </JobSelBtn>
           <JobSelBtn states={states} index={2}>
-            기획자
+            PM
           </JobSelBtn>
         </RoleSelect>
         <DevSelect>
