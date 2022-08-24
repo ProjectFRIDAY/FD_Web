@@ -35,7 +35,7 @@ function ProcessCard() {
       <ProcessBigText>PROCESS</ProcessBigText>
       <ProcessMidTextContainer>
         <ProcessMidText>모집기간</ProcessMidText>
-        <ProcessTinyText>매년 3월, 9월</ProcessTinyText>
+        <ProcessTinyText>9/5 ~ 9/14 23:59 </ProcessTinyText>
         <ProcessMidText>지원자격</ProcessMidText>
         <ProcessTinyText>
           1. Friday와 동일한 목표를 가지신 분
