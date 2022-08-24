@@ -1,12 +1,51 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import * as Text from './Text';
 import * as Job from './JobExplain';
-import designImg from '../../assets/images/job/design.jpg';
-import IosImg from '../../assets/images/job/ios.jpg';
-import AndroidImg from '../../assets/images/job/android.png';
-import FrontEndImg from '../../assets/images/job/fe.jpg';
-import BackEndImg from '../../assets/images/job/be.jpg';
-import PmImg from '../../assets/images/job/pm.jpg';
+// import designImg from '../../assets/images/job/design.jpg';
+// import IosImg from '../../assets/images/job/ios.jpg';
+// import AndroidImg from '../../assets/images/job/android.png';
+// import FrontEndImg from '../../assets/images/job/fe.jpg';
+// import BackEndImg from '../../assets/images/job/be.jpg';
+// import PmImg from '../../assets/images/job/pm.jpg';
+
+const RecruitLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+`;
+
+const SelectContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+const RoleSelect = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+`;
+
+const DevSelect = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+`;
+
+// const RoleImage = styled.img`
+//   width: 500px;
+//   height: 300px;
+//   margin-top: 30px;
+// `;
+
+const ExplainContainer = styled.div`
+  margin-top: 3rem;
+  padding-left: 5rem;
+`;
 
 function RecruitAreaCard() {
   const [jobSel, setJobSel] = useState(0);
@@ -17,53 +56,35 @@ function RecruitAreaCard() {
   ];
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: '100px',
-      }}
-    >
+    <RecruitLayout>
       <Text.Big>모집 분야</Text.Big>
-      <div style={{ marginTop: '80px' }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: '500px',
-            alignItems: 'center',
-            margin: 'auto',
-            marginBottom: '50px',
-          }}
-        >
-          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '480px' }}>
-            <JobSelBtn states={states} index={0}>
-              디자이너
-            </JobSelBtn>
-            <JobSelBtn states={states} index={1}>
-              개발자
-            </JobSelBtn>
-            <JobSelBtn states={states} index={2}>
-              기획자
-            </JobSelBtn>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '500px' }}>
-            <DevSelBtn states={states} index={0}>
-              iOS
-            </DevSelBtn>
-            <DevSelBtn states={states} index={1}>
-              Android
-            </DevSelBtn>
-            <DevSelBtn states={states} index={2}>
-              Front-End
-            </DevSelBtn>
-            <DevSelBtn states={states} index={3}>
-              Back-End
-            </DevSelBtn>
-          </div>
-          <img
+      <SelectContainer>
+        <RoleSelect>
+          <JobSelBtn states={states} index={0}>
+            디자이너
+          </JobSelBtn>
+          <JobSelBtn states={states} index={1}>
+            개발자
+          </JobSelBtn>
+          <JobSelBtn states={states} index={2}>
+            PM
+          </JobSelBtn>
+        </RoleSelect>
+        <DevSelect>
+          <DevSelBtn states={states} index={0}>
+            iOS
+          </DevSelBtn>
+          <DevSelBtn states={states} index={1}>
+            Android
+          </DevSelBtn>
+          <DevSelBtn states={states} index={2}>
+            Front-End
+          </DevSelBtn>
+          <DevSelBtn states={states} index={3}>
+            Back-End
+          </DevSelBtn>
+        </DevSelect>
+        {/* <RoleImage
             src={
               (jobSel === 0 && designImg) ||
               (jobSel === 2 && PmImg) ||
@@ -72,20 +93,17 @@ function RecruitAreaCard() {
               (devSel === 2 && FrontEndImg) ||
               (devSel === 3 && BackEndImg)
             }
-            alt="Job description"
-            width="500"
-            height="300"
-            style={{ marginTop: '30px' }}
-          />
-        </div>
+          /> */}
+      </SelectContainer>
+      <ExplainContainer>
         {(jobSel === 0 && <Job.Designer />) ||
           (jobSel === 2 && <Job.Planner />) ||
           (devSel === 0 && <Job.IOS />) ||
           (devSel === 1 && <Job.Android />) ||
           (devSel === 2 && <Job.FrontEnd />) ||
           (devSel === 3 && <Job.BackEnd />)}
-      </div>
-    </div>
+      </ExplainContainer>
+    </RecruitLayout>
   );
 }
 export default RecruitAreaCard;

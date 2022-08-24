@@ -69,7 +69,7 @@ function Header() {
         <MyLink fontSize="1.8rem" to="/" navigation={false}>
           FRIDAY
         </MyLink>
-        <ul style={{ margin: 0, display: 'inline', position: 'absolute', right: '5rem' }}>
+        <ul style={{ margin: 0, display: 'inline', position: 'absolute', right: '4rem' }}>
           <VerticalLine>
             <MyLink navFontSize="1.3rem" to="/">
               HOME

@@ -9,7 +9,7 @@ const TransparentModal = styled.div`
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 800px) {
     display: none;
   }
 `;

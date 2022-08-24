@@ -6,19 +6,19 @@ export const Designer = () => {
   return (
     <div>
       <ExplainJob title="활동">
-        PM, 개발자와 함께 프로젝트를 수행하며 전반적인 디자인을 담당합니다.
+        프로젝트에서 전반적인 디자인을 담당합니다.
         <br />
-        기획을 바탕으로 UI/UX을 디자인 합니다.
+        기획을 바탕으로 UI / UX을 디자인 합니다.
       </ExplainJob>
       <ExplainJob title="기술">
-        1. UI/UX에 대한 이해가 있으신 분
+        1. UI / UX에 대해 공부를 해보신 분
         <br />
         2. 디자인에 관심이 많으신 분
         <br />
         3. 열린 자세로 다른 직군과 소통할 수 있는 분
       </ExplainJob>
       <ExplainJob title="이런 분이면 더 좋아요">
-        1. Figma, Adobe Xd, Zeplin 등 하나 이상의 디자인 툴을 다뤄 본 경험이 있으신 분
+        1. Figma, Adobe Xd 등 하나 이상의 디자인 툴을 다뤄보신 분
         <br />
         2. 디자인 관련 학과에 재학중이신 분
       </ExplainJob>
@@ -29,11 +29,13 @@ export const Planner = () => {
   return (
     <div>
       <ExplainJob title="활동">
-        디자이너, 개발자와 함께 프로젝트를 수행하며 프로젝트의 방향을 이끕니다.
+        목표를 향해 프로젝트의 방향을 이끕니다.
         <br />
-        서비스의 기획부터 아이디어 구체화, 프로젝트의 원활한 진행을 위한 관리,
+        1. 서비스의 기획부터 아이디어 구체화
         <br />
-        서비스의 출시 후의 마케팅과 같은 활동을 합니다.
+        2. 프로젝트의 원활한 진행을 위한 관리
+        <br />
+        3. 서비스의 출시 후의 마케팅
       </ExplainJob>
       <ExplainJob title="기술">
         1. 나무보다 숲을 보는 능력을 가지신 분
@@ -55,14 +57,14 @@ export const Android = () => {
   return (
     <div>
       <ExplainJob title="활동">
-        프로젝트에서 안드로이드 개발을 담당합니다.
+        프로젝트에서 안드로이드 클라이언트 개발을 담당합니다.
         <br />
         백엔드 개발자, PM, 디자이너와 함께 프로젝트를 진행합니다.
       </ExplainJob>
       <ExplainJob title="기술">
-        1. java, kotlin 등의 언어로 안드로이드 개발을 해보신 분
+        1. 안드로이드 개발을 해보신 분
         <br />
-        2. 시키지 않아도 모르는 내용을 물어보거나 스스로 공부하시는 분
+        2. 새로운 내용의 습득을 즐기시는 분
         <br />
         3. 프로젝트를 책임지고 끝까지 마무리하실 분
       </ExplainJob>
@@ -78,20 +80,18 @@ export const IOS = () => {
   return (
     <div>
       <ExplainJob title="활동">
-        프로젝트에서 iOS 개발을 담당합니다.
+        프로젝트에서 iOS 클라이언트 개발을 담당합니다.
         <br />
         백엔드 개발자, PM, 디자이너와 함께 프로젝트를 진행합니다.
       </ExplainJob>
       <ExplainJob title="기술">
-        1. java, kotlin 등의 언어로 안드로이드 개발을 해보신 분
+        1. ios 개발을 해보신 분
         <br />
-        2. 시키지 않아도 모르는 내용을 물어보거나 스스로 공부하시는 분
+        2. 새로운 내용의 습득을 즐기시는 분
         <br />
-        3. 프로젝트를 끝까지 마무리하실 수 있는 분
+        3. 프로젝트를 책임지고 끝까지 마무리하실 분
       </ExplainJob>
       <ExplainJob title="이런 분이면 더 좋아요">
-        React, Vue.js, Angular 중 하나 이상 다뤄 본 경험
-        <br />
         git을 이용한 프로젝트 관리 경험
         <br />
         디자이너, 백엔드 개발자와 소통 경험
@@ -113,7 +113,7 @@ export const FrontEnd = () => {
         <br />
         2. 자바스크립트의 기초 문법을 알고 계시는 분
         <br />
-        3. 시키지 않아도 모르는 내용을 물어보거나 스스로 공부하여 해결 분
+        3. 프로젝트를 책임지고 끝까지 마무리하실 분
         <br />
         4. 프로젝트를 끝까지 마무리하실 수 있는 분
       </ExplainJob>
@@ -139,14 +139,14 @@ export const BackEnd = () => {
       <ExplainJob title="기술">
         1. 데이터베이스를 이해하고 계신 분
         <br />
-        2. 자바스크립트로 프로젝트를 해보고 싶은 분
+        2. RESTful의 개념을 이해하고 계신 분
       </ExplainJob>
       <ExplainJob title="이런 분이면 더 좋아요">
-        1. React, Vue.js, Angular 중 하나 이상 다뤄 본 경험
+        1. RESTful API를 설계해보신 분
         <br />
         2. git을 이용한 프로젝트 관리 경험
         <br />
-        3. 디자이너, 백엔드 개발자, 기획자와 소통 경험
+        3. 디자이너, 프론트엔드 개발자와 협업해본 경험
         <br />
       </ExplainJob>
     </div>

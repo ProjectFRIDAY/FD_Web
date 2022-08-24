@@ -13,10 +13,10 @@ const FaqContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
-  border-bottom: '1px solid #888787';
+  border-bottom: 1px solid #888787;
 `;
 
-const FaqLogo = styled.div`
+const FaqLogo = styled.span`
   width: 46px;
   height: 46px;
   border-radius: 10px;
@@ -25,13 +25,13 @@ const FaqLogo = styled.div`
   font-weight: bold;
   text-align: center;
   padding-top: 7px;
+  margin-right: 1rem;
 `;
 
-const FaqTextContainer = styled.div`
+const FaqTitleContainer = styled.div`
   margin-left: 30px;
-  margin-bottom: 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `;
 
 const QuestionTitle = styled.p`
@@ -48,6 +48,7 @@ const QuestionTitle = styled.p`
 const FaqModal = styled.p`
   font-size: 16px;
   margin-top: 0px;
+  margin-left: 2.3rem;
   color: #ccc;
 `;
 
@@ -75,25 +76,25 @@ function FAQCard() {
     <FaqLayout>
       <FaqTitle>FAQ</FaqTitle>
       <FAQ title="해당 분야에 대해 잘 모르는데, 참여할 수 있나요?">
-        A. 물론 가능합니다.
+        물론 가능합니다.
         <br />
         열정과 새로운 지식을 습득하고자 하는 의지가 있는 분들은 언제든 환영합니다!
       </FAQ>
 
       <FAQ title="정해진 활동 시간이 있나요?">
-        A. 활동 시간은 프로젝트별로 상이합니다.
+        활동 시간은 프로젝트별로 상이합니다.
         <br />
         다만 공통적으로 주 1회의 정기 회의가 진행됩니다.
       </FAQ>
 
       <FAQ title="모든 활동이 온라인으로 진행되나요?">
-        A. 현재는 모두 온라인으로 진행되고 있습니다. 상황에 따라 달라질 수 있습니다.
+        현재는 모두 온라인으로 진행되고 있습니다. 상황에 따라 달라질 수 있습니다.
         <br />
         친목을 위한 대면 활동도 있으니 기대해주세요!
       </FAQ>
 
       <FAQ title="프로젝트는 어떤 식으로 시작되나요?">
-        A. 먼저 Friday 전체 회의에서 각자의 아이디어를 공유합니다.
+        먼저 Friday 전체 회의에서 각자의 아이디어를 공유합니다.
         <br />
         이후 투표를 통해 몇 개의 아이디어를 선정합니다.
         <br />
@@ -115,7 +116,7 @@ function FAQ(props) {
   };
   return (
     <FaqContainer>
-      <FaqTextContainer>
+      <FaqTitleContainer>
         <FaqLogo>Q</FaqLogo>
         <QuestionTitle>
           {props.title}
@@ -123,9 +124,8 @@ function FAQ(props) {
             <Toggle onClick={onToggle} />
           </div>
         </QuestionTitle>
-
-        {expanded && <FaqModal>{props.children}</FaqModal>}
-      </FaqTextContainer>
+      </FaqTitleContainer>
+      {expanded && <FaqModal>{props.children}</FaqModal>}
     </FaqContainer>
   );
 }
