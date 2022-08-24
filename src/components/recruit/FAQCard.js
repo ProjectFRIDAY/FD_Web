@@ -13,7 +13,7 @@ const FaqContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
-  border-bottom: '1px solid #888787';
+  border-bottom: 1px solid #888787;
 `;
 
 const FaqLogo = styled.div`
