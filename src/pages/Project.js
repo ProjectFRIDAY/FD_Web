@@ -4,9 +4,9 @@ import { prjState, visibleState } from '../recoil/atom';
 import styled from 'styled-components';
 import Times from '../assets/fonts/TimesNewRomanPSMT.ttf';
 import Icons from '../components/Icons';
-import card from '../components/main/Card';
-import Button from '../components/main/Button';
-import Modal from '../components/Modal';
+import card from '../components/project/Card';
+import Button from '../components/Button';
+import Modal from '../components/project/Modal';
 
 const StyledH1 = styled.h1`
   width: 100%;
@@ -91,6 +91,10 @@ function Project() {
         >
           <card.ImageField src={Icons[1].src}></card.ImageField>
           <card.TextField>플랜 다이얼</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발완료</card.Tag>
+            <card.Tag>#APP</card.Tag>
+          </card.TagField>
         </card.Card>
         <card.Card
           onClick={() => {
@@ -99,6 +103,10 @@ function Project() {
         >
           <card.ImageField src={Icons[6].src}></card.ImageField>
           <card.TextField>Friday 공식 웹사이트</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발중</card.Tag>
+            <card.Tag>#WEB</card.Tag>
+          </card.TagField>
         </card.Card>
         <card.Card
           onClick={() => {
@@ -107,6 +115,10 @@ function Project() {
         >
           <card.ImageField src={Icons[0].src}></card.ImageField>
           <card.TextField>Comento</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발중</card.Tag>
+            <card.Tag>#WEB</card.Tag>
+          </card.TagField>
         </card.Card>
       </Wrapper>
       <Wrapper>
@@ -117,6 +129,10 @@ function Project() {
         >
           <card.ImageField src={Icons[3].src}></card.ImageField>
           <card.TextField>엄마 타이머</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발완료</card.Tag>
+            <card.Tag>#APP</card.Tag>
+          </card.TagField>
         </card.Card>
         <card.Card
           onClick={() => {
@@ -124,15 +140,25 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[4].src}></card.ImageField>
-          <card.TextField>날로</card.TextField>
+          <card.TextField>약속이</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발완료</card.Tag>
+            <card.Tag>#WEB</card.Tag>
+            <card.Tag>#토이프로젝트</card.Tag>
+          </card.TagField>
         </card.Card>
         <card.Card
           onClick={() => {
-            openModal(6);
+            openModal(5);
           }}
         >
           <card.ImageField src={Icons[5].src}></card.ImageField>
           <card.TextField>텍스티</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발완료</card.Tag>
+            <card.Tag>#WEB</card.Tag>
+            <card.Tag>#토이프로젝트</card.Tag>
+          </card.TagField>
         </card.Card>
         <Modal content={prj} visible={visible}></Modal>
       </Wrapper>

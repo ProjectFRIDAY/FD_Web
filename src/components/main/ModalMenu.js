@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MyLink from './MyLink';
+import MyLink from '../MyLink';
 
 const TransparentModal = styled.div`
   width: 100%;

@@ -5,7 +5,7 @@ import FridayAnimation from '../lottie/friday.json';
 import ProjectIntro from '../components/main/ProjectIntro';
 import PhilosophyText from '../components/main/PhilosophyText';
 import styled from 'styled-components';
-import Button from '../components/main/Button';
+import Button from '../components/Button';
 import MainTop from '../components/main/MainTop';
 import Review from '../components/main/Review';
 import { menuAtom } from '../recoil/atom';

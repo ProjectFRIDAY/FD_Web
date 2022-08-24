@@ -1,6 +1,6 @@
 import React from 'react';
 import BackgroundImage from '../../assets/images/recruitBackground.png';
-import Button from '../../components/main/Button';
+import Button from '../../components/Button';
 
 function TitleBackgroundCard() {
   return (
