@@ -41,6 +41,7 @@ body {
   color: black;
   position: absolute;
   right: 0;
+  top: 0;
   padding: 25px;
 }
 `;
