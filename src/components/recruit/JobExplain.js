@@ -92,9 +92,9 @@ export const IOS = () => {
         3. 프로젝트를 책임지고 끝까지 마무리하실 분
       </ExplainJob>
       <ExplainJob title="이런 분이면 더 좋아요">
-        git을 이용한 프로젝트 관리 경험
+        1. 디자이너, 백엔드 개발자와의 협업 경험
         <br />
-        디자이너, 백엔드 개발자와 소통 경험
+        2. git을 이용한 프로젝트 관리 경험
         <br />
       </ExplainJob>
     </div>
@@ -132,7 +132,7 @@ export const BackEnd = () => {
   return (
     <div>
       <ExplainJob title="활동">
-        팀 내에서 백엔드 개발을 담당합니다.
+        프로젝트에서 백엔드 개발을 담당합니다.
         <br />
         클라이언트 개발자, PM, 디자이너와 함께 프로젝트를 진행합니다.
       </ExplainJob>
