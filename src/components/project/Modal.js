@@ -57,6 +57,9 @@ const Text = styled.div`
   margin-top: 20px;
   font-size: 25px;
   font-weight: 800px;
+  a:visited {
+    color: blue;
+  }
 `;
 
 const Link = styled.a`
@@ -73,6 +76,7 @@ const Link = styled.a`
   &:link,
   &:active {
     text-decoration: none;
+    color: blue;
   }
 `;
 
