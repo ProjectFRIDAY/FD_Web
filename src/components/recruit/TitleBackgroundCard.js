@@ -13,7 +13,7 @@ const RecruitButton = styled(Button)`
   align-items: center;
   color: black;
   background-color: white;
-`
+`;
 
 function TitleBackgroundCard() {
   return (
@@ -37,12 +37,7 @@ function TitleBackgroundCard() {
       >
         FRIDAY 모집
       </p>
-      <RecruitButton
-        gradient
-        border={false}
-        href="https://wjsalsrb5.typeform.com/friday-apply"
-        target="_blank"
-      >
+      <RecruitButton gradient border={false} href="https://wjsalsrb5.typeform.com/friday-apply" target="_blank">
         4기 지원하기
       </RecruitButton>
     </div>
