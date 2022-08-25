@@ -1,9 +1,8 @@
 import comentoIcon from '../assets/images/comento.png';
 import planDialIcon from '../assets/images/planDial.png';
-import fridayIcon from '../assets/images/Friday.jpg';
-import friday from '../assets/images/Friday2.jpg';
+import fridayIcon from '../assets/images/FD_Web.png';
 import momTimer from '../assets/images/momTimer.png';
-import nalo from '../assets/images/nalo.png';
+import promise from '../assets/images/promise.png';
 import texti from '../assets/images/texti.png';
 
 const Icons = [
@@ -25,15 +24,11 @@ const Icons = [
   },
   {
     id: 4,
-    src: `${nalo}`,
+    src: `${promise}`,
   },
   {
     id: 5,
     src: `${texti}`,
-  },
-  {
-    id: 6,
-    src: `${friday}`,
   },
 ];
 

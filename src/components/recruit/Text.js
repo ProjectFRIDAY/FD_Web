@@ -25,7 +25,7 @@ export const SmallBold = styled.p`
 `;
 export const Tiny = styled.p`
   font-family: Arial;
-  font-size: 15px;
+  font-size: 20px;
   display: inline-block;
 `;
 export const Custom = styled.p`

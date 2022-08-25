@@ -15,8 +15,9 @@ const ProcessMidText = styled(Text.Mid)`
 `;
 const ProcessTinyText = styled(Text.Tiny)`
   margin-bottom: 50px;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 35px;
+  margin-top: 0;
 `;
 function ProcessCard() {
   return (
@@ -48,14 +49,22 @@ function ProcessCard() {
         <ProcessTinyText>상단의 지원하기 버튼을 통해 지원서를 작성해주세요.</ProcessTinyText>
         <ProcessMidText>전형절차</ProcessMidText>
         <ProcessTinyText> 지원자님은 간단한 지원서를 작성하신 후, 짧은 비대면 면접을 거치게 됩니다.</ProcessTinyText>
-        <Text.SmallBold>서류전형</Text.SmallBold>
-        <ProcessTinyText>제출하신 지원서를 바탕으로 지원 분야와의 연관성을 종합적으로 검토합니다.</ProcessTinyText>
-        <Text.SmallBold>1차 면접</Text.SmallBold>
-        <ProcessTinyText>
-          실무에 대한 내용을 중심으로 면접이 진행됩니다.
-          <br />
-          면접 시간은 약 30분 ~ 1시간 이내로 소요됩니다.
-        </ProcessTinyText>
+
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          marginLeft: '20px'
+        }}>
+          <Text.SmallBold>서류전형</Text.SmallBold>
+          <ProcessTinyText>제출하신 지원서를 바탕으로 지원 분야와의 연관성을 종합적으로 검토합니다.</ProcessTinyText>
+          <Text.SmallBold>1차 면접</Text.SmallBold>
+          <ProcessTinyText>
+            실무에 대한 내용을 중심으로 면접이 진행됩니다.
+            <br />
+            면접 시간은 약 30분 ~ 1시간 이내로 소요됩니다.
+          </ProcessTinyText>
+        </div>
+
       </ProcessMidTextContainer>
     </div>
   );
