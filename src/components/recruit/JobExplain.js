@@ -161,7 +161,7 @@ function ExplainJob(props) {
     <div>
       <ExplainJobTitle>{props.title}</ExplainJobTitle>
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', marginBottom: '50px' }}>
-        <div style={{ width: '0', height: '13px', border: '1px solid #7e7c7c', marginTop: '7px' }} />
+        <div style={{ width: '0', height: '13px', border: '1px solid #7e7c7c', marginTop: '13px' }} />
         <Text.Small style={{ margin: '0', paddingLeft: '20px', lineHeight: '2.6rem' }}>{props.children}</Text.Small>
       </div>
     </div>
