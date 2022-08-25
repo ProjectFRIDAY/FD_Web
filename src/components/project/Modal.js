@@ -9,7 +9,7 @@ const ModalStyle = styled.div`
   @media only screen and (max-width: 1000px) {
     width: 60%;
     height: 40%;
-    top: 15vh;
+    top: 40vh;
     left: 23vw;
   }
   background-color: white;
