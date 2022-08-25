@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import ScrollAnimation from '../ScrollAnimation';
 import minaImg from '../../assets/images/review/mina.jpg';
 import wonheeImg from '../../assets/images/review/wonhee.jpg';
+import seonghwanImg from '../../assets/images/review/seonghwan.jpg';
 
 const Positioner = styled.div`
   width: 100%;
@@ -25,22 +26,22 @@ const Modal = styled.div`
     }}
   }
   width: 20rem;
-  height: 25rem;
+  height: 25.2rem;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 3px 40px 0 ${props => props.theme.primaryColor};
   background: #ccc;
-  margin: 1rem;
+  margin: 3rem;
 `;
 const ImageField = styled.img`
-  height: 12rem;
+  height: 17rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 `;
 
 const TextField = styled.div`
-  height: 13rem;
+  height: 13.2rem;
   padding: 0 1rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -118,21 +119,20 @@ function Review() {
           </p>
           <BlackLine />
           <p style={{ margin: '0.5rem', textAlign: 'left' }}>
-            <b>김민아님 (디자이너, 1기)</b>
+            <b>김민아님 (디자이너, 3기)</b>
           </p>
         </TextField>
       </Modal>
       <Modal xPosition={'-8rem'}>
-        <ImageField />
+        <ImageField src={seonghwanImg} alt="승환님 이미지" />
         <TextField>
           <p style={{ fontSize: '15px' }}>
             목적 없는 열정은 FRIDAY를 만난 후 명확한 비전이 되었습니다. 드넓은 개발 세상 속 FRIDAY에서의 경험은 제
             여정의 이정표가 되었습니다. 당장 진로가 정해지지 않았더라도 주저하지 말고 일단 지원해 보세요.
           </p>
-
           <BlackLine />
           <p style={{ margin: '0.5rem', textAlign: 'left' }}>
-            <b>송승환님 (개발자, 1기)</b>
+            <b>송승환님 (개발자, 3기)</b>
           </p>
         </TextField>
       </Modal>
@@ -146,7 +146,7 @@ function Review() {
           </p>
           <BlackLine />
           <p style={{ margin: '0.5rem', textAlign: 'left' }}>
-            <b>도원희님 (PM, 1기)</b>
+            <b>도원희님 (PM, 2기)</b>
           </p>
         </TextField>
       </Modal>
@@ -159,7 +159,7 @@ function Review() {
           </p>
           <BlackLine />
           <p style={{ margin: '0.5rem', textAlign: 'left' }}>
-            <b>송진영님 (개발자, 1기)</b>
+            <b>송진영님 (개발자, 2기)</b>
           </p>
         </TextField>
       </Modal>
