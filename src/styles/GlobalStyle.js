@@ -46,7 +46,7 @@ a:visited {
 }
  
 a:hover { 
- text-decoration: underline;
+ text-decoration: none;
 }
 
 .page {
