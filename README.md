@@ -1,6 +1,6 @@
 # 프로젝트 이름 및 소개
 ![fd web 로고](./comento.png)<br></br>
-<b>FD Web</b> : FRIDAY의 대표 홈페이지 제작(링크: https://www.fridayproject.co.kr/)<br><br>
+<b>FD Web</b> : FRIDAY의 대표 홈페이지 제작 (링크: https://www.fridayproject.co.kr/)<br><br>
 
 ## ⏰ 개발 기간
 
@@ -10,7 +10,7 @@
 
 - Developer<br>
   Leader: 장재균 <br>
-  Member: 김동연, 송승환, 송진영<br><br>
+  Member: 김동연, 서지호, 송승환, 송진영<br><br>
 - Design<br>
   Member: 김민아 <br><br>
 - Management <br>
@@ -22,4 +22,4 @@
 
 #### UI/UX 및 Wireframe 링크
 
-Zeplin 링크: [Zeplin](https://www.figma.com/file/eu6TdzgDWUbj1ZUTUbLZcT/%EC%B4%88%EC%95%88?node-id=0%3A1)
+Zeplin 링크: [Zeplin]([https://www.figma.com/file/eu6TdzgDWUbj1ZUTUbLZcT/%EC%B4%88%EC%95%88?node-id=0%3A1](https://app.zeplin.io/project/626e30ca3521cb134e0263db))
