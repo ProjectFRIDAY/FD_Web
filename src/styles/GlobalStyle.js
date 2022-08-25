@@ -37,7 +37,7 @@ a:visited {
 }
  
 a:hover { 
- text-decoration: underline;
+ text-decoration: none;
 }
 
 .page {
@@ -46,6 +46,7 @@ a:hover {
 .title {
   font-family: 'TimesNewRomanPSMT';
   font-weight: normal;
+  /* margin-top: 30px; */
 }
 
 .icon {

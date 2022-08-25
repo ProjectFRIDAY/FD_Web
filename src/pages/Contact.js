@@ -14,21 +14,17 @@ const GradientBackground = styled.div`
   background-image: linear-gradient(148deg, #053a36 0%, #000 28%);
 `;
 
-const Spacer = styled.div`
-  height: 5rem;
-`;
-
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem;
+  padding-top: 50px;
 `;
 
 const ContactLayout = styled.div`
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  margin: 0rem;
+  margin-top: 5rem;
   padding: 0rem;
 `;
 
@@ -63,14 +59,24 @@ const ContactTo = styled.div`
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   text-align: center;
-  padding-top: 0.6rem;
   font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 `;
 
 const Icon = styled.img`
   width: 30px;
   height: 30px;
   margin: 1rem;
+`;
+
+const LinkName = styled.span`
+  @media only screen and (max-width: 1000px) {
+    font-size: 15px;
+  }
+  text-align: center;
+  font-size: 20px;
 `;
 
 function Contact() {
@@ -83,7 +89,6 @@ function Contact() {
           <h1 style={{ fontSize: '8rem' }} className="title">
             Contact
           </h1>
-          <Spacer />
           <ContactLayout>
             <ContactBox href="mailto:fridayproj2@gmail.com" target="_blank">
               <Title>
@@ -91,7 +96,7 @@ function Contact() {
                 <p>메일</p>
               </Title>
               <ContactTo backgroundColor="#01baae">
-                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>fridayproj2@gmail.com</p>
+                <LinkName>fridayproj2@gmail.com</LinkName>
               </ContactTo>
             </ContactBox>
 
@@ -101,7 +106,7 @@ function Contact() {
                 <p>카카오톡</p>
               </Title>
               <ContactTo backgroundColor="#f9e000">
-                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>@fridayproj</p>
+                <LinkName>@fridayproj</LinkName>
               </ContactTo>
             </ContactBox>
 
@@ -110,14 +115,15 @@ function Contact() {
                 <Icon src={instagramIcon} />
                 <p>인스타그램</p>
               </Title>
-              <ContactTo backgroundColor="
+              <ContactTo
+                backgroundColor="
                 radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , 
-                linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);">
-                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>@fri__.day</p>
+                linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);"
+              >
+                <LinkName>@fri__.day</LinkName>
               </ContactTo>
             </ContactBox>
           </ContactLayout>
-          <Spacer />
         </Layout>
       </GradientBackground>
     </div>
