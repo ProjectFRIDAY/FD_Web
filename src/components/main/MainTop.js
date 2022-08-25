@@ -32,7 +32,6 @@ function MainTop() {
           color={'#01baae'}
           backgroundColor={'white'}
           border={true}
-          gradient={true}
         >
           4기 지원하기
         </MyButton>
