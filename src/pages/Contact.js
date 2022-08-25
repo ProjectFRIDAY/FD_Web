@@ -73,17 +73,24 @@ const Icon = styled.img`
   margin: 1rem;
 `;
 
+const LinkName = styled.span`
+  @media only screen and (max-width: 1000px) {
+    font-size: 15px;
+  }
+  text-align: center;
+  font-size: 20px;
+`;
+
 function Contact() {
   const setMenu = useSetRecoilState(menuAtom);
   return (
     <div className="page">
+      {setMenu(1)}
       <GradientBackground>
-        {setMenu(1)}
         <Layout>
           <h1 style={{ fontSize: '8rem' }} className="title">
             Contact
           </h1>
-          <Spacer />
           <ContactLayout>
             <ContactBox href="mailto:fridayproj2@gmail.com" target="_blank">
               <Title>
@@ -91,7 +98,7 @@ function Contact() {
                 <p>메일</p>
               </Title>
               <ContactTo backgroundColor="#01baae">
-                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>fridayproj2@gmail.com</p>
+                <LinkName>fridayproj2@gmail.com</LinkName>
               </ContactTo>
             </ContactBox>
 
@@ -101,7 +108,7 @@ function Contact() {
                 <p>카카오톡</p>
               </Title>
               <ContactTo backgroundColor="#f9e000">
-                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>@fridayproj</p>
+                <LinkName>@fridayproj</LinkName>
               </ContactTo>
             </ContactBox>
 
@@ -115,7 +122,7 @@ function Contact() {
                 radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , 
                 linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);"
               >
-                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>@fri__.day</p>
+                <LinkName>@fri__.day</LinkName>
               </ContactTo>
             </ContactBox>
           </ContactLayout>

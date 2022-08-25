@@ -44,10 +44,9 @@ const RoleImage = styled.img`
 `;
 
 const ExplainContainer = styled.div`
-  margin: 9rem 0 0 8rem;
+  margin: 3rem 0 0 8rem;
   width: 600px;
 `;
-
 
 function RecruitAreaCard() {
   const [jobSel, setJobSel] = useState(0);
@@ -60,7 +59,7 @@ function RecruitAreaCard() {
   return (
     <RecruitLayout>
       <SelectContainer>
-        <Text.Big style={{marginBottom: '5rem'}}>모집 분야</Text.Big>
+        <Text.Big style={{ marginBottom: '5rem' }}>모집 분야</Text.Big>
         <RoleSelect>
           <JobSelBtn states={states} index={0}>
             디자이너
@@ -87,15 +86,15 @@ function RecruitAreaCard() {
           </DevSelBtn>
         </DevSelect>
         <RoleImage
-            src={
-              (jobSel === 0 && designImg) ||
-              (jobSel === 2 && PmImg) ||
-              (devSel === 0 && IosImg) ||
-              (devSel === 1 && AndroidImg) ||
-              (devSel === 2 && FrontEndImg) ||
-              (devSel === 3 && BackEndImg)
-            }
-          />
+          src={
+            (jobSel === 0 && designImg) ||
+            (jobSel === 2 && PmImg) ||
+            (devSel === 0 && IosImg) ||
+            (devSel === 1 && AndroidImg) ||
+            (devSel === 2 && FrontEndImg) ||
+            (devSel === 3 && BackEndImg)
+          }
+        />
       </SelectContainer>
       <ExplainContainer>
         {(jobSel === 0 && <Job.Designer />) ||

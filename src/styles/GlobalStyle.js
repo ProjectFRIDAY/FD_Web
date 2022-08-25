@@ -37,12 +37,25 @@ body {
   color: #fff;
 }
 
+a:link { 
+ text-decoration: none;
+}
+ 
+a:visited { 
+ text-decoration: none;
+}
+ 
+a:hover { 
+ text-decoration: underline;
+}
+
 .page {
   margin-top: 5rem;
 }
 .title {
   font-family: 'TimesNewRomanPSMT';
   font-weight: normal;
+  /* margin-top: 30px; */
 }
 
 .icon {

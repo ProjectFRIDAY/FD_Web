@@ -50,11 +50,13 @@ function ProcessCard() {
         <ProcessMidText>전형절차</ProcessMidText>
         <ProcessTinyText> 지원자님은 간단한 지원서를 작성하신 후, 짧은 비대면 면접을 거치게 됩니다.</ProcessTinyText>
 
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          marginLeft: '20px'
-        }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            marginLeft: '20px',
+          }}
+        >
           <Text.SmallBold>서류전형</Text.SmallBold>
           <ProcessTinyText>제출하신 지원서를 바탕으로 지원 분야와의 연관성을 종합적으로 검토합니다.</ProcessTinyText>
           <Text.SmallBold>1차 면접</Text.SmallBold>
@@ -64,7 +66,6 @@ function ProcessCard() {
             면접 시간은 약 30분 ~ 1시간 이내로 소요됩니다.
           </ProcessTinyText>
         </div>
-
       </ProcessMidTextContainer>
     </div>
   );
