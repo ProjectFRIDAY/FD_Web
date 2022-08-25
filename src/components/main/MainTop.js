@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MainVideo from './MainVideo';
-import Button from './Button';
+import Button from '../Button';
 
 const StyledH1 = styled.h1`
   width: 100%;

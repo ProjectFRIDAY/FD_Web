@@ -7,7 +7,7 @@ export const menuAtom = atom({
 
 export const prjState = atom({
   key: 'prjState',
-  default: 0,
+  default: '웹사이트',
 });
 
 export const visibleState = atom({

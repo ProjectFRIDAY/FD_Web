@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { menuAtom } from '../recoil/atom';
 import { useRecoilState } from 'recoil';
 import ModalMenu from './main/ModalMenu';
-import MyLink from './main/MyLink';
+import MyLink from '../components/MyLink';
 
 const FixedHeader = styled.div`
   width: 100%;

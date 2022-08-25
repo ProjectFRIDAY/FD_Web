@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from '../../assets/images/recruitBackground.png';
-import Button from '../../components/main/Button';
+import Button from '../../components/Button';
 
 const RecruitButton = styled(Button)`
   width: 160px;
