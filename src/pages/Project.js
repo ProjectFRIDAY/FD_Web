@@ -1,5 +1,6 @@
 import React from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
+import { menuAtom } from '../recoil/atom';
 import { prjState, visibleState } from '../recoil/atom';
 import styled from 'styled-components';
 import Times from '../assets/fonts/TimesNewRomanPSMT.ttf';
@@ -78,9 +79,11 @@ function Project() {
     setPrj(prj);
     setVisible(true);
   };
+  const setMenu = useSetRecoilState(menuAtom);
 
   return (
     <>
+      {setMenu(1)}
       <StyledH1>FRIDAY</StyledH1>
       <BackgroundText>CREATIVE</BackgroundText>
       <Text>Friday Projects</Text>
@@ -170,7 +173,7 @@ function Project() {
           color={'white'}
           gradient
         >
-          10기 지원하기 🡒
+          4기 지원하기
         </Button>
       </MainBottom>
     </>
