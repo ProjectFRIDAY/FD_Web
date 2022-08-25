@@ -14,10 +14,10 @@ const Projects = {
   },
   웹사이트: {
     img: Icons[2].src,
-    title: 'FRIDAY 공식 웹사이트',
-    desc: '현재 방문하신 FRIDAY 공식 웹사이트를 제작했던 프로젝트입니다. FRIDAY의 공식 홈페이지이자, FRIDAY의 방향성, 목표를 보여주는 페이지이고, 지금까지 FRIDAY에서 진행했던 프로젝트와, 진행하고 있는 프로젝트를 확인하실 수 있습니다.',
+    title: 'FRIDAY 홈페이지',
+    desc: '현재 방문하신 FRIDAY 공식 홈페이지를 제작했던 프로젝트입니다. FRIDAY의 공식 홈페이지이자, FRIDAY의 방향성, 목표를 보여주는 페이지이고, 지금까지 FRIDAY에서 진행했던 프로젝트와, 진행하고 있는 프로젝트를 확인하실 수 있습니다.',
     git: 'https://github.com/ProjectFRIDAY/FD_Web',
-    team: 'FE - 2명, BE - 2명, Design - 1명',
+    team: 'FE - 4명, BE - 1명, Design - 1명',
     tag: '#개발완료, #WEB',
   },
   comento: {
