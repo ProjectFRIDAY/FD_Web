@@ -19,7 +19,3 @@
 ## 사용한 프레임워크(FrameWork)
 
 - FE : <b> React.js</b> <p> <img src="https://velog.velcdn.com/images/jtwjs/post/3ebdc992-342a-4895-8394-5cb14fee44c8/reactJS.png" width=100 height=80> </p><br>
-
-#### UI/UX 및 Wireframe 링크
-
-Zeplin 링크: [Zeplin]([https://app.zeplin.io/project/626e30ca3521cb134e0263db])
