@@ -12,7 +12,7 @@ import { menuAtom } from '../recoil/atom';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const MainBottom = styled.div`
-  margin: 20rem auto;
+  margin: 26rem auto;
   text-align: center;
   font-size: 3vw;
 `;
