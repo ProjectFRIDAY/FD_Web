@@ -15,7 +15,7 @@ const GradientBackground = styled.div`
 `;
 
 const Spacer = styled.div`
-  height: 11.5rem;
+  height: 5rem;
 `;
 
 const Layout = styled.div`
@@ -35,7 +35,7 @@ const ContactLayout = styled.div`
 const ContactBox = styled.a`
   width: 16rem;
   height: 13rem;
-  margin: 5rem;
+  margin: 3rem;
   background-color: white;
   color: black;
   position: relative;
@@ -59,7 +59,7 @@ const ContactTo = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 3rem;
+  height: 70%;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   text-align: center;
@@ -90,17 +90,19 @@ function Contact() {
                 <Icon src={mailIcon} />
                 <p>메일</p>
               </Title>
-              <p style={{ textAlign: 'center' }}>fridayproj2@gmail</p>
-              <ContactTo backgroundColor="#01baae">메일로 문의하기</ContactTo>
+              <ContactTo backgroundColor="#01baae">
+                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>fridayproj2@gmail.com</p>
+              </ContactTo>
             </ContactBox>
 
-            <ContactBox href="" target="_blank">
+            <ContactBox href="https://open.kakao.com/o/sytyCGxe" target="_blank">
               <Title>
                 <Icon src={kakaoIcon} />
                 <p>카카오톡</p>
               </Title>
-              <p style={{ textAlign: 'center' }}>@</p>
-              <ContactTo backgroundColor="#f9e000">카카오톡으로 문의하기</ContactTo>
+              <ContactTo backgroundColor="#f9e000">
+                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>@fridayproj</p>
+              </ContactTo>
             </ContactBox>
 
             <ContactBox href="https://www.instagram.com/accounts/login/?next=/fri__.day/" target="_blank">
@@ -108,9 +110,10 @@ function Contact() {
                 <Icon src={instagramIcon} />
                 <p>인스타그램</p>
               </Title>
-              <p style={{ textAlign: 'center' }}>@fri__.day</p>
-              <ContactTo backgroundColor="radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);">
-                인스타그램으로 문의하기
+              <ContactTo backgroundColor="
+                radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , 
+                linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);">
+                <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>@fri__.day</p>
               </ContactTo>
             </ContactBox>
           </ContactLayout>
