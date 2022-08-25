@@ -77,8 +77,8 @@ function Contact() {
   const setMenu = useSetRecoilState(menuAtom);
   return (
     <div className="page">
-      {setMenu(1)}
       <GradientBackground>
+        {setMenu(1)}
         <Layout>
           <h1 style={{ fontSize: '8rem' }} className="title">
             Contact
@@ -110,9 +110,11 @@ function Contact() {
                 <Icon src={instagramIcon} />
                 <p>인스타그램</p>
               </Title>
-              <ContactTo backgroundColor="
+              <ContactTo
+                backgroundColor="
                 radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , 
-                linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);">
+                linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);"
+              >
                 <p style={{ textAlign: 'center', fontSize: '20px', paddingTop: '1rem' }}>@fri__.day</p>
               </ContactTo>
             </ContactBox>
