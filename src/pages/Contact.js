@@ -26,7 +26,6 @@ const Layout = styled.div`
 
 const ContactLayout = styled.div`
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin: 0rem;
   padding: 0rem;
