@@ -1,13 +1,13 @@
 # 프로젝트 이름 및 소개
 
-https://www.fridayproject.co.kr/
+홈페이지 링크: https://www.fridayproject.co.kr/
 ![fd web 로고](./comento.png)<br></br>
 
 <b>FD Web</b> : FRIDAY의 대표 홈페이지
 
 ## ⏰ 개발 기간
 
-개발기간 : 2022년 4월 1일 ~ 2022년 8월 25일
+개발기간 : 2022년 4월 1일 ~ 2022년 8월 25일<br><br>
 
 ## 👩‍💻 멤버 구성
 
@@ -15,7 +15,7 @@ https://www.fridayproject.co.kr/
   Leader: 장재균 <br>
   Member: 김동연, 송승환, 송진영<br><br>
 - Design<br>
-  Member: ~김민아~ <br>
+  Member: 김민아 <br>
 - Management <br>
   Member: 도원희 <br><br>
   
