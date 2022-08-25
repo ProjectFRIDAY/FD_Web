@@ -22,4 +22,4 @@
 
 #### UI/UX 및 Wireframe 링크
 
-Zeplin 링크: [Zeplin]([https://www.figma.com/file/eu6TdzgDWUbj1ZUTUbLZcT/%EC%B4%88%EC%95%88?node-id=0%3A1](https://app.zeplin.io/project/626e30ca3521cb134e0263db))
+Zeplin 링크: [Zeplin]([https://app.zeplin.io/project/626e30ca3521cb134e0263db])
