@@ -53,7 +53,7 @@ function Main() {
             color={'white'}
             gradient
           >
-            10기 지원하기
+            4기 지원하기
           </Button>
         </MainBottom>
       </ScrollAnimation>
