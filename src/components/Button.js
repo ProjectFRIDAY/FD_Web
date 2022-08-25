@@ -50,7 +50,7 @@ const StyledButton = styled.a`
         background-image: linear-gradient(180deg, ${BACKGROUND_COLOR}, ${darken(0.2, BACKGROUND_COLOR)});
       `}
       &:hover {
-        color: ${lighten(0.1, COLOR)};
+        color: ${lighten(0.05, COLOR)};
       }
       &:active {
         color: ${darken(0.1, COLOR)};

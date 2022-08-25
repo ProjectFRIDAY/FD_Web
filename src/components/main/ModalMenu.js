@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MyLink from './MyLink';
+import MyLink from '../MyLink';
 
 const TransparentModal = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ const TransparentModal = styled.div`
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 800px) {
     display: none;
   }
 `;
@@ -52,7 +52,5 @@ function ModalMenu({ children, ...args }) {
     </TransparentModal>
   );
 }
-
-// 현재 페이지에 해당하는 네비게이션 색상 설정
 
 export default ModalMenu;

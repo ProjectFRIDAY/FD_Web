@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MainVideo from './MainVideo';
-import Button from './Button';
+import Button from '../Button';
 
 const StyledH1 = styled.h1`
   width: 100%;
@@ -30,11 +30,10 @@ function MainTop() {
           href="https://wjsalsrb5.typeform.com/friday-apply"
           target="_blank"
           color={'#01baae'}
-          backgroundColor={'#fff'}
+          backgroundColor={'white'}
           border={true}
-          gradient={false}
         >
-          10기 지원하기
+          4기 지원하기
         </MyButton>
       </MainVideo>
     </>

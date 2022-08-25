@@ -5,14 +5,14 @@ import FridayAnimation from '../lottie/friday.json';
 import ProjectIntro from '../components/main/ProjectIntro';
 import PhilosophyText from '../components/main/PhilosophyText';
 import styled from 'styled-components';
-import Button from '../components/main/Button';
+import Button from '../components/Button';
 import MainTop from '../components/main/MainTop';
 import Review from '../components/main/Review';
 import { menuAtom } from '../recoil/atom';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const MainBottom = styled.div`
-  margin: 20rem auto;
+  margin: 26rem auto;
   text-align: center;
   font-size: 3vw;
 `;
@@ -53,7 +53,7 @@ function Main() {
             color={'white'}
             gradient
           >
-            10기 지원하기
+            4기 지원하기
           </Button>
         </MainBottom>
       </ScrollAnimation>
