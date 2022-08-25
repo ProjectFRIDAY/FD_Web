@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import * as Text from './Text';
 import * as Job from './JobExplain';
-// import designImg from '../../assets/images/job/design.jpg';
-// import IosImg from '../../assets/images/job/ios.jpg';
-// import AndroidImg from '../../assets/images/job/android.png';
-// import FrontEndImg from '../../assets/images/job/fe.jpg';
-// import BackEndImg from '../../assets/images/job/be.jpg';
-// import PmImg from '../../assets/images/job/pm.jpg';
+import designImg from '../../assets/images/job/design.jpg';
+import IosImg from '../../assets/images/job/ios.jpg';
+import AndroidImg from '../../assets/images/job/android.png';
+import FrontEndImg from '../../assets/images/job/fe.jpg';
+import BackEndImg from '../../assets/images/job/be.jpg';
+import PmImg from '../../assets/images/job/pm.jpg';
 
 const RecruitLayout = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 10rem;
 `;
 
@@ -36,16 +37,17 @@ const DevSelect = styled.div`
   width: 500px;
 `;
 
-// const RoleImage = styled.img`
-//   width: 500px;
-//   height: 300px;
-//   margin-top: 30px;
-// `;
+const RoleImage = styled.img`
+  width: 500px;
+  height: 300px;
+  margin-top: 30px;
+`;
 
 const ExplainContainer = styled.div`
-  margin-top: 3rem;
-  padding-left: 5rem;
+  margin: 9rem 0 0 8rem;
+  width: 600px;
 `;
+
 
 function RecruitAreaCard() {
   const [jobSel, setJobSel] = useState(0);
@@ -57,8 +59,8 @@ function RecruitAreaCard() {
 
   return (
     <RecruitLayout>
-      <Text.Big>모집 분야</Text.Big>
       <SelectContainer>
+        <Text.Big style={{marginBottom: '5rem'}}>모집 분야</Text.Big>
         <RoleSelect>
           <JobSelBtn states={states} index={0}>
             디자이너
@@ -84,7 +86,7 @@ function RecruitAreaCard() {
             Back-End
           </DevSelBtn>
         </DevSelect>
-        {/* <RoleImage
+        <RoleImage
             src={
               (jobSel === 0 && designImg) ||
               (jobSel === 2 && PmImg) ||
@@ -93,7 +95,7 @@ function RecruitAreaCard() {
               (devSel === 2 && FrontEndImg) ||
               (devSel === 3 && BackEndImg)
             }
-          /> */}
+          />
       </SelectContainer>
       <ExplainContainer>
         {(jobSel === 0 && <Job.Designer />) ||
