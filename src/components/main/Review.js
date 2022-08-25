@@ -4,6 +4,7 @@ import ScrollAnimation from '../ScrollAnimation';
 import minaImg from '../../assets/images/review/mina.jpg';
 import wonheeImg from '../../assets/images/review/wonhee.jpg';
 import seonghwanImg from '../../assets/images/review/seonghwan.jpg';
+import jinyoungImg from '../../assets/images/review/jinyoung.jpg';
 
 const Positioner = styled.div`
   width: 100%;
@@ -151,7 +152,7 @@ function Review() {
         </TextField>
       </Modal>
       <Modal xPosition={'-8rem'}>
-        <ImageField />
+        <ImageField src={jinyoungImg} alt="진영님 이미지" />
         <TextField>
           <p style={{ fontSize: '15px' }}>
             프로젝트의 A부터 Z까지 함께할 수 있고, 서로 피드백을 공유하고 수용한다는 게 가장 큰 장점인 것 같아요. 열정
