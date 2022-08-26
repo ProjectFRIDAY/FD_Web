@@ -1,5 +1,5 @@
 # 프로젝트 이름 및 소개
-![fd web 로고](./comento.png)<br></br>
+![fd web 로고](./src/assets/images/FD_Web.png)<br></br>
 <b>FD Web</b> : FRIDAY의 대표 홈페이지 제작 (링크: https://www.fridayproject.co.kr/)<br><br>
 
 ## ⏰ 개발 기간
