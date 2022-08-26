@@ -1,4 +1,4 @@
-import comentoIcon from '../assets/images/comento.png';
+import comentoIcon from '../assets/images/comento.jpg';
 import planDialIcon from '../assets/images/planDial.png';
 import fridayIcon from '../assets/images/FD_Web.png';
 import momTimer from '../assets/images/momTimer.png';

@@ -47,6 +47,7 @@ const Title = styled.div`
   }
   font-size: 40px;
   font-weight: 800;
+  line-height: 3rem;
 `;
 
 const Text = styled.div`

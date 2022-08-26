@@ -108,7 +108,7 @@ function Project() {
           <card.ImageField src={Icons[2].src}></card.ImageField>
           <card.TextField>Friday 공식 웹사이트</card.TextField>
           <card.TagField>
-            <card.Tag>#개발중</card.Tag>
+            <card.Tag>#개발완료</card.Tag>
             <card.Tag>#WEB</card.Tag>
           </card.TagField>
         </card.Card>

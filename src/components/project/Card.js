@@ -26,9 +26,11 @@ const ImageField = styled.img`
 
 const TextField = styled.div`
   @media only screen and (max-width: 1000px) {
+    height: 5rem;
     font-size: 23px;
     padding-bottom: 20px;
   }
+  height: 7rem;
   background: white;
   color: black;
   text-align: center;
