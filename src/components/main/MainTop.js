@@ -9,6 +9,8 @@ const StyledH1 = styled.h1`
   text-align: center;
   position: absolute;
   font-size: 15vw;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
 `;
 
 const MyButton = styled(Button)`
@@ -25,7 +27,7 @@ function MainTop() {
   return (
     <>
       <MainVideo>
-        <StyledH1 className="title">FRIDAY</StyledH1>
+        <StyledH1>FRIDAY</StyledH1>
         <MyButton
           href="https://wjsalsrb5.typeform.com/friday-apply"
           target="_blank"

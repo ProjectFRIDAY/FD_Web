@@ -14,10 +14,6 @@ const GradientBackground = styled.div`
   background-image: linear-gradient(148deg, #053a36 0%, #000 28%);
 `;
 
-const Spacer = styled.div`
-  height: 5rem;
-`;
-
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,6 +31,7 @@ const ContactBox = styled.a`
   width: 16rem;
   height: 13rem;
   margin: 3rem;
+  margin-top: 9rem;
   background-color: white;
   color: black;
   position: relative;
@@ -62,7 +59,9 @@ const ContactTo = styled.div`
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   text-align: center;
-  padding-top: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
 `;
 
@@ -76,12 +75,19 @@ const LinkName = styled.span`
   @media only screen and (max-width: 1000px) {
     font-size: 15px;
   }
-  text-align: center;
   font-size: 20px;
+`;
+
+const StyledH1 = styled.h1`
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 22rem 0;
 `;
 
 function Contact() {
   const setMenu = useSetRecoilState(menuAtom);
+
   return (
     <div className="page">
       {setMenu(1)}
@@ -125,8 +131,8 @@ function Contact() {
               </ContactTo>
             </ContactBox>
           </ContactLayout>
-          <Spacer />
         </Layout>
+        <StyledH1>🌟여러분들의 문의를 언제든 환영합니다.🌟</StyledH1>
       </GradientBackground>
     </div>
   );
