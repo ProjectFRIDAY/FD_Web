@@ -20,7 +20,6 @@ const MainBottom = styled.div`
 function Main() {
   const setMenu = useSetRecoilState(menuAtom);
   const settings = {
-    offset: 0,
     animateIn: 'zoomIn',
     animateOnce: false,
   };
@@ -37,7 +36,12 @@ function Main() {
     <div style={{ marginTop: '4rem' }}>
       {setMenu(1)}
       <MainTop />
-      <div style={{ background: 'linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #036660 100%)' }}>
+      <div
+        style={{
+          marginBottom: '3rem',
+          background: 'linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #036660 100%)',
+        }}
+      >
         <Lottie options={defaultOptions} />
       </div>
       <PhilosophyText />
