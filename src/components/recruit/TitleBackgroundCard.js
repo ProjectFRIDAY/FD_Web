@@ -16,7 +16,7 @@ const RecruitButton = styled(Button)`
 `;
 
 const StyledH1 = styled.h1`
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'TimesNewRomanPSMT';
   font-weight: normal;
 `;
 

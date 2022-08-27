@@ -86,7 +86,7 @@ const Welcome = styled.h1`
 `;
 
 const StyledH1 = styled.h1`
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'TimesNewRomanPSMT';
   font-weight: normal;
   font-size: 8rem;
 `;

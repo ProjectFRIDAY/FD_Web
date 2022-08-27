@@ -15,7 +15,7 @@ const StyledH1 = styled.h1`
   text-align: center;
   position: absolute;
   font-size: 167px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'TimesNewRomanPSMT';
   font-weight: normal;
 `;
 
