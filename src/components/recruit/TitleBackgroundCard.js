@@ -15,6 +15,11 @@ const RecruitButton = styled(Button)`
   background-color: white;
 `;
 
+const StyledH1 = styled.h1`
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+`;
+
 function TitleBackgroundCard() {
   return (
     <div
@@ -27,16 +32,15 @@ function TitleBackgroundCard() {
         flexDirection: 'column',
       }}
     >
-      <p
+      <StyledH1
         style={{
-          fontFamily: 'TimesNewRomanPSMT',
           fontSize: '80px',
           paddingTop: '250px',
           marginLeft: '20vw',
         }}
       >
         FRIDAY 모집
-      </p>
+      </StyledH1>
       <RecruitButton gradient border={false} href="https://wjsalsrb5.typeform.com/friday-apply" target="_blank">
         4기 지원하기
       </RecruitButton>
