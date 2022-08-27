@@ -38,6 +38,7 @@ function TitleBackgroundCard() {
           paddingTop: '250px',
           marginLeft: '20vw',
         }}
+        className="title"
       >
         FRIDAY 모집
       </StyledH1>

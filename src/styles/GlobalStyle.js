@@ -14,17 +14,19 @@ const GlobalStyle = createGlobalStyle`
 } 
 @font-face {
   font-family: 'SegoeUI', sans-serif;
-  src: url(${SegoeWoff2}) format('woff2'),
-      url(${SegoeWoff}) format('woff'),
-      url(${SegoeTTF}) format('truetype'),
+  src: url(${SegoeTTF}) format('truetype');
+  src: 
+  url(${SegoeWoff}) format('woff'),
+  url(${SegoeWoff2}) format('woff2'),
       url(${SegoeEot}+'?iefix') format('embedded-opentype');
 }
 @font-face {
-    font-family: 'TimesNewRomanPSMT';
-    src: url(${TimesWoff2}) format('woff2'), 
+    font-family: 'TimesNewRomanMTStd';
+    src: url(${TimesTTF}) format('truetype');
+    src: 
     url(${TimesWoff}) format('woff'), 
-    url(${TimesTTF}) format('truetype'),
-    url(${TimesEot}+'?iefix') format('embedded-opentype');
+    url(${TimesWoff2}) format('woff2'), 
+    url(${TimesEot}+'?#iefix') format('embedded-opentype');
   }
 
 body {
@@ -53,7 +55,7 @@ a:hover {
   margin-top: 5rem;
 }
 .title {
-  font-family: 'TimesNewRomanPSMT';
+  font-family: 'TimesNewRomanMTStd';
   font-weight: normal;
   /* margin-top: 30px; */
 }

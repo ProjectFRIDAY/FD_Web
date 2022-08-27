@@ -5,6 +5,10 @@ import { useSetRecoilState } from 'recoil';
 import mailIcon from '../assets/images/icons/gmail.png';
 import kakaoIcon from '../assets/images/icons/kakao.png';
 import instagramIcon from '../assets/images/icons/instagram.png';
+import TimesTTF from '../assets/fonts/TimesNewRomanMTStd.ttf';
+import TimesEot from '../assets/fonts/TimesNewRomanMTStd.eot';
+import TimesWoff from '../assets/fonts/TimesNewRomanMTStd.woff';
+import TimesWoff2 from '../assets/fonts/TimesNewRomanMTStd.woff2';
 
 const GradientBackground = styled.div`
   width: 100%;
@@ -86,7 +90,6 @@ const Welcome = styled.h1`
 `;
 
 const StyledH1 = styled.h1`
-  font-family: 'TimesNewRomanPSMT';
   font-weight: normal;
   font-size: 8rem;
 `;
