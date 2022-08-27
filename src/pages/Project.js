@@ -3,7 +3,6 @@ import { useRecoilState, useSetRecoilState } from 'recoil';
 import { menuAtom } from '../recoil/atom';
 import { prjState, visibleState } from '../recoil/atom';
 import styled from 'styled-components';
-import Times from '../assets/fonts/TimesNewRomanPSMT.ttf';
 import Icons from '../components/Icons';
 import card from '../components/project/Card';
 import Button from '../components/Button';
@@ -16,11 +15,7 @@ const StyledH1 = styled.h1`
   text-align: center;
   position: absolute;
   font-size: 167px;
-  @font-face {
-    font-family: 'TimesNewRomanPSMT';
-    src: url('${Times}') format('truetype');
-  }
-  font-family: 'TimesNewRomanPSMT';
+  font-family: 'Times New Roman', Times, serif;
   font-weight: normal;
 `;
 

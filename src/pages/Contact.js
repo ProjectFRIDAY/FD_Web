@@ -78,11 +78,17 @@ const LinkName = styled.span`
   font-size: 20px;
 `;
 
-const StyledH1 = styled.h1`
+const Welcome = styled.h1`
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
   margin: 22rem 0;
+`;
+
+const StyledH1 = styled.h1`
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  font-size: 8rem;
 `;
 
 function Contact() {
@@ -93,9 +99,7 @@ function Contact() {
       {setMenu(1)}
       <GradientBackground>
         <Layout>
-          <h1 style={{ fontSize: '8rem' }} className="title">
-            Contact
-          </h1>
+          <StyledH1 className="title">Contact</StyledH1>
           <ContactLayout>
             <ContactBox href="mailto:fridayproj2@gmail.com" target="_blank">
               <Title>
@@ -132,7 +136,7 @@ function Contact() {
             </ContactBox>
           </ContactLayout>
         </Layout>
-        <StyledH1>🌟여러분들의 문의를 언제든 환영합니다.🌟</StyledH1>
+        <Welcome>🌟여러분들의 문의를 언제든 환영합니다.🌟</Welcome>
       </GradientBackground>
     </div>
   );
