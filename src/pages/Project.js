@@ -15,8 +15,6 @@ const StyledH1 = styled.h1`
   text-align: center;
   position: absolute;
   font-size: 167px;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: normal;
 `;
 
 const BackgroundText = styled.h1`
@@ -36,7 +34,6 @@ const BackgroundText = styled.h1`
 `;
 
 const Text = styled.div`
-  font-family: 'TimesNewRomanPSMT';
   background-color: rgba(0, 122, 114, 0.86);
   padding: 1rem;
   font-size: 45px;
@@ -79,9 +76,9 @@ function Project() {
   return (
     <>
       {setMenu(1)}
-      <StyledH1>FRIDAY</StyledH1>
+      <StyledH1 className="title">FRIDAY</StyledH1>
       <BackgroundText>CREATIVE</BackgroundText>
-      <Text>Friday Projects</Text>
+      <Text className="title">Friday Projects</Text>
       <Wrapper>
         <card.Card
           onClick={() => {

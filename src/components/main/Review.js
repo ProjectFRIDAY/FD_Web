@@ -27,7 +27,7 @@ const Modal = styled.div`
     }}
   }
   width: 20rem;
-  height: 25.2rem;
+  height: 30.2rem;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
