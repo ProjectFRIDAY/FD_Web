@@ -32,6 +32,7 @@ const FaqTitleContainer = styled.div`
   margin-left: 30px;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 `;
 
 const QuestionTitle = styled.p`
@@ -115,13 +116,13 @@ function FAQ(props) {
     }
   };
   return (
-    <FaqContainer>
+    <FaqContainer onClick={onToggle}>
       <FaqTitleContainer>
         <FaqLogo>Q</FaqLogo>
         <QuestionTitle>
           {props.title}
           <div>
-            <Toggle onClick={onToggle} />
+            <Toggle />
           </div>
         </QuestionTitle>
       </FaqTitleContainer>
