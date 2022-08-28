@@ -8,7 +8,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 const ModalStyle = styled.div`
   @media only screen and (max-width: 1000px) {
     width: 60%;
-    height: 40%;
+    height: 34%;
     top: 40vh;
     left: 23vw;
   }
