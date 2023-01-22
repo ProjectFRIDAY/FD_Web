@@ -36,14 +36,14 @@ function ProcessCard() {
       <ProcessBigText>PROCESS</ProcessBigText>
       <ProcessMidTextContainer>
         <ProcessMidText>모집기간</ProcessMidText>
-        <ProcessTinyText>9월 5일 ~ 9월 14일 23:59 </ProcessTinyText>
+        <ProcessTinyText>2023년 1월 25일 ~ 1월 31일 23:59 </ProcessTinyText>
         <ProcessMidText>지원자격</ProcessMidText>
         <ProcessTinyText>
           1. Friday와 동일한 목표를 가지신 분
           <br />
           2. Friday에 많은 시간을 투자할 수 있는 분
           <br />
-          3. 지원 분야에 대한 간단한 지식이 있는 분
+          3. 지원 분야에 대한 열정과 지식이 있는 분
         </ProcessTinyText>
         <ProcessMidText>접수방법</ProcessMidText>
         <ProcessTinyText>상단의 지원하기 버튼을 통해 지원서를 작성해주세요.</ProcessTinyText>

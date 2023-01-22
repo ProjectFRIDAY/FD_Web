@@ -120,7 +120,7 @@ function Contact() {
               </ContactTo>
             </ContactBox>
 
-            <ContactBox href="https://www.instagram.com/accounts/login/?next=/fri__.day/" target="_blank">
+            <ContactBox href="https://www.instagram.com/fridayproj_/" target="_blank">
               <Title>
                 <Icon src={instagramIcon} />
                 <p>인스타그램</p>
@@ -130,7 +130,7 @@ function Contact() {
                 radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , 
                 linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);"
               >
-                <LinkName>@fri__.day</LinkName>
+                <LinkName>@fridayproj_</LinkName>
               </ContactTo>
             </ContactBox>
           </ContactLayout>

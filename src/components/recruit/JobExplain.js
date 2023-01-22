@@ -11,9 +11,9 @@ export const Designer = () => {
         기획을 바탕으로 UI / UX을 디자인 합니다.
       </ExplainJob>
       <ExplainJob title="자격 요건">
-        1. UI / UX에 대해 공부를 해보신 분
+        1. UI / UX에 관심이 있거나 공부를 해보신 분
         <br />
-        2. 디자인에 관심이 많으신 분
+        2. 평소 소프트웨어 서비스의 디자인에 관심이 많으신 분
         <br />
         3. 열린 자세로 다른 직군과 소통할 수 있는 분
       </ExplainJob>
@@ -31,7 +31,7 @@ export const Planner = () => {
       <ExplainJob title="활동">
         목표를 향해 프로젝트의 방향을 이끕니다.
         <br />
-        1. 서비스의 기획부터 아이디어 구체화
+        1. 서비스의 기획부터 아이디어 구체화 진행
         <br />
         2. 프로젝트의 원활한 진행을 위한 관리
         <br />
@@ -53,48 +53,25 @@ export const Planner = () => {
     </div>
   );
 };
-export const Android = () => {
+export const Mobile = () => {
   return (
     <div>
       <ExplainJob title="활동">
-        프로젝트에서 안드로이드 클라이언트 개발을 담당합니다.
+        프로젝트에서 모바일 앱 개발을 담당합니다.
         <br />
         백엔드 개발자, PM, 디자이너와 함께 프로젝트를 진행합니다.
       </ExplainJob>
       <ExplainJob title="자격 요건">
-        1. 안드로이드 개발 경험이 있는 분
+        1. 주력 언어(자바, 스위프트, 다트 등) 하나에 능통하신 분
         <br />
         2. 새로운 내용의 습득을 즐기시는 분
         <br />
-        3. 프로젝트를 책임지고 끝까지 마무리하실 분
+        3. git을 이용한 프로젝트 관리 경험이 있으신 분
       </ExplainJob>
       <ExplainJob title="이런 분이면 더 좋아요">
-        1. 디자이너, 백엔드 개발자와의 협업 경험
+        1. 안드로이드, 아이폰, 플러터, 리액트 네이티브를 사용해보신 분
         <br />
-        2. git을 이용한 프로젝트 관리 경험
-      </ExplainJob>
-    </div>
-  );
-};
-export const IOS = () => {
-  return (
-    <div>
-      <ExplainJob title="활동">
-        프로젝트에서 iOS 클라이언트 개발을 담당합니다.
-        <br />
-        백엔드 개발자, PM, 디자이너와 함께 프로젝트를 진행합니다.
-      </ExplainJob>
-      <ExplainJob title="자격 요건">
-        1. ios 개발 경험이 있는 분
-        <br />
-        2. 새로운 내용의 습득을 즐기시는 분
-        <br />
-        3. 프로젝트를 책임지고 끝까지 마무리하실 분
-      </ExplainJob>
-      <ExplainJob title="이런 분이면 더 좋아요">
-        1. 디자이너, 백엔드 개발자와의 협업 경험
-        <br />
-        2. git을 이용한 프로젝트 관리 경험
+        2. 디자이너, 백엔드 개발자와 협업해본 경험이 있으신 분
         <br />
       </ExplainJob>
     </div>
@@ -109,18 +86,16 @@ export const FrontEnd = () => {
         백엔드 개발자, PM, 디자이너와 함께 프로젝트를 진행합니다.
       </ExplainJob>
       <ExplainJob title="자격 요건">
-        1. HTML과 CSS 기본을 이해하고,
+        1. 기본적인 HTML과 CSS를 이해하고 계시는 분
         <br />
-        2. 자바스크립트 문법을 알고 계시는 분
+        2. 자바스크립트나 타입스크립트 문법을 알고 계시는 분
         <br />
-        3. 프로젝트를 책임지고 끝까지 마무리하실 분
+        3. git을 이용한 프로젝트 관리 경험이 있으신 분
       </ExplainJob>
       <ExplainJob title="이런 분이면 더 좋아요">
-        1. React, Vue.js, Angular 중 하나 이상 다뤄 본 경험
+        1. 프론트엔드 프레임워크 중 하나를 사용해보신 분
         <br />
-        2. git을 이용한 프로젝트 관리 경험
-        <br />
-        3. 디자이너, 백엔드 개발자와 협업해본 경험
+        2. 디자이너, 백엔드 개발자와 협업해본 경험이 있으신 분
         <br />
       </ExplainJob>
     </div>
@@ -132,21 +107,19 @@ export const BackEnd = () => {
       <ExplainJob title="활동">
         프로젝트에서 백엔드 개발을 담당합니다.
         <br />
-        클라이언트 개발자, PM, 디자이너와 함께 프로젝트를 진행합니다.
+        프론트엔드 개발자, PM, 디자이너와 함께 프로젝트를 진행합니다.
       </ExplainJob>
       <ExplainJob title="자격 요건">
-        1. node.js, java, kotlin, spring boot중 하나를 사용해 보신 분
+        1. 주력 언어(자바, 자바스크립트, 파이썬 등) 하나에 능통하신 분
         <br />
         2. RESTful을 이해하고, 데이터베이스를 설계해보신 분
         <br />
-        3. 프로젝트를 책임지고 끝까지 마무리하실 분
+        3. git을 이용한 프로젝트 협업 경험이 있으신 분
       </ExplainJob>
       <ExplainJob title="이런 분이면 더 좋아요">
-        1. RESTful API를 설계해보신 분
+        1. 백엔드 프레임워크 중 하나를 사용해보신 분
         <br />
-        2. git을 이용한 프로젝트 협업 경험
-        <br />
-        3. 디자이너, 프론트엔드 개발자와 협업해본 경험
+        2. 디자이너, 프론트엔드 개발자와 협업해본 경험이 있으신 분
         <br />
       </ExplainJob>
     </div>
