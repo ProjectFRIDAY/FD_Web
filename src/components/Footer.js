@@ -48,15 +48,15 @@ export default function Footer() {
             <FontAwesomeIcon icon={faGithub} size="3x" color="white" />
           </MyAnchor>
           <MyAnchor
-            href="https://www.instagram.com/accounts/login/?next=/fri__.day/"
+            href="https://www.instagram.com/fridayproj_/"
             target="_blank"
             className="instagram social"
           >
             <FontAwesomeIcon icon={faInstagram} size="3x" color="white" />
           </MyAnchor>
         </SocialContainer>
+        <CopyRight>Copyright © Friday All Rights Reserved.</CopyRight>
       </GradientFooter>
-      <CopyRight>Copyright © Friday All Rights Reserved.</CopyRight>
     </>
   );
 }

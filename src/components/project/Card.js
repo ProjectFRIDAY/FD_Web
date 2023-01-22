@@ -22,6 +22,7 @@ const ImageField = styled.img`
   background-color: '#ccc';
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  object-fit: cover;
 `;
 
 const TextField = styled.div`

@@ -31,6 +31,7 @@ const MyImg = styled.img`
   outline: none;
   border-radius: 20px;
   border: 1.5px solid ${props => props.theme.primaryColor};
+  object-fit: cover;
 `;
 
 function ProjectIntro() {
