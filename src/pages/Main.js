@@ -51,13 +51,13 @@ function Main() {
         <MainBottom>
           <h1>Open Up Your Ideas</h1>
           <Button
-            href="https://wjsalsrb5.typeform.com/friday-apply"
+            href="https://the-form.io/forms/survey/response/829a9b33-b74a-44d8-810b-22edea79a3ef"
             target="_blank"
             backgroundColor={'#01baae'}
             color={'white'}
             gradient
           >
-            4기 지원하기
+            4.5기 지원하기
           </Button>
         </MainBottom>
       </ScrollAnimation>

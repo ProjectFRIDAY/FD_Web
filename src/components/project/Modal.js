@@ -12,12 +12,14 @@ const ModalStyle = styled.div`
     top: 40vh;
     left: 23vw;
   }
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: brightness(1.1) blur(10px);
+  backdrop-filter: brightness(1.1) blur(10px);
   display: ${props => (props.visible ? 'block' : 'none')};
   width: 60vw;
   height: 80vh;
   position: fixed;
-  border-radius: 3rem;
+  border-radius: 1rem;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
   top: 15vh;
   left: 20vw;
@@ -30,7 +32,6 @@ const Img = styled.img`
     width: 130px;
     height: 130px;
   }
-  border: 1px solid gray;
   border-radius: 10px;
   width: 200px;
   height: 200px;
@@ -105,22 +106,22 @@ function Modal({ ...rest }) {
       <Wrapper>
         <Img src={rest.content.img} />
         <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
-          <Title>프로젝트명: {rest.content.title}</Title>
-          <Link href={rest.content.git} target="_blank">
-            <Text style={{ display: 'inline' }}>Github 바로가기</Text>
-          </Link>
-          {rest.content.site ? (
-            <Link style={{ marginTop: 0 }} href={rest.content.site} target="_blank">
-              <Text style={{ display: 'inline-block' }}>플랜 다이얼 사이트 바로가기</Text>
+          <Title>{rest.content.title}</Title>
+          {rest.content.git ?? (
+            <Link href={rest.content.git} target="_blank">
+              <Text style={{ display: 'inline' }}>Github 바로가기</Text>
             </Link>
-          ) : (
-            ''
           )}
-          <Text>팀원: {rest.content.team}</Text>
+          {rest.content.site ?? (
+            <Link style={{ marginTop: 0 }} href={rest.content.site} target="_blank">
+              <Text style={{ display: 'inline-block' }}>웹사이트 바로가기</Text>
+            </Link>
+          )}
+          <Text>{rest.content.team}</Text>
           <Text>{rest.content.tag}</Text>
         </div>
       </Wrapper>
-      <Desc>프로젝트 설명: {rest.content.desc}</Desc>
+      <Desc> {rest.content.desc}</Desc>
       {rest.content.aos ? (
         <Link href={rest.content.aos} target="_blank">
           <img style={{ width: 200, marginTop: 20 }} src={require('../../assets/images/aos.png')}></img>

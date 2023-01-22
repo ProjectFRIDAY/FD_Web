@@ -39,6 +39,7 @@ const ImageField = styled.img`
   height: 17rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  object-fit: cover;
 `;
 
 const TextField = styled.div`

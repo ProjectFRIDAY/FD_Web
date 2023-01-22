@@ -80,6 +80,56 @@ function Project() {
       <BackgroundText>CREATIVE</BackgroundText>
       <Text className="title">Friday Projects</Text>
       <Wrapper>
+      <card.Card
+          onClick={() => {
+            openModal('배달N');
+          }}
+        >
+          <card.ImageField src={Icons[8].src}></card.ImageField>
+          <card.TextField>배달N</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발중</card.Tag>
+            <card.Tag>#Mobile</card.Tag>
+          </card.TagField>
+        </card.Card>
+        <card.Card
+          onClick={() => {
+            openModal('OOTD');
+          }}
+        >
+          <card.ImageField src={Icons[6].src}></card.ImageField>
+          <card.TextField>OOTD</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발중</card.Tag>
+            <card.Tag>#Mobile</card.Tag>
+          </card.TagField>
+        </card.Card>
+        <card.Card
+          onClick={() => {
+            openModal('레모아');
+          }}
+        >
+          <card.ImageField src={Icons[7].src}></card.ImageField>
+          <card.TextField>레모아</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발중</card.Tag>
+            <card.Tag>#Web</card.Tag>
+          </card.TagField>
+        </card.Card>
+      </Wrapper>
+      <Wrapper>
+        <card.Card
+          onClick={() => {
+            openModal('comento');
+          }}
+        >
+          <card.ImageField src={Icons[0].src}></card.ImageField>
+          <card.TextField>코멘토</card.TextField>
+          <card.TagField>
+            <card.Tag>#개발중</card.Tag>
+            <card.Tag>#Web</card.Tag>
+          </card.TagField>
+        </card.Card>
         <card.Card
           onClick={() => {
             openModal('플랜다이얼');
@@ -89,7 +139,7 @@ function Project() {
           <card.TextField>플랜 다이얼</card.TextField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
-            <card.Tag>#APP</card.Tag>
+            <card.Tag>#Mobile</card.Tag>
           </card.TagField>
         </card.Card>
         <card.Card
@@ -98,22 +148,10 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[2].src}></card.ImageField>
-          <card.TextField>Friday 공식 웹사이트</card.TextField>
+          <card.TextField>Friday 웹사이트</card.TextField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
-            <card.Tag>#WEB</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('comento');
-          }}
-        >
-          <card.ImageField src={Icons[0].src}></card.ImageField>
-          <card.TextField>Comento</card.TextField>
-          <card.TagField>
-            <card.Tag>#개발중</card.Tag>
-            <card.Tag>#WEB</card.Tag>
+            <card.Tag>#Web</card.Tag>
           </card.TagField>
         </card.Card>
       </Wrapper>
@@ -127,7 +165,19 @@ function Project() {
           <card.TextField>엄마 타이머</card.TextField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
-            <card.Tag>#APP</card.Tag>
+            <card.Tag>#Mobile</card.Tag>
+          </card.TagField>
+        </card.Card>
+        <card.Card
+          onClick={() => {
+            openModal('텍스티');
+          }}
+        >
+          <card.ImageField src={Icons[5].src}></card.ImageField>
+          <card.TextField>텍스티</card.TextField>
+          <card.TagField>
+            <card.Tag>#해커톤</card.Tag>
+            <card.Tag>#Web</card.Tag>
           </card.TagField>
         </card.Card>
         <card.Card
@@ -139,19 +189,7 @@ function Project() {
           <card.TextField>약속이</card.TextField>
           <card.TagField>
             <card.Tag>#토이프로젝트</card.Tag>
-            <card.Tag>#WEB</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('텍스티');
-          }}
-        >
-          <card.ImageField src={Icons[5].src}></card.ImageField>
-          <card.TextField>텍스티</card.TextField>
-          <card.TagField>
-            <card.Tag>#토이프로젝트</card.Tag>
-            <card.Tag>#WEB</card.Tag>
+            <card.Tag>#Web</card.Tag>
           </card.TagField>
         </card.Card>
         <Modal content={Projects[prj]} visible={visible}></Modal>
@@ -159,13 +197,13 @@ function Project() {
       <MainBottom>
         <h1>Open Up Your Ideas</h1>
         <Button
-          href="https://wjsalsrb5.typeform.com/friday-apply"
+          href="https://the-form.io/forms/survey/response/829a9b33-b74a-44d8-810b-22edea79a3ef"
           target="_blank"
           backgroundColor={'#01baae'}
           color={'white'}
           gradient
         >
-          4기 지원하기
+          4.5기 지원하기
         </Button>
       </MainBottom>
     </>
