@@ -78,6 +78,15 @@ function ProjectIntro() {
       </TextContainer>
       <MySlider {...settings}>
         <div>
+          <MyImg src={Icons[6].src} />
+        </div>
+        <div>
+          <MyImg src={Icons[7].src} />
+        </div>
+        <div>
+          <MyImg src={Icons[8].src} />
+        </div>
+        <div>
           <MyImg src={Icons[0].src} />
         </div>
         <div>

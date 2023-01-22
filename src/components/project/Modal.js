@@ -12,7 +12,7 @@ const ModalStyle = styled.div`
     top: 40vh;
     left: 23vw;
   }
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: brightness(1.1) blur(10px);
   backdrop-filter: brightness(1.1) blur(10px);
   display: ${props => (props.visible ? 'block' : 'none')};
