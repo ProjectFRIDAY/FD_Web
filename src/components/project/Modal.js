@@ -107,16 +107,16 @@ function Modal({ ...rest }) {
         <Img src={rest.content.img} />
         <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
           <Title>{rest.content.title}</Title>
-          {rest.content.git ?? (
+          {rest.content.git ? (
             <Link href={rest.content.git} target="_blank">
               <Text style={{ display: 'inline' }}>Github 바로가기</Text>
             </Link>
-          )}
-          {rest.content.site ?? (
+          ) : ""}
+          {rest.content.site ? (
             <Link style={{ marginTop: 0 }} href={rest.content.site} target="_blank">
               <Text style={{ display: 'inline-block' }}>웹사이트 바로가기</Text>
             </Link>
-          )}
+          ) : ""}
           <Text>{rest.content.team}</Text>
           <Text>{rest.content.tag}</Text>
         </div>
