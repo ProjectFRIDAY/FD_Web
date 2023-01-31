@@ -72,13 +72,13 @@ function RecruitAreaCard() {
           </JobSelBtn>
         </RoleSelect>
         <DevSelect>
-          <DevSelBtn states={states} index={1}>
+          <DevSelBtn states={states} index={0}>
             Front-End
           </DevSelBtn>
-          <DevSelBtn states={states} index={2}>
+          <DevSelBtn states={states} index={1}>
             Back-End
           </DevSelBtn>
-          <DevSelBtn states={states} index={0}>
+          <DevSelBtn states={states} index={2}>
             Mobile
           </DevSelBtn>
         </DevSelect>
@@ -86,18 +86,18 @@ function RecruitAreaCard() {
           src={
             (jobSel === 0 && designImg) ||
             (jobSel === 2 && PmImg) ||
-            (devSel === 0 && MobileImg) ||
-            (devSel === 1 && FrontEndImg) ||
-            (devSel === 2 && BackEndImg)
+            (devSel === 0 && FrontEndImg) ||
+            (devSel === 1 && BackEndImg) ||
+            (devSel === 2 && MobileImg)
           }
         />
       </SelectContainer>
       <ExplainContainer>
         {(jobSel === 0 && <Job.Designer />) ||
           (jobSel === 2 && <Job.Planner />) ||
-          (devSel === 0 && <Job.Mobile />) ||
-          (devSel === 1 && <Job.FrontEnd />) ||
-          (devSel === 2 && <Job.BackEnd />)}
+          (devSel === 0 && <Job.FrontEnd />) ||
+          (devSel === 1 && <Job.BackEnd />) ||
+          (devSel === 2 && <Job.Mobile />)}
       </ExplainContainer>
     </RecruitLayout>
   );
