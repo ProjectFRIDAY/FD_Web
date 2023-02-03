@@ -8,7 +8,7 @@ const Card = styled.div`
   }
   cursor: pointer;
   width: 20rem;
-  height: 27rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -23,22 +23,6 @@ const ImageField = styled.img`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit: cover;
-`;
-
-const TextField = styled.div`
-  @media only screen and (max-width: 1000px) {
-    height: 5rem;
-    font-size: 23px;
-    padding-bottom: 20px;
-  }
-  height: 7rem;
-  background: white;
-  color: black;
-  text-align: center;
-  padding-top: 1rem;
-  font-family: SegoeUISymbol;
-  font-weight: 800;
-  font-size: 25px;
 `;
 
 const TagField = styled.div`
@@ -64,4 +48,4 @@ const Tag = styled.span`
   text-shadow: #01baae 0 0 10px;
 `;
 
-export default { Card, TextField, ImageField, TagField, Tag };
+export default { Card, ImageField, TagField, Tag };
