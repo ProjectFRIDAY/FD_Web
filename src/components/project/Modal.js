@@ -12,7 +12,7 @@ const ModalStyle = styled.div`
     top: 40vh;
     left: 23vw;
   }
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: brightness(1.1) blur(10px);
   backdrop-filter: brightness(1.1) blur(10px);
   display: ${props => (props.visible ? 'block' : 'none')};
@@ -107,16 +107,16 @@ function Modal({ ...rest }) {
         <Img src={rest.content.img} />
         <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
           <Title>{rest.content.title}</Title>
-          {rest.content.git ?? (
+          {rest.content.git ? (
             <Link href={rest.content.git} target="_blank">
               <Text style={{ display: 'inline' }}>Github 바로가기</Text>
             </Link>
-          )}
-          {rest.content.site ?? (
+          ) : ""}
+          {rest.content.site ? (
             <Link style={{ marginTop: 0 }} href={rest.content.site} target="_blank">
               <Text style={{ display: 'inline-block' }}>웹사이트 바로가기</Text>
             </Link>
-          )}
+          ) : ""}
           <Text>{rest.content.team}</Text>
           <Text>{rest.content.tag}</Text>
         </div>

@@ -34,8 +34,8 @@ function TitleBackgroundCard() {
       }}
     >
       <StyledH1 className="title">FRIDAY 모집</StyledH1>
-      <RecruitButton gradient border={false} href="https://the-form.io/forms/survey/response/829a9b33-b74a-44d8-810b-22edea79a3ef" target="_blank">
-        4.5기 지원하기
+      <RecruitButton gradient border={false} onClick={() => alert("4.5기 모집 기간이 아닙니다.")} target="_blank">
+        4.5기 지원 마감
       </RecruitButton>
     </div>
   );

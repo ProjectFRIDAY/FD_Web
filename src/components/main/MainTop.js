@@ -27,13 +27,13 @@ function MainTop() {
       <MainVideo>
         <StyledH1 className="title">FRIDAY</StyledH1>
         <MyButton
-          href="https://the-form.io/forms/survey/response/829a9b33-b74a-44d8-810b-22edea79a3ef"
+          onClick={() => alert("4.5기 모집 기간이 아닙니다.")}
           target="_blank"
           color={'#01baae'}
           backgroundColor={'white'}
           border={true}
         >
-          4.5기 지원하기
+          4.5기 지원 마감
         </MyButton>
       </MainVideo>
     </>
