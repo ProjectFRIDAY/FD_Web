@@ -80,13 +80,12 @@ function Project() {
       <BackgroundText>CREATIVE</BackgroundText>
       <Text className="title">Friday Projects</Text>
       <Wrapper>
-      <card.Card
+        <card.Card
           onClick={() => {
             openModal('배달N');
           }}
         >
           <card.ImageField src={Icons[8].src}></card.ImageField>
-          <card.TextField>배달N</card.TextField>
           <card.TagField>
             <card.Tag>#개발중</card.Tag>
             <card.Tag>#Mobile</card.Tag>
@@ -98,7 +97,7 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[6].src}></card.ImageField>
-          <card.TextField>OOTD</card.TextField>
+
           <card.TagField>
             <card.Tag>#개발중</card.Tag>
             <card.Tag>#Mobile</card.Tag>
@@ -110,7 +109,6 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[7].src}></card.ImageField>
-          <card.TextField>레모아</card.TextField>
           <card.TagField>
             <card.Tag>#개발중</card.Tag>
             <card.Tag>#Web</card.Tag>
@@ -124,7 +122,6 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[0].src}></card.ImageField>
-          <card.TextField>코멘토</card.TextField>
           <card.TagField>
             <card.Tag>#개발중</card.Tag>
             <card.Tag>#Web</card.Tag>
@@ -136,7 +133,6 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[1].src}></card.ImageField>
-          <card.TextField>플랜 다이얼</card.TextField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
             <card.Tag>#Mobile</card.Tag>
@@ -148,7 +144,6 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[2].src}></card.ImageField>
-          <card.TextField>Friday 웹사이트</card.TextField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
             <card.Tag>#Web</card.Tag>
@@ -162,7 +157,6 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[3].src}></card.ImageField>
-          <card.TextField>엄마 타이머</card.TextField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
             <card.Tag>#Mobile</card.Tag>
@@ -174,7 +168,6 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[5].src}></card.ImageField>
-          <card.TextField>텍스티</card.TextField>
           <card.TagField>
             <card.Tag>#해커톤</card.Tag>
             <card.Tag>#Web</card.Tag>
@@ -186,7 +179,6 @@ function Project() {
           }}
         >
           <card.ImageField src={Icons[4].src}></card.ImageField>
-          <card.TextField>약속이</card.TextField>
           <card.TagField>
             <card.Tag>#토이프로젝트</card.Tag>
             <card.Tag>#Web</card.Tag>
