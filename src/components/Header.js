@@ -14,7 +14,7 @@ const FixedHeader = styled(motion.div)`
   align-items: center;
   margin: 0;
   padding: 0 2rem;
-  background-color: black;
+  background-color: #011918;
   font-weight: bold;
   position: fixed;
   top: 0;
@@ -80,7 +80,7 @@ function Header() {
     const updateScroiingDown = () => {
       const scrollY = window.pageYOffset;
 
-      setIsScrollingDown(scrollY - lastScrollY > 0);
+      setIsScrollingDown(scrollY - lastScrollY >= 0);
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
     };
@@ -90,7 +90,7 @@ function Header() {
         window.requestAnimationFrame(updateScroiingDown);
         ticking = true;
       }
-    }, 300);
+    }, 200);
 
     window.addEventListener('scroll', onScroll);
     return () => {

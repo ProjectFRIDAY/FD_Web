@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const GradientFooter = styled.div`
-  width: 100%;
-  height: 22rem;
-  padding: 1rem;
+  width: 100vw;
+  height: 15rem;
+  padding: 3rem 3rem 2rem 3rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -17,25 +17,19 @@ const GradientFooter = styled.div`
 const SocialContainer = styled.div`
   display: inline-flex;
   justify-content: flex-end;
-  margin: 0 2rem;
+  gap: 1rem;
 `;
 
 const TextContainer = styled.div`
   font-weight: bold;
   font-size: 2rem;
-  margin: 0 2rem;
-`;
-
-const MyAnchor = styled.a`
-  margin-right: 1.5rem;
 `;
 
 const CopyRight = styled.div`
-  width: 100%;
-  height: 2rem;
+  width: 100vw;
   text-align: center;
   color: #ccc;
-  font-size: 1.3rem;
+  font-size: 1rem;
 `;
 
 export default function Footer() {
@@ -44,18 +38,18 @@ export default function Footer() {
       <GradientFooter>
         <TextContainer>FRIDAY</TextContainer>
         <SocialContainer>
-          <MyAnchor href="https://github.com/ProjectFRIDAY" target="_blank" className="github social">
-            <FontAwesomeIcon icon={faGithub} size="3x" color="white" />
-          </MyAnchor>
-          <MyAnchor
+          <a href="https://github.com/ProjectFRIDAY" target="_blank" className="github social">
+            <FontAwesomeIcon icon={faGithub} size="2x" color="white" />
+          </a>
+          <a
             href="https://www.instagram.com/fridayproj_/"
             target="_blank"
             className="instagram social"
           >
-            <FontAwesomeIcon icon={faInstagram} size="3x" color="white" />
-          </MyAnchor>
+            <FontAwesomeIcon icon={faInstagram} size="2x" color="white" />
+          </a>
         </SocialContainer>
-        <CopyRight>Copyright © Friday All Rights Reserved.</CopyRight>
+        <CopyRight>Copyright © Friday. All Rights Reserved.</CopyRight>
       </GradientFooter>
     </>
   );

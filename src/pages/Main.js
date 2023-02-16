@@ -18,8 +18,8 @@ const MainBottom = styled.div`
 `;
 
 const GradientContainer = styled.div`
-  margin-bottom: 3rem;
-  background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #036660 100%);
+  padding: 5vh 0;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #024D48 100%);
 `;
 
 function Main() {
@@ -42,7 +42,7 @@ function Main() {
       {setMenu(1)}
       <MainTop />
       <GradientContainer>
-        <Lottie options={defaultOptions} />
+        <Lottie options={defaultOptions} height="90vh" isClickToPauseDisabled/>
       </GradientContainer>
       <PhilosophyText />
       <ProjectIntro />
@@ -51,13 +51,13 @@ function Main() {
         <MainBottom>
           <h1>Open Up Your Ideas</h1>
           <Button
-            onClick={() => alert('4.5기 모집 기간이 아닙니다.')}
+            onClick={() => alert('5기 모집 기간이 아닙니다.')}
             target="_blank"
             backgroundColor={'#01baae'}
             color={'white'}
             gradient
           >
-            4.5기 지원 마감
+            5기 지원하기
           </Button>
         </MainBottom>
       </ScrollAnimation>

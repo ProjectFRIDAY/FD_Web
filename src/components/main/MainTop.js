@@ -46,13 +46,13 @@ function MainTop() {
         <TopContainer>
           <StyledTitle className="title">FRIDAY</StyledTitle>
           <MyButton
-            onClick={() => alert('4.5기 모집 기간이 아닙니다.')}
+            onClick={() => alert('5기 모집 기간이 아닙니다.')}
             target="_blank"
             color={'#01baae'}
             backgroundColor={'white'}
             border={true}
           >
-            4.5기 지원 마감
+            5기 지원하기
           </MyButton>
           <AnimationContainer>
             <Lottie options={defaultLottieOptions} width={600}isClickToPauseDisabled/>
