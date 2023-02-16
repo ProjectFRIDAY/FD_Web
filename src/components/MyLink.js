@@ -7,7 +7,6 @@ MyLink.propTypes = {
   color: PropTypes.string,
   navigation: PropTypes.bool,
   fontSize: PropTypes.number,
-  fontSize: PropTypes.number,
   hoverColor: PropTypes.string,
 };
 
@@ -15,7 +14,6 @@ MyLink.defaultProps = {
   color: 'white',
   navigation: true,
   fontSize: '1.5rem',
-  fontSize: '1rem',
   hoverColor: '#01B9AD',
 };
 

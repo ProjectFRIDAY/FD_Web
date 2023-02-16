@@ -5,6 +5,7 @@ import { useSetRecoilState } from 'recoil';
 import mailIcon from '../assets/images/icons/gmail.png';
 import kakaoIcon from '../assets/images/icons/kakao.png';
 import instagramIcon from '../assets/images/icons/instagram.png';
+import AnimatedPage from '../components/template/AnimatedPage';
 
 const GradientBackground = styled.div`
   width: 100%;
@@ -100,7 +101,7 @@ function Contact() {
   const setMenu = useSetRecoilState(menuAtom);
 
   return (
-    <div>
+    <AnimatedPage>
       {setMenu(1)}
       <GradientBackground>
         <Layout>
@@ -143,7 +144,7 @@ function Contact() {
         </Layout>
         <Welcome>🌟 여러분의 문의를 환영합니다. 🌟</Welcome>
       </GradientBackground>
-    </div>
+    </AnimatedPage>
   );
 }
 

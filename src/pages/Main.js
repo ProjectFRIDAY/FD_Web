@@ -9,6 +9,7 @@ import MainTop from '../components/main/MainTop';
 import Review from '../components/main/Review';
 import JoinFriday from '../components/JoinFriday';
 import { menuAtom } from '../recoil/atom';
+import AnimatedPage from '../components/template/AnimatedPage';
 
 const GradientContainer = styled.div`
   padding: 5vh 0;
@@ -27,7 +28,7 @@ function Main() {
   };
 
   return (
-    <div>
+    <AnimatedPage>
       {setMenu(1)}
       <MainTop />
       <GradientContainer>
@@ -37,7 +38,7 @@ function Main() {
       <ProjectIntro />
       <Review />
       <JoinFriday />
-    </div>
+    </AnimatedPage>
   );
 }
 

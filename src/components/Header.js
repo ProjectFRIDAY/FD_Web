@@ -6,7 +6,7 @@ import { throttle } from 'lodash';
 import ModalMenu from './main/ModalMenu';
 import MyLink from '../components/MyLink';
 import PageMenuList from './PageMenuList';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 const FixedHeader = styled(motion.div)`
   height: 4rem;
@@ -15,12 +15,13 @@ const FixedHeader = styled(motion.div)`
   align-items: center;
   margin: 0;
   padding: 0 2rem;
-  background-color: #011918;
   font-weight: bold;
   position: fixed;
   top: 0;
   z-index: 3;
   justify-content: space-between;
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
 `;
 
 const MenuIcon = styled.div`
@@ -87,7 +88,7 @@ function Header() {
         window.requestAnimationFrame(updateScroiingDown);
         ticking = true;
       }
-    }, 300);
+    }, 100);
 
     window.addEventListener('scroll', onScroll);
     return () => {
@@ -111,7 +112,7 @@ function Header() {
           FRIDAY
         </MyLink>
         <PageListContainer>
-        <PageMenuList />
+          <PageMenuList />
         </PageListContainer>
         <MenuIcon
           onClick={() => {

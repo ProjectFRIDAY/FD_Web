@@ -8,6 +8,7 @@ import card from '../components/project/Card';
 import Modal from '../components/project/Modal';
 import Projects from '../components/project/Projects';
 import JoinFriday from '../components/JoinFriday';
+import AnimatedPage from '../components/template/AnimatedPage';
 
 const TitleContainer = styled.div`
   display: flex;
@@ -64,7 +65,7 @@ function Project() {
   const setMenu = useSetRecoilState(menuAtom);
 
   return (
-    <>
+    <AnimatedPage>
       {setMenu(1)}
       <TitleContainer>
         <StyledH1 className="title">FRIDAY</StyledH1>
@@ -164,7 +165,7 @@ function Project() {
         <Modal content={Projects[prj]} visible={visible}></Modal>
       </Wrapper>
       <JoinFriday />
-    </>
+    </AnimatedPage>
   );
 }
 
