@@ -38,7 +38,7 @@ function Main() {
   };
 
   return (
-    <div style={{ marginTop: '4rem' }}>
+    <div>
       {setMenu(1)}
       <MainTop />
       <GradientContainer>

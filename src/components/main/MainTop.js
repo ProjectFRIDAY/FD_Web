@@ -2,39 +2,62 @@ import React from 'react';
 import styled from 'styled-components';
 import MainVideo from './MainVideo';
 import Button from '../Button';
+import Lottie from 'react-lottie';
+import Scroll from '../../lottie/scroll.json';
 
-const StyledH1 = styled.h1`
-  width: 100%;
-  height: 100px;
-  text-align: center;
+const TopContainer = styled.div`
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -20%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const StyledTitle = styled.div`
   font-size: 15vw;
+  margin-bottom: 5vw;
 `;
 
 const MyButton = styled(Button)`
-  position: absolute;
-  margin-top: 1rem;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5vw;
+  font-size: 1rem;
   z-index: 1;
 `;
 
+const AnimationContainer = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%);
+`;
+
 function MainTop() {
+  const defaultLottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Scroll,
+  };
+
   return (
     <>
       <MainVideo>
-        <StyledH1 className="title">FRIDAY</StyledH1>
-        <MyButton
-          onClick={() => alert("4.5기 모집 기간이 아닙니다.")}
-          target="_blank"
-          color={'#01baae'}
-          backgroundColor={'white'}
-          border={true}
-        >
-          4.5기 지원 마감
-        </MyButton>
+        <TopContainer>
+          <StyledTitle className="title">FRIDAY</StyledTitle>
+          <MyButton
+            onClick={() => alert('4.5기 모집 기간이 아닙니다.')}
+            target="_blank"
+            color={'#01baae'}
+            backgroundColor={'white'}
+            border={true}
+          >
+            4.5기 지원 마감
+          </MyButton>
+          <AnimationContainer>
+            <Lottie options={defaultLottieOptions} width={600}isClickToPauseDisabled/>
+          </AnimationContainer>
+        </TopContainer>
       </MainVideo>
     </>
   );

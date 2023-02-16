@@ -8,12 +8,12 @@ import MyLink from '../components/MyLink';
 import { motion } from 'framer-motion';
 
 const FixedHeader = styled(motion.div)`
-  width: 100%;
   height: 4rem;
+  width: 100%;
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 0 3rem;
+  padding: 0 2rem;
   background-color: black;
   font-weight: bold;
   position: fixed;
@@ -100,7 +100,8 @@ function Header() {
   // end 스크롤 방향에 따라 헤더 숨기기
 
   // 애니메이션 설정
-  const animationVarients = {
+  const animationName = !isScrollingDown && menu ? 'hide' : 'show';
+  const headerAnimationVarients = {
     open: { height: '4rem', visivility: 'visible', opacity: 1 },
     hide: { height: '0', visivility: 'gone', opacity: 0 },
   };
@@ -108,7 +109,7 @@ function Header() {
 
   return (
     <>
-      <FixedHeader animate={isScrollingDown && menu ? 'hide' : 'show'} variants={animationVarients}>
+      <FixedHeader animate={animationName} variants={headerAnimationVarients}>
         <MyLink fontSize="1.8rem" to="/" navigation={false}>
           FRIDAY
         </MyLink>
