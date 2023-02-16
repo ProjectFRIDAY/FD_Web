@@ -89,7 +89,7 @@ const Desc = styled.div`
     line-height: 20px;
   }
   font-size: 20px;
-  margin-top: 20px;
+  margin: 40px 0;
   line-height: 30px;
   white-space: pre-line;
 `;
