@@ -3,41 +3,35 @@ import styled from 'styled-components';
 import BackgroundImage from '../../assets/images/recruitBackground.png';
 import Button from '../../components/Button';
 
-const RecruitButton = styled(Button)`
-  width: 160px;
-  height: 50px;
-  margin-left: 20vw;
+const TitleContainer = styled.div`
+  background-image: url(${BackgroundImage});
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const RecruitButton = styled(Button)`
   color: black;
   background-color: white;
 `;
 
 const StyledH1 = styled.h1`
-  font-size: 80px;
-  padding-top: 250px;
-  margin-left: 20vw;
+  font-size: 10vw;
 `;
 
 function TitleBackgroundCard() {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${BackgroundImage})`,
-        backgroundSize: 'cover',
-        height: '600px',
-        margin: '0',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
+    <TitleContainer>
       <StyledH1 className="title">FRIDAY 모집</StyledH1>
-      <RecruitButton gradient border={false} onClick={() => alert("4.5기 모집 기간이 아닙니다.")} target="_blank">
-        4.5기 지원 마감
+      <RecruitButton gradient border={false} onClick={() => alert('5기 모집 기간이 아닙니다.')} target="_blank">
+        5기 지원하기
       </RecruitButton>
-    </div>
+    </TitleContainer>
   );
 }
 export default TitleBackgroundCard;

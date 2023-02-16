@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import ScrollAnimation from '../ScrollAnimation';
 
 const PhilosophyBox = styled.div`
-  width: 80%;
+  width: 80vw;
   padding: 4rem;
   margin: 4rem auto;
   border: 1px solid #01baae;
   border-radius: 20px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
+    width: 90vw;
     padding: 2rem;
     line-height: 2rem;
   }

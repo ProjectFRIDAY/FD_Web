@@ -2,42 +2,41 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { menuAtom } from '../recoil/atom';
 import { useRecoilState } from 'recoil';
+import { throttle } from 'lodash';
 import ModalMenu from './main/ModalMenu';
 import MyLink from '../components/MyLink';
+import PageMenuList from './PageMenuList';
+import { motion } from 'framer-motion'
 
-const FixedHeader = styled.div`
+const FixedHeader = styled(motion.div)`
+  height: 4rem;
   width: 100%;
-  height: 5rem;
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 1rem;
-  background-color: black;
+  padding: 0 2rem;
   font-weight: bold;
   position: fixed;
   top: 0;
   z-index: 3;
-`;
-
-const VerticalLine = styled.li`
-  display: inline-block;
-  margin-left: 3rem;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
 `;
 
 const MenuIcon = styled.div`
   display: none;
   cursor: pointer;
   @media only screen and (max-width: 800px) {
-    position: absolute;
     display: inline-block;
   }
 `;
 
 const MenuBar = styled.div`
-  width: 35px;
-  height: 4px;
+  width: 30px;
+  height: 3px;
   background-color: white;
-  margin: 6px 0;
+  margin: 5px 0;
   transition: 0.4s;
   ${props =>
     props.short &&
@@ -47,12 +46,12 @@ const MenuBar = styled.div`
   ${props =>
     props.leftRotate &&
     css`
-      -webkit-transform: rotate(45deg) translate(0, 14px);
+      -webkit-transform: rotate(45deg) translate(0, 12px);
     `}
     ${props =>
     props.rightRotate &&
     css`
-      -webkit-transform: rotate(-45deg) translate(0, -14px);
+      -webkit-transform: rotate(-45deg) translate(0, -12px);
     `}
     ${props =>
     props.fadeOut &&
@@ -61,57 +60,81 @@ const MenuBar = styled.div`
     `}
 `;
 
+const PageListContainer = styled.div`
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
 function Header() {
   const [menu, setMenu] = useRecoilState(menuAtom);
+  const [isScrollingDown, setIsScrollingDown] = React.useState(false);
+
+  // 스크롤 방향에 따라 헤더 숨기기
+  React.useEffect(() => {
+    let lastScrollY = 0;
+    let ticking = false;
+
+    const updateScroiingDown = () => {
+      const scrollY = window.pageYOffset;
+
+      setIsScrollingDown(scrollY - lastScrollY >= 0);
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+      ticking = false;
+    };
+
+    const onScroll = throttle(() => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScroiingDown);
+        ticking = true;
+      }
+    }, 100);
+
+    window.addEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+  // end 스크롤 방향에 따라 헤더 숨기기
+
+  // 애니메이션 설정
+  const animationName = !isScrollingDown && menu ? 'hide' : 'show';
+  const headerAnimationVarients = {
+    open: { height: '4rem', opacity: 1 },
+    hide: { height: '0', opacity: 0 },
+  };
+  // end 애니메이션 설정
+
   return (
     <>
-      <FixedHeader>
+      <FixedHeader animate={animationName} variants={headerAnimationVarients}>
         <MyLink fontSize="1.8rem" to="/" navigation={false}>
           FRIDAY
         </MyLink>
-        <ul style={{ margin: 0, display: 'inline', position: 'absolute', right: '4rem' }}>
-          <VerticalLine>
-            <MyLink navFontSize="1.3rem" to="/">
-              HOME
-            </MyLink>
-          </VerticalLine>
-          <VerticalLine>
-            <MyLink navFontSize="1.3rem" to="/project">
-              PROJECT
-            </MyLink>
-          </VerticalLine>
-          <VerticalLine>
-            <MyLink navFontSize="1.3rem" to="/recruit">
-              RECRUIT
-            </MyLink>
-          </VerticalLine>
-          <VerticalLine>
-            <MyLink navFontSize="1.3rem" to="/contact">
-              CONTACT
-            </MyLink>
-          </VerticalLine>
-          <MenuIcon
-            onClick={() => {
-              menu ? setMenu(0) : setMenu(1);
-            }}
-          >
-            {menu ? (
-              <>
-                <MenuBar />
-                <MenuBar short />
-                <MenuBar />
-              </>
-            ) : (
-              <>
-                <MenuBar leftRotate />
-                <MenuBar fadeOut />
-                <MenuBar rightRotate />
-              </>
-            )}
-          </MenuIcon>
-        </ul>
+        <PageListContainer>
+          <PageMenuList />
+        </PageListContainer>
+        <MenuIcon
+          onClick={() => {
+            menu ? setMenu(0) : setMenu(1);
+          }}
+        >
+          {menu ? (
+            <>
+              <MenuBar />
+              <MenuBar short />
+              <MenuBar />
+            </>
+          ) : (
+            <>
+              <MenuBar leftRotate />
+              <MenuBar fadeOut />
+              <MenuBar rightRotate />
+            </>
+          )}
+        </MenuIcon>
       </FixedHeader>
-      {!menu && <ModalMenu />}
+      <ModalMenu isVisible={!menu} />
     </>
   );
 }

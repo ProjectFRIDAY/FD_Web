@@ -5,63 +5,54 @@ import { prjState, visibleState } from '../recoil/atom';
 import styled from 'styled-components';
 import Icons from '../components/Icons';
 import card from '../components/project/Card';
-import Button from '../components/Button';
 import Modal from '../components/project/Modal';
 import Projects from '../components/project/Projects';
+import JoinFriday from '../components/JoinFriday';
+import AnimatedPage from '../components/template/AnimatedPage';
 
-const StyledH1 = styled.h1`
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100px;
-  text-align: center;
-  position: absolute;
-  font-size: 167px;
+  margin: 10vw 0;
 `;
 
-const BackgroundText = styled.h1`
-  position: relative;
-  opacity: 0.37;
-  top: 5rem;
-  filter: blur(12px);
+const StyledH1 = styled.div`
+  font-size: 10vw;
+  text-align: center;
+  line-height: 1;
+`;
+
+const BackgroundText = styled.div`
+  opacity: 0.4;
+  filter: blur(10px);
   font-family: SegoeUISymbol;
-  font-size: 168px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
+  font-size: 10vw;
   text-align: center;
   color: #f1efef;
+  @media only screen and (max-width: 800px) {
+    filter: blur(4px);
+  }
 `;
 
 const Text = styled.div`
   background-color: rgba(0, 122, 114, 0.86);
-  padding: 1rem;
-  font-size: 45px;
-  margin-top: 8rem;
-  margin-bottom: 2rem;
+  padding: 1.3rem 1rem;
+  font-size: 40px;
+  margin-bottom: 3rem;
   text-align: center;
 `;
 
 const Wrapper = styled.div`
-  @media only screen and (min-width: 1000px) and (max-width: 1200px) {
-    width: 100%;
-    height: 50%;
-    justify-content: space-between;
-    display: flex;
-    margin: 0;
-  }
-  justify-content: space-between;
+  justify-content: space-evenly;
   display: flex;
   margin: auto;
-  margin-bottom: 5rem;
-  width: 80%;
-  height: 50%;
-`;
-
-const MainBottom = styled.div`
-  margin: 15rem auto;
-  text-align: center;
-  font-size: 3vw;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10vw 10px;
 `;
 
 function Project() {
@@ -74,23 +65,14 @@ function Project() {
   const setMenu = useSetRecoilState(menuAtom);
 
   return (
-    <>
+    <AnimatedPage>
       {setMenu(1)}
-      <StyledH1 className="title">FRIDAY</StyledH1>
-      <BackgroundText>CREATIVE</BackgroundText>
+      <TitleContainer>
+        <StyledH1 className="title">FRIDAY</StyledH1>
+        <BackgroundText>CREATIVE</BackgroundText>
+      </TitleContainer>
       <Text className="title">Friday Projects</Text>
       <Wrapper>
-        <card.Card
-          onClick={() => {
-            openModal('배달N');
-          }}
-        >
-          <card.ImageField src={Icons[8].src}></card.ImageField>
-          <card.TagField>
-            <card.Tag>#개발중</card.Tag>
-            <card.Tag>#Mobile</card.Tag>
-          </card.TagField>
-        </card.Card>
         <card.Card
           onClick={() => {
             openModal('OOTD');
@@ -114,8 +96,6 @@ function Project() {
             <card.Tag>#Web</card.Tag>
           </card.TagField>
         </card.Card>
-      </Wrapper>
-      <Wrapper>
         <card.Card
           onClick={() => {
             openModal('comento');
@@ -149,8 +129,6 @@ function Project() {
             <card.Tag>#Web</card.Tag>
           </card.TagField>
         </card.Card>
-      </Wrapper>
-      <Wrapper>
         <card.Card
           onClick={() => {
             openModal('엄마타이머');
@@ -186,19 +164,8 @@ function Project() {
         </card.Card>
         <Modal content={Projects[prj]} visible={visible}></Modal>
       </Wrapper>
-      <MainBottom>
-        <h1>Open Up Your Ideas</h1>
-        <Button
-          onClick={() => alert("4.5기 모집 기간이 아닙니다.")}
-          target="_blank"
-          backgroundColor={'#01baae'}
-          color={'white'}
-          gradient
-        >
-          4.5기 지원 마감
-        </Button>
-      </MainBottom>
-    </>
+      <JoinFriday />
+    </AnimatedPage>
   );
 }
 

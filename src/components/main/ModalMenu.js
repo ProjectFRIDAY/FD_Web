@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import MyLink from '../MyLink';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const TransparentModal = styled.div`
+const TransparentModal = styled(motion.div)`
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   z-index: 2;
   @media only screen and (min-width: 800px) {
     display: none;
@@ -32,24 +35,33 @@ const ModalLink = styled(MyLink)`
   transition: 0.5s;
 `;
 
-function ModalMenu({ children, ...args }) {
+function ModalMenu({ isVisible }) {
   return (
-    <TransparentModal {...args}>
-      <Menu>
-        <ModalLink to="/" navigation={false}>
-          HOME
-        </ModalLink>
-        <ModalLink to="/project" navigation={false}>
-          PROJECT
-        </ModalLink>
-        <ModalLink to="/recruit" navigation={false}>
-          RECRUIT
-        </ModalLink>
-        <ModalLink to="/contact" navigation={false}>
-          CONTACT
-        </ModalLink>
-      </Menu>
-    </TransparentModal>
+    <AnimatePresence>
+      {isVisible && (
+        <TransparentModal
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          <Menu>
+            <ModalLink to="/" navigation={false}>
+              HOME
+            </ModalLink>
+            <ModalLink to="/project" navigation={false}>
+              PROJECT
+            </ModalLink>
+            <ModalLink to="/recruit" navigation={false}>
+              RECRUIT
+            </ModalLink>
+            <ModalLink to="/contact" navigation={false}>
+              CONTACT
+            </ModalLink>
+          </Menu>
+        </TransparentModal>
+      )}
+    </AnimatePresence>
   );
 }
 
