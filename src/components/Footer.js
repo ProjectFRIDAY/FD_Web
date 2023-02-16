@@ -6,13 +6,20 @@ import PageMenuList from './PageMenuList';
 
 const GradientFooter = styled.div`
   width: 100%;
-  height: 15rem;
   padding: 3rem 3rem 2rem 3rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(to bottom, rgba(0, 123, 115, 0), #007b73);
+  gap: 1rem;
+`;
+
+const TitleContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem 3rem;
+  flex-wrap: wrap;
 `;
 
 const SocialContainer = styled.div`
@@ -32,24 +39,22 @@ const CopyRight = styled.div`
   text-align: center;
   color: #ccc;
   font-size: 1rem;
+  margin-top: 2rem;
 `;
 
 const PageListContainer = styled.div`
   display: inline;
-  @media only screen and (max-width: 800px) {
-    display: none;
-  }
 `;
 
 export default function Footer() {
   return (
     <GradientFooter>
-      <div>
+      <TitleContainer>
         <TextContainer>FRIDAY</TextContainer>
         <PageListContainer>
           <PageMenuList fontSize="1rem" />
         </PageListContainer>
-      </div>
+      </TitleContainer>
       <SocialContainer>
         <a href="https://github.com/ProjectFRIDAY" target="_blank" className="github social">
           <FontAwesomeIcon icon={faGithub} size="2x" color="white" />

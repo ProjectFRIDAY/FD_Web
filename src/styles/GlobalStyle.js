@@ -38,6 +38,10 @@ body {
   background-color: #000;
   text-decoration: none;
   color: #fff;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 a:link { 
@@ -50,10 +54,6 @@ a:visited {
  
 a:hover { 
  text-decoration: none;
-}
-
-.page {
-  margin-top: 5rem;
 }
 .title {
   font-family: 'TimesNewRomanMTStd';

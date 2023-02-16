@@ -5,33 +5,34 @@ import MyLink from './MyLink';
 const MenuContainer = styled.div`
   display: inline-flex;
   align-items: center;
+  gap: 0 3rem;
+  flex-wrap: wrap;
 `;
 
 const VerticalLine = styled.span`
   display: inline-block;
-  margin-left: 3rem;
 `;
 
 const PageMenuList = ({fontSize = "1.3rem"}) => {
   return (
     <MenuContainer>
       <VerticalLine>
-        <MyLink navFontSize={fontSize} to="/">
+        <MyLink fontSize={fontSize} to="/">
           HOME
         </MyLink>
       </VerticalLine>
       <VerticalLine>
-        <MyLink navFontSize={fontSize} to="/project">
+        <MyLink fontSize={fontSize} to="/project">
           PROJECT
         </MyLink>
       </VerticalLine>
       <VerticalLine>
-        <MyLink navFontSize={fontSize} to="/recruit">
+        <MyLink fontSize={fontSize} to="/recruit">
           RECRUIT
         </MyLink>
       </VerticalLine>
       <VerticalLine>
-        <MyLink navFontSize={fontSize} to="/contact">
+        <MyLink fontSize={fontSize} to="/contact">
           CONTACT
         </MyLink>
       </VerticalLine>

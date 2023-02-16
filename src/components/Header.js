@@ -59,6 +59,12 @@ const MenuBar = styled.div`
     `}
 `;
 
+const PageListContainer = styled.div`
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
 function Header() {
   const [menu, setMenu] = useRecoilState(menuAtom);
   const [isScrollingDown, setIsScrollingDown] = React.useState(false);
@@ -104,7 +110,9 @@ function Header() {
         <MyLink fontSize="1.8rem" to="/" navigation={false}>
           FRIDAY
         </MyLink>
-        <PageMenuList/>
+        <PageListContainer>
+        <PageMenuList />
+        </PageListContainer>
         <MenuIcon
           onClick={() => {
             menu ? setMenu(0) : setMenu(1);

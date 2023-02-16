@@ -17,21 +17,21 @@ const GradientBackground = styled.div`
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 1rem;
 `;
 
 const ContactLayout = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0rem;
   padding: 0rem;
+  flex-wrap: wrap;
+  gap: 3rem 5rem;
 `;
 
 const ContactBox = styled.a`
   width: 16rem;
   height: 13rem;
-  margin: 3rem;
-  margin-top: 9rem;
   background-color: white;
   color: black;
   position: relative;
@@ -82,19 +82,25 @@ const Welcome = styled.h1`
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  margin: 22rem 0;
+  margin: 25rem 0 20rem 0;
+  line-height: 1.5;
 `;
 
 const StyledH1 = styled.h1`
+  margin: 10rem 0;
   font-weight: normal;
-  font-size: 8rem;
+  font-size: 10vw;
+
+  @media only screen and (min-width: 1000px) {
+    margin-top: 13rem;
+  }
 `;
 
 function Contact() {
   const setMenu = useSetRecoilState(menuAtom);
 
   return (
-    <div className="page">
+    <div>
       {setMenu(1)}
       <GradientBackground>
         <Layout>
@@ -135,7 +141,7 @@ function Contact() {
             </ContactBox>
           </ContactLayout>
         </Layout>
-        <Welcome>🌟여러분들의 문의를 언제든 환영합니다.🌟</Welcome>
+        <Welcome>🌟 여러분의 문의를 환영합니다. 🌟</Welcome>
       </GradientBackground>
     </div>
   );
