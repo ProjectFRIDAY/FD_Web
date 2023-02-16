@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Video from '../../assets/videos/tunnel.mp4';
 
 const FullVideos = styled.div`
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 `;

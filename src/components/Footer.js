@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import PageMenuList from './PageMenuList';
 
 const GradientFooter = styled.div`
   width: 100%;
@@ -21,6 +22,7 @@ const SocialContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
+  display: inline;
   font-weight: bold;
   font-size: 2rem;
 `;
@@ -32,20 +34,28 @@ const CopyRight = styled.div`
   font-size: 1rem;
 `;
 
+const PageListContainer = styled.div`
+  display: inline;
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
 export default function Footer() {
   return (
     <>
       <GradientFooter>
-        <TextContainer>FRIDAY</TextContainer>
+        <div>
+          <TextContainer>FRIDAY</TextContainer>
+          <PageListContainer>
+            <PageMenuList fontSize="1rem" />
+          </PageListContainer>
+        </div>
         <SocialContainer>
           <a href="https://github.com/ProjectFRIDAY" target="_blank" className="github social">
             <FontAwesomeIcon icon={faGithub} size="2x" color="white" />
           </a>
-          <a
-            href="https://www.instagram.com/fridayproj_/"
-            target="_blank"
-            className="instagram social"
-          >
+          <a href="https://www.instagram.com/fridayproj_/" target="_blank" className="instagram social">
             <FontAwesomeIcon icon={faInstagram} size="2x" color="white" />
           </a>
         </SocialContainer>

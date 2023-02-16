@@ -5,6 +5,7 @@ import { useRecoilState } from 'recoil';
 import { throttle } from 'lodash';
 import ModalMenu from './main/ModalMenu';
 import MyLink from '../components/MyLink';
+import PageMenuList from './PageMenuList';
 import { motion } from 'framer-motion';
 
 const FixedHeader = styled(motion.div)`
@@ -20,16 +21,6 @@ const FixedHeader = styled(motion.div)`
   top: 0;
   z-index: 3;
   justify-content: space-between;
-`;
-
-const MenuContainer = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const VerticalLine = styled.span`
-  display: inline-block;
-  margin-left: 3rem;
 `;
 
 const MenuIcon = styled.div`
@@ -113,28 +104,7 @@ function Header() {
         <MyLink fontSize="1.8rem" to="/" navigation={false}>
           FRIDAY
         </MyLink>
-        <MenuContainer>
-          <VerticalLine>
-            <MyLink navFontSize="1.3rem" to="/">
-              HOME
-            </MyLink>
-          </VerticalLine>
-          <VerticalLine>
-            <MyLink navFontSize="1.3rem" to="/project">
-              PROJECT
-            </MyLink>
-          </VerticalLine>
-          <VerticalLine>
-            <MyLink navFontSize="1.3rem" to="/recruit">
-              RECRUIT
-            </MyLink>
-          </VerticalLine>
-          <VerticalLine>
-            <MyLink navFontSize="1.3rem" to="/contact">
-              CONTACT
-            </MyLink>
-          </VerticalLine>
-        </MenuContainer>
+        <PageMenuList/>
         <MenuIcon
           onClick={() => {
             menu ? setMenu(0) : setMenu(1);

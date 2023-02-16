@@ -12,7 +12,7 @@ import { menuAtom } from '../recoil/atom';
 
 const GradientContainer = styled.div`
   padding: 5vh 0;
-  background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #024D48 100%);
+  background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #024d48 100%);
 `;
 
 function Main() {
@@ -31,12 +31,12 @@ function Main() {
       {setMenu(1)}
       <MainTop />
       <GradientContainer>
-        <Lottie options={defaultOptions} height="90vh" isClickToPauseDisabled/>
+        <Lottie options={defaultOptions} height="90vh" isClickToPauseDisabled />
       </GradientContainer>
       <PhilosophyText />
       <ProjectIntro />
       <Review />
-      <JoinFriday/>
+      <JoinFriday />
     </div>
   );
 }
