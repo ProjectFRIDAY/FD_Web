@@ -26,6 +26,7 @@ const ModalStyle = styled(motion.div)`
   @media only screen and (max-width: 1000px) {
     width: 80vw;
     left: 10vw;
+    padding: 25px;
   }
 `;
 
@@ -111,6 +112,9 @@ const ExitIcon = styled(FontAwesomeIcon)`
   margin: 10px;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  @media only screen and (max-width: 1000px) {
+    margin: 0;
+  }
 `;
 
 const DownloadImage = styled.img`
