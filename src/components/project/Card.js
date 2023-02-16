@@ -1,20 +1,14 @@
 import styled, { css } from 'styled-components';
 
 const Card = styled.div`
-  @media only screen and (max-width: 1000px) {
-    width: 15rem;
-    height: 25rem;
-    margin-bottom: 5rem;
-  }
   cursor: pointer;
-  width: 20rem;
-  height: 25rem;
+  width: max(10rem, 20vw);
+  height: max(12rem, 24vw);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  box-shadow: 0 3px 40px 0 ${props => props.theme.primaryColor};
+  box-shadow: 0 0 1.5rem 0 ${props => props.theme.primaryColor};
   background: #ccc;
-  margin: 1rem;
 `;
 
 const ImageField = styled.img`
@@ -26,9 +20,6 @@ const ImageField = styled.img`
 `;
 
 const TagField = styled.div`
-  @media only screen and (max-width: 1000px) {
-    display: block;
-  }
   align-items: center;
   display: flex;
   background: white;
@@ -46,6 +37,10 @@ const Tag = styled.span`
   padding-right: 7px;
   font-weight: 600;
   text-shadow: #01baae 0 0 10px;
+  @media only screen and (max-width: 800px) {
+    font-size: 10px;
+    text-shadow: none;
+  }
 `;
 
 export default { Card, ImageField, TagField, Tag };

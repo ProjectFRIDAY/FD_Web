@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const GradientFooter = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 15rem;
   padding: 3rem 3rem 2rem 3rem;
   display: flex;
@@ -26,7 +26,7 @@ const TextContainer = styled.div`
 `;
 
 const CopyRight = styled.div`
-  width: 100vw;
+  width: 100%;
   text-align: center;
   color: #ccc;
   font-size: 1rem;

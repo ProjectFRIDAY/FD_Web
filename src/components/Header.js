@@ -90,7 +90,7 @@ function Header() {
         window.requestAnimationFrame(updateScroiingDown);
         ticking = true;
       }
-    }, 200);
+    }, 300);
 
     window.addEventListener('scroll', onScroll);
     return () => {
@@ -102,8 +102,8 @@ function Header() {
   // 애니메이션 설정
   const animationName = !isScrollingDown && menu ? 'hide' : 'show';
   const headerAnimationVarients = {
-    open: { height: '4rem', visivility: 'visible', opacity: 1 },
-    hide: { height: '0', visivility: 'gone', opacity: 0 },
+    open: { height: '4rem', opacity: 1 },
+    hide: { height: '0', opacity: 0 },
   };
   // end 애니메이션 설정
 

@@ -14,7 +14,7 @@ const Positioner = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin: 20rem auto;
+  margin: 20rem auto 0 auto;
 `;
 
 const Modal = styled.div`
