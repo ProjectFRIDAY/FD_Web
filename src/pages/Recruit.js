@@ -5,6 +5,7 @@ import RecruitAreaCard from '../components/recruit/RecruitAreaCard';
 import FAQCard from '../components/recruit/FAQCard';
 import { menuAtom } from '../recoil/atom';
 import { useSetRecoilState } from 'recoil';
+import JoinFriday from '../components/JoinFriday';
 
 function Recruit() {
   const setMenu = useSetRecoilState(menuAtom);
@@ -15,6 +16,7 @@ function Recruit() {
       <ProcessCard />
       <RecruitAreaCard />
       <FAQCard />
+      <JoinFriday />
     </>
   );
 }

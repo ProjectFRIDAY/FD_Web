@@ -4,15 +4,16 @@ import styled from 'styled-components';
 const FaqLayout = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   margin-bottom: 3rem;
   margin-top: 10rem;
+  width: 100%;
 `;
 
 const FaqContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px;
+  margin: 0px 30px 60px 30px;
   border-bottom: 1px solid #888787;
 `;
 
@@ -25,25 +26,30 @@ const FaqLogo = styled.span`
   font-weight: bold;
   text-align: center;
   padding-top: 7px;
-  margin-right: 1rem;
 `;
 
 const FaqTitleContainer = styled.div`
-  margin-left: 30px;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   cursor: pointer;
+  align-items: center;
+  gap: 10px;
 `;
 
 const QuestionTitle = styled.p`
   font-weight: bold;
   font-size: 22px;
-  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 700px;
+  width: 100%;
   text-align: left;
+  gap: 10px;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 17px;
+  }
 `;
 
 const FaqModal = styled.p`
@@ -82,13 +88,13 @@ function FAQCard() {
         Friday는 열정과 새로운 지식을 습득하고자 하는 의지와 열정이 있는 분들을 환영합니다!
         <br />
         <br />
-        다만 .5기의 경우 프로젝트 진행 도중에 참여하므로 어느 정도 지식이 요구됩니다.
+        다만 추가 모집 전형인 .5기의 경우 프로젝트 진행 도중에 참여하므로 어느 정도 지식이 요구됩니다.
       </FAQ>
 
       <FAQ title="정해진 활동 기간이 있나요?">
         Friday는 프로젝트 1회 후 끝나는 것이 아닌, 계속해서 활동할 수 있는 동아리입니다.
         <br />
-        월 10,000원의 회비가 존재하며, 납부시 계속 활동을 이어갈 수 있습니다.
+        분기(3개월)당 30,000원의 회비가 존재하며, 납부시 계속 활동을 이어갈 수 있습니다.
         <br />
         언제든 Friday와 함께 아이디어를 펼쳐보세요!
       </FAQ>
@@ -103,7 +109,7 @@ function FAQCard() {
         현재는 대부분이 온라인으로 진행되고 있습니다.
         <br />
         프로젝트에 따라 주기적으로 대면 모임을 가지는 경우도 있습니다.
-        <br /> 
+        <br />
         또한 모든 프로젝트 팀원들이 모여 친목 다지는 활동도 있으니 기대해주세요!
       </FAQ>
 
