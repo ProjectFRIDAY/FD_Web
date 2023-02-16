@@ -17,6 +17,11 @@ const MainBottom = styled.div`
   font-size: 3vw;
 `;
 
+const GradientContainer = styled.div`
+  margin-bottom: 3rem;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #036660 100%);
+`;
+
 function Main() {
   const setMenu = useSetRecoilState(menuAtom);
   const settings = {
@@ -36,14 +41,9 @@ function Main() {
     <div style={{ marginTop: '4rem' }}>
       {setMenu(1)}
       <MainTop />
-      <div
-        style={{
-          marginBottom: '3rem',
-          background: 'linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 21, 20, 1) 90%, #036660 100%)',
-        }}
-      >
+      <GradientContainer>
         <Lottie options={defaultOptions} />
-      </div>
+      </GradientContainer>
       <PhilosophyText />
       <ProjectIntro />
       <Review />
@@ -51,7 +51,7 @@ function Main() {
         <MainBottom>
           <h1>Open Up Your Ideas</h1>
           <Button
-            onClick={() => alert("4.5기 모집 기간이 아닙니다.")}
+            onClick={() => alert('4.5기 모집 기간이 아닙니다.')}
             target="_blank"
             backgroundColor={'#01baae'}
             color={'white'}
