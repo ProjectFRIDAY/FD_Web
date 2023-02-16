@@ -8,9 +8,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const ModalStyle = styled(motion.div)`
-  background-color: rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: brightness(1.1) blur(10px);
-  backdrop-filter: brightness(1.1) blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(3rem);
+  backdrop-filter: blur(3rem);
   width: 60vw;
   height: auto;
   position: fixed;
