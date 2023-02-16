@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import FAQ from './FAQ';
 
 const FaqLayout = styled.div`
   display: flex;
@@ -8,65 +9,6 @@ const FaqLayout = styled.div`
   margin-bottom: 3rem;
   margin-top: 10rem;
   width: 100%;
-`;
-
-const FaqContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0px 30px 60px 30px;
-  border-bottom: 1px solid #888787;
-`;
-
-const FaqLogo = styled.span`
-  width: 46px;
-  height: 46px;
-  border-radius: 10px;
-  background-image: linear-gradient(134deg, #01baae 9%, #044a27 90%);
-  font-size: 23px;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 7px;
-`;
-
-const FaqTitleContainer = styled.div`
-  padding: 0 10px;
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  align-items: center;
-  gap: 10px;
-`;
-
-const QuestionTitle = styled.p`
-  font-weight: bold;
-  font-size: 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  text-align: left;
-  gap: 10px;
-
-  @media only screen and (max-width: 800px) {
-    font-size: 17px;
-  }
-`;
-
-const FaqModal = styled.p`
-  font-size: 16px;
-  margin-top: 0px;
-  margin-left: 2.3rem;
-  color: #ccc;
-`;
-
-const Toggle = styled.div`
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  cursor: pointer;
 `;
 
 const FaqTitle = styled.p`
@@ -124,28 +66,3 @@ function FAQCard() {
   );
 }
 export default FAQCard;
-
-function FAQ(props) {
-  const [expanded, setExpand] = useState(false);
-  const onToggle = e => {
-    if (expanded === false) {
-      setExpand(true);
-    } else {
-      setExpand(false);
-    }
-  };
-  return (
-    <FaqContainer onClick={onToggle}>
-      <FaqTitleContainer>
-        <FaqLogo>Q</FaqLogo>
-        <QuestionTitle>
-          {props.title}
-          <div>
-            <Toggle />
-          </div>
-        </QuestionTitle>
-      </FaqTitleContainer>
-      {expanded && <FaqModal>{props.children}</FaqModal>}
-    </FaqContainer>
-  );
-}
