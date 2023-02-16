@@ -34,7 +34,7 @@ const StyledButton = styled.a`
       font-weight: bold;
       cursor: pointer;
       text-align: center;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
       ${BORDER &&
       css`
         border: 2px solid;

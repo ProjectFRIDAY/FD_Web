@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const TextContainer = styled.div`
-  margin: 5rem auto;
+  margin: 3rem auto;
   font-size: 1.5vw;
   @media only screen and (max-width: 600px) {
     font-size: 2vw;
@@ -32,6 +32,7 @@ const MyImg = styled.img`
   border-radius: 20px;
   border: 1.5px solid ${props => props.theme.primaryColor};
   object-fit: cover;
+  pointer-events: none;
 `;
 
 function ProjectIntro() {
@@ -41,13 +42,13 @@ function ProjectIntro() {
     centerPadding: '60px',
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 5,
     slidesToScroll: 2,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
-    cssEase: 'linear',
+    cssEase: 'ease-out',
     responsive: [
       {
         breakpoint: 1020,
@@ -105,7 +106,7 @@ function ProjectIntro() {
           <MyImg src={Icons[5].src} />
         </div>
       </MySlider>
-      <MyButton href="/project" style={{ marginTop: '4rem' }} border color={'#01baae'} backgroundColor={'black'}>
+      <MyButton href="/project" style={{ marginTop: '3rem' }} border color={'#01baae'} backgroundColor={'black'}>
         모든 프로젝트 보기
       </MyButton>
     </Container>

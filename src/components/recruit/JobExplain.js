@@ -2,6 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import * as Text from './Text';
 
+const JobDescContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 50px;
+`;
+
+const JobDescText = styled(Text.Small)`
+  margin: 0;
+  padding-left: 20px;
+  line-height: 2;
+`;
+
 export const Designer = () => {
   return (
     <div>
@@ -133,18 +146,11 @@ const ExplainJobTitle = styled(Text.SmallBold)`
 function ExplainJob(props) {
   return (
     <div>
-      <ExplainJobTitle>{props.title}</ExplainJobTitle>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'flex-start',
-          marginBottom: '50px',
-        }}
-      >
+      <ExplainJobTitle>📌 {props.title}</ExplainJobTitle>
+      <JobDescContainer>
         <div style={{ width: '0', height: '13px', border: '1px solid #7e7c7c', marginTop: '13px' }} />
-        <Text.Small style={{ margin: '0', paddingLeft: '20px', lineHeight: '2.6rem' }}>{props.children}</Text.Small>
-      </div>
+        <JobDescText>{props.children}</JobDescText>
+      </JobDescContainer>
     </div>
   );
 }

@@ -14,12 +14,13 @@ const RecruitLayout = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 10rem;
+  gap: 3rem 8rem;
 `;
 
 const SelectContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: min(500px, 95vw);
   align-items: center;
   margin-top: 20px;
 `;
@@ -27,25 +28,26 @@ const SelectContainer = styled.div`
 const RoleSelect = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 480px;
+  width: 100%;
+  gap: 10px;
 `;
 
 const DevSelect = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 500px;
+  width: 100%;
+  gap: 10px;
 `;
 
 const RoleImage = styled.img`
-  width: 500px;
+  width: 100%;
   height: 300px;
   margin-top: 30px;
   object-fit: cover;
 `;
 
 const ExplainContainer = styled.div`
-  margin: 3rem 0 0 8rem;
-  width: 600px;
+  width: min(600px, 90vw);
 `;
 
 function RecruitAreaCard() {
