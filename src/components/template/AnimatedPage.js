@@ -8,7 +8,7 @@ import { isMobile } from 'react-device-detect';
 const AnimatedPage = ({ children }) => {
   const innerContent = (
     <>
-      <ScrollToTop delay={500} />
+      <ScrollToTop delay={isMobile ? 0 : 500} />
       {children}
       <Footer />
     </>
