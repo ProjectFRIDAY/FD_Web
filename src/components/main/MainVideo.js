@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Video from '../../assets/videos/tunnel.mp4';
+import Thumbnail from '../../assets/images/tunnel.jpg';
 
 const FullVideos = styled.div`
   height: 100vh;
@@ -30,7 +31,7 @@ export default function MainVideo({ children }) {
     <FullVideos>
       {children}
       <VideoFilter />
-      <VideoItem autoPlay loop muted>
+      <VideoItem autoPlay loop muted poster={Thumbnail}>
         <source src={Video} type="video/mp4" />
         Your browser does not support the video tag.
       </VideoItem>
