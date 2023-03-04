@@ -4,6 +4,7 @@ import MainVideo from './MainVideo';
 import Button from '../Button';
 import Lottie from 'react-lottie';
 import Scroll from '../../lottie/scroll.json';
+import MyLink from '../../components/MyLink';
 
 const TopContainer = styled.div`
   position: absolute;
@@ -22,7 +23,6 @@ const StyledTitle = styled.div`
 `;
 
 const MyButton = styled(Button)`
-  font-size: 1rem;
   z-index: 1;
 `;
 
@@ -45,17 +45,11 @@ function MainTop() {
       <MainVideo>
         <TopContainer>
           <StyledTitle className="title">FRIDAY</StyledTitle>
-          <MyButton
-            onClick={() => alert('5기 모집 기간이 아닙니다.')}
-            target="_blank"
-            color={'#01baae'}
-            backgroundColor={'white'}
-            border={true}
-          >
-            5기 지원하기
+          <MyButton color={'#01baae'} backgroundColor={'white'} border={true}>
+            <MyLink to="/recruit" fontSize="1rem" color="#01B9AD" hoverColor="#a1ede8">5기 지원하기</MyLink>
           </MyButton>
           <AnimationContainer>
-            <Lottie options={defaultLottieOptions} width={600}isClickToPauseDisabled/>
+            <Lottie options={defaultLottieOptions} width={600} isClickToPauseDisabled />
           </AnimationContainer>
         </TopContainer>
       </MainVideo>
