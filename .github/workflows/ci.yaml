@@ -33,7 +33,7 @@ jobs:
         with:
           host: ${{ secrets.AWS_FRIDAY }}
           username: ${{ secrets.AWS_FRIDAY_USER }}
-          password: ${{ secrets.AWS_FRIDAY_KEY }}
+          key: ${{ secrets.AWS_FRIDAY_KEY }}
           port: ${{ secrets.AWS_FRIDAY_PORT }}
           
       - name: copy file via ssh password
@@ -41,7 +41,7 @@ jobs:
         with:
           host: ${{ secrets.AWS_FRIDAY }}
           username: ${{ secrets.AWS_FRIDAY_USER }}
-          password: ${{ secrets.AWS_FRIDAY_KEY }}
+          key: ${{ secrets.AWS_FRIDAY_KEY }}
           port: ${{ secrets.AWS_FRIDAY_PORT }}
           source: 'build'
           target: '/home/ubuntu/FD_Web/build'
