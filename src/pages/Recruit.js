@@ -5,7 +5,6 @@ import RecruitAreaCard from '../components/recruit/RecruitAreaCard';
 import FAQCard from '../components/recruit/FAQCard';
 import { menuAtom } from '../recoil/atom';
 import { useSetRecoilState } from 'recoil';
-import JoinFriday from '../components/JoinFriday';
 import AnimatedPage from '../components/template/AnimatedPage';
 
 function Recruit() {
@@ -17,7 +16,6 @@ function Recruit() {
       <ProcessCard />
       <RecruitAreaCard />
       <FAQCard />
-      <JoinFriday />
     </AnimatedPage>
   );
 }

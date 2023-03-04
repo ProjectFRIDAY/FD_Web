@@ -5,7 +5,7 @@ import ScrollAnimation from '../ScrollAnimation';
 const PhilosophyBox = styled.div`
   width: 80vw;
   padding: 4rem;
-  margin: 4rem auto;
+  margin: 4rem auto 12rem auto;
   border: 1px solid #01baae;
   border-radius: 20px;
   @media screen and (max-width: 800px) {
