@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-22.04 # Job 가상환경 인스턴스
     steps: # Steps
       - name: Checkout source code. # 레포지토리 체크아웃
-        uses: actions/checkout@deploy
+        uses: actions/checkout@v3
 
       - name: Cache node modules # node modules 캐싱
         uses: actions/cache@v1
