@@ -20,6 +20,7 @@ const FixedHeader = styled(motion.div)`
   top: 0;
   z-index: 3;
   justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
 `;
