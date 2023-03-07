@@ -4,5 +4,5 @@ import 'animate.css/animate.min.css';
 
 export default function ScrollAnimation({children, ...settings }) {
   //return <AnimationOnScroll {...settings}></AnimationOnScroll>;
-  return <div>{children}</div>;
+  return <div {...settings}>{children}</div>;
 }
