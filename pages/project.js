@@ -1,14 +1,14 @@
 import React from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { menuAtom } from '../recoil/atom';
-import { prjState, visibleState } from '../recoil/atom';
+import { menuAtom } from '../src/recoil/atom';
+import { prjState, visibleState } from '../src/recoil/atom';
 import styled from 'styled-components';
-import Icons from '../components/Icons';
-import card from '../components/project/Card';
-import Modal from '../components/project/Modal';
-import Projects from '../components/project/Projects';
-import JoinFriday from '../components/JoinFriday';
-import AnimatedPage from '../components/template/AnimatedPage';
+import Icons from '../src/components/Icons';
+import card from '../src/components/project/Card';
+import Modal from '../src/components/project/Modal';
+import Projects from '../src/components/project/Projects';
+import JoinFriday from '../src/components/JoinFriday';
+import AnimatedPage from '../src/components/template/AnimatedPage';
 
 const TitleContainer = styled.div`
   display: flex;

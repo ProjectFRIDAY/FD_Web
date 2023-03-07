@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSetRecoilState } from 'recoil';
-import { menuAtom } from '../recoil/atom';
-import AnimatedPage from '../components/template/AnimatedPage';
-import { getBlogItems } from '../data/source/NotionApi';
+import { menuAtom } from '../src/recoil/atom';
+import AnimatedPage from '../src/components/template/AnimatedPage';
+import { getBlogItems } from '../src/data/source/NotionApi';
 
 const Blog = () => {
   const setMenu = useSetRecoilState(menuAtom);

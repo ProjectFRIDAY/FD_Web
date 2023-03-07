@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faLink } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 const ModalStyle = styled(motion.div)`
   background-color: rgba(255, 255, 255, 0.5);
@@ -68,7 +69,7 @@ const Text = styled.div`
   }
 `;
 
-const Link = styled.a`
+const LinkComp = styled(Link)`
   font-size: 25px;
   font-weight: 800px;
   text-decoration: none;
@@ -154,16 +155,16 @@ function Modal({ ...rest }) {
               <TitleContainer>
                 <Title>{rest.content.title}</Title>
                 {rest.content.git ? (
-                  <Link href={rest.content.git} target="_blank">
+                  <LinkComp href={rest.content.git} target="_blank">
                     <FontAwesomeIcon icon={faGithub} color="black" />
-                  </Link>
+                  </LinkComp>
                 ) : (
                   ''
                 )}
                 {rest.content.site ? (
-                  <Link style={{ marginTop: 0 }} href={rest.content.site} target="_blank">
+                  <LinkComp style={{ marginTop: 0 }} href={rest.content.site} target="_blank">
                     <FontAwesomeIcon icon={faLink} color="black" />
-                  </Link>
+                  </LinkComp>
                 ) : (
                   ''
                 )}
@@ -177,16 +178,16 @@ function Modal({ ...rest }) {
           <Desc dangerouslySetInnerHTML={{ __html: rest.content.desc }}></Desc>
           <DownloadContainer>
             {rest.content.aos ? (
-              <Link href={rest.content.aos} target="_blank">
-                <DownloadImage src={require('../../assets/images/aos.png')}></DownloadImage>
-              </Link>
+              <LinkComp href={rest.content.aos} target="_blank">
+                <DownloadImage src="/assets/images/aos.png"></DownloadImage>
+              </LinkComp>
             ) : (
               ''
             )}
             {rest.content.ios ? (
-              <Link href={rest.content.ios} target="_blank">
-                <DownloadImage src={require('../../assets/images/ios.png')}></DownloadImage>
-              </Link>
+              <LinkComp href={rest.content.ios} target="_blank">
+                <DownloadImage src="/assets/images/ios.png"></DownloadImage>
+              </LinkComp>
             ) : (
               ''
             )}

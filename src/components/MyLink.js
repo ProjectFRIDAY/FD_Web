@@ -1,27 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
-
-MyLink.propTypes = {
-  color: PropTypes.string,
-  navigation: PropTypes.bool,
-  fontSize: PropTypes.number,
-  hoverColor: PropTypes.string,
-};
-
-MyLink.defaultProps = {
-  color: 'white',
-  navigation: true,
-  fontSize: '1.5rem',
-  hoverColor: '#01B9AD',
-};
+import Link from 'next/link';
 
 const StyledLink = styled(Link)`
   ${props => {
-    const COLOR = props.color;
-    const FONT_SIZE = props.fontSize;
-    const HOVER_COLOR = props.hoverColor;
+    const COLOR = props.color ?? 'white';
+    const FONT_SIZE = props.fontSize ?? '1.5rem';
+    const HOVER_COLOR = props.hoverColor ?? '#01B9AD';
     return css`
       color: ${COLOR};
       font-size: ${FONT_SIZE};
@@ -35,8 +20,8 @@ const StyledLink = styled(Link)`
   }}
 `;
 
-function MyLink({ children, ...args }) {
-  return <StyledLink {...args}>{children}</StyledLink>;
+function MyLink({ children, to, ...args }) {
+  return <StyledLink href={to} {...args}>{children}</StyledLink>;
 }
 
 export default MyLink;

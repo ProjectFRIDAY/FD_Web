@@ -109,7 +109,7 @@ function Header() {
   return (
     <>
       <FixedHeader animate={animationName} variants={headerAnimationVarients}>
-        <MyLink fontSize="1.8rem" to="/" navigation={false}>
+        <MyLink fontSize="1.8rem" to="/">
           FRIDAY
         </MyLink>
         <PageListContainer>

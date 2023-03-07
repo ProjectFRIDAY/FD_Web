@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import MainVideo from './MainVideo';
 import Button from '../Button';
 import Lottie from 'react-lottie';
-import Scroll from '../../lottie/scroll.json';
+import Scroll from '../../../public/assets/lottie/scroll.json';
 import MyLink from '../../components/MyLink';
 
 const TopContainer = styled.div`

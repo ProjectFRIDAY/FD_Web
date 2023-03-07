@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSetRecoilState } from 'recoil';
 import Lottie from 'react-lottie';
-import FridayAnimation from '../lottie/friday.json';
-import ProjectIntro from '../components/main/ProjectIntro';
-import PhilosophyText from '../components/main/PhilosophyText';
+import ProjectIntro from '../src/components/main/ProjectIntro';
+import PhilosophyText from '../src/components/main/PhilosophyText';
 import styled from 'styled-components';
-import MainTop from '../components/main/MainTop';
-import Review from '../components/main/Review';
-import JoinFriday from '../components/JoinFriday';
-import { menuAtom } from '../recoil/atom';
-import AnimatedPage from '../components/template/AnimatedPage';
+import MainTop from '../src/components/main/MainTop';
+import Review from '../src/components/main/Review';
+import JoinFriday from '../src/components/JoinFriday';
+import { menuAtom } from '../src/recoil/atom';
+import AnimatedPage from '../src/components/template/AnimatedPage';
+import FridayAnimation from '../public/assets/lottie/friday.json';
 
 const GradientContainer = styled.div`
   padding: 5vh 0;

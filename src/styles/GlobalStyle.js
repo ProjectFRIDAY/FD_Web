@@ -1,12 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
-import SegoeTTF from '../assets/fonts/SegoeUI.TTF';
-import SegoeEot from '../assets/fonts/SegoeUI.eot';
-import SegoeWoff from '../assets/fonts/SegoeUI.woff';
-import SegoeWoff2 from '../assets/fonts/SegoeUI.woff2';
-import TimesTTF from '../assets/fonts/TimesNewRomanMTStd.ttf';
-import TimesEot from '../assets/fonts/TimesNewRomanMTStd.eot';
-import TimesWoff from '../assets/fonts/TimesNewRomanMTStd.woff';
-import TimesWoff2 from '../assets/fonts/TimesNewRomanMTStd.woff2';
+
+const SegoeTTF = "/assets/fonts/SegoeUI.TTF";
+const SegoeEot = "/assets/fonts/SegoeUI.eot";
+const SegoeWoff = "/assets/fonts/SegoeUI.woff";
+const SegoeWoff2 = "/assets/fonts/SegoeUI.woff2";
+const TimesTTF = "/assets/fonts/TimesNewRomanMTStd.ttf";
+const TimesEot = "/assets/fonts/TimesNewRomanMTStd.eot";
+const TimesWoff = "/assets/fonts/TimesNewRomanMTStd.woff";
+const TimesWoff2 = "/assets/fonts/TimesNewRomanMTStd.woff2";
 
 const GlobalStyle = createGlobalStyle`
 *, *::before, *::after {

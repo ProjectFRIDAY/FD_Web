@@ -1,11 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { menuAtom } from '../recoil/atom';
+import { menuAtom } from '../src/recoil/atom';
 import { useSetRecoilState } from 'recoil';
-import mailIcon from '../assets/images/icons/gmail.png';
-import kakaoIcon from '../assets/images/icons/kakao.png';
-import instagramIcon from '../assets/images/icons/instagram.png';
-import AnimatedPage from '../components/template/AnimatedPage';
+import AnimatedPage from '../src/components/template/AnimatedPage';
+
+const mailIcon = "/assets/images/icons/gmail.png";
+const kakaoIcon = "/assets/images/icons/kakao.png";
+const instagramIcon = "/assets/images/icons/instagram.png";
 
 const GradientBackground = styled.div`
   width: 100%;
