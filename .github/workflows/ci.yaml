@@ -27,6 +27,11 @@ jobs:
 
       - name: Build # React Build
         run: CI='' npm run build
+        
+      - name: Export
+        run: npm run export
+        
+      - run: touch out/.nojekyll
 
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
@@ -43,5 +48,5 @@ jobs:
           username: ${{ secrets.AWS_FRIDAY_USER }}
           key: ${{ secrets.AWS_FRIDAY_KEY }}
           port: ${{ secrets.AWS_FRIDAY_PORT }}
-          source: 'build'
-          target: '/home/ubuntu/FD_Web/build'
+          source: 'out'
+          target: '/home/ubuntu/FD_Web/out'
