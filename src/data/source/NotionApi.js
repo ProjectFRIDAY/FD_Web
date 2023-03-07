@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const notionKey = process.env.REACT_APP_NOTION_KEY;
-const notionDatabaseKey = process.env.REACT_APP_NOTION_DATABASE_KEY;
+const notionKey = process.env.NEXT_PUBLIC_NOTION_KEY;
+const notionDatabaseKey = process.env.NEXT_PUBLIC_NOTION_DATABASE_KEY;
 
 export async function getBlogItems() {
   try {
