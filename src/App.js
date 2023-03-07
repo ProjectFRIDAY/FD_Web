@@ -6,6 +6,7 @@ import Main from './pages/Main';
 import Project from './pages/Project';
 import Recruit from './pages/Recruit';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,10 @@ function App() {
     {
       path: '/contact',
       element: <Contact />,
+    },
+    {
+      path: '/blog',
+      element: <Blog />,
     },
   ]);
 

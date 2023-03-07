@@ -58,6 +58,9 @@ function ModalMenu({ isVisible }) {
             <ModalLink to="/contact" navigation={false}>
               CONTACT
             </ModalLink>
+            <ModalLink to="/blog" navigation={false}>
+              BLOG
+            </ModalLink>
           </Menu>
         </TransparentModal>
       )}
