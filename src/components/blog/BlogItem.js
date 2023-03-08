@@ -94,7 +94,7 @@ export default function BlogItem({ blogItem }) {
     >
       <ThumbnailArea>{blogItem.icon ?? ''}</ThumbnailArea>
       <TitleArea>{blogItem.title ?? ''}</TitleArea>
-      <TagArea>{blogItem.tags ? blogItem.tags.map(item => <Tag>#{item}</Tag>) : ''}</TagArea>
+      <TagArea>{blogItem.tags ? blogItem.tags.map((item, index) => <Tag key={index}>#{item}</Tag>) : ''}</TagArea>
       <div></div>
       <InfoArea>
         <Info>

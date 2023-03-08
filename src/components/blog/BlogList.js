@@ -14,8 +14,8 @@ const BlogListLayout = styled.div`
 export default function BlogList({ blogItems }) {
   return (
     <BlogListLayout>
-      {blogItems.map(item => (
-        <BlogItem blogItem={item} />
+      {blogItems.map((item, index) => (
+        <BlogItem key={index} blogItem={item} />
       ))}
     </BlogListLayout>
   );
