@@ -35,7 +35,7 @@ export async function getBlogItems() {
 
 export async function getNotionPost(id) {
   try {
-    const result = await axios.get(`/pages/${id}`, commonHeaders);
+    const result = await axios.get(`/page/${id}`);
     return result.data;
   } catch (error) {
     throw new Error(error);
