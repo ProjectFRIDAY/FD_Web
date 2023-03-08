@@ -5,8 +5,10 @@ const notionKey = process.env.NEXT_PUBLIC_NOTION_KEY;
 const notionDatabaseKey = process.env.NEXT_PUBLIC_NOTION_DATABASE_KEY;
 
 const commonHeaders = {
-  Authorization: `Bearer ${notionKey}`,
-  'Notion-Version': '2022-06-28',
+  headers: {
+    Authorization: `Bearer ${notionKey}`,
+    'Notion-Version': '2022-06-28',
+  },
 };
 
 export async function getBlogItems() {
@@ -31,7 +33,7 @@ export async function getBlogItems() {
   }
 }
 
-export async function getNotionPost(id) {
+export async function getBlogItem(id) {
   try {
     const result = await axios.get(`/pages/${id}`, commonHeaders);
     return result.data;
