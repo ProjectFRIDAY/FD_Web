@@ -27,6 +27,7 @@
     "react-dom": "^18.1.0",
     "react-lottie": "^1.2.3",
     "react-material-ui-carousel": "^3.4.2",
+    "react-notion": "^0.10.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "recoil": "^0.7.4",

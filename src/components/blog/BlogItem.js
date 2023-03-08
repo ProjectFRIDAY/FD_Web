@@ -18,7 +18,7 @@ const BlogItemLayout = styled.div`
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.3);
-    width: 92vw;
+    width: 93vw;
   }
 `;
 

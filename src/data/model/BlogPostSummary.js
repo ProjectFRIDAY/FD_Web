@@ -13,7 +13,7 @@ export default class BlogPostSummary {
   static fromRawData(rawData) {
     return new BlogPostSummary({
       id: rawData.id,
-      title: rawData.properties.제목.title.plain_text,
+      title: rawData.properties.제목.title.text.content,
       author: rawData.properties.작성자.created_by.name,
       email: rawData.properties.작성자.created_by.person.email,
       icon: rawData.icon.emoji,
