@@ -1,4 +1,5 @@
 import axios from 'axios';
+import BlogPostSummary from '../model/BlogPostSummary';
 
 const notionKey = process.env.NEXT_PUBLIC_NOTION_KEY;
 const notionDatabaseKey = process.env.NEXT_PUBLIC_NOTION_DATABASE_KEY;
@@ -9,6 +10,12 @@ export async function getBlogItems() {
       `/databases/${notionDatabaseKey}/query`,
       {
         page_size: 100,
+        sorts: [
+          {
+            property: '작성 일시',
+            direction: 'descending',
+          },
+        ],
       },
       {
         headers: {
@@ -17,7 +24,8 @@ export async function getBlogItems() {
         },
       }
     );
-    return result.data.results;
+
+    return result.data.results.map(item => BlogPostSummary.fromRawData(item));
   } catch (error) {
     throw new Error(error);
   }
