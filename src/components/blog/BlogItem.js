@@ -17,7 +17,7 @@ const BlogItemLayout = styled.div`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.35);
     width: 93vw;
   }
 `;

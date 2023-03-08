@@ -5,7 +5,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 import { isMobile } from 'react-device-detect';
 
-const AnimatedPage = ({ children }) => {
+const AnimatedPage = ({ children, blackHeader = false }) => {
   const innerContent = (
     <>
       <ScrollToTop delay={isMobile ? 0 : 500} />
@@ -16,7 +16,7 @@ const AnimatedPage = ({ children }) => {
 
   return (
     <>
-      <Header />
+      <Header blackHeader={blackHeader} />
       {isMobile ? (
         innerContent
       ) : (

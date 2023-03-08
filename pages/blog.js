@@ -6,6 +6,7 @@ import { getBlogItems } from '../src/data/source/NotionApi';
 import BlogList from '../src/components/blog/BlogList';
 import styled from 'styled-components';
 import ScrollToTopButton from '../src/components/ScrollToTopButton';
+import { useRouter } from 'next/router';
 
 const TitleContainer = styled.div`
   display: flex;
@@ -44,13 +45,19 @@ const Text = styled.div`
 `;
 
 const Blog = () => {
+  const router = useRouter();
   const setMenu = useSetRecoilState(menuAtom);
   const [blogItems, setBlogItems] = React.useState([]);
 
   React.useEffect(() => {
-    getBlogItems().then(data => {
-      setBlogItems(data);
-    });
+    getBlogItems()
+      .then(data => {
+        setBlogItems(data);
+      })
+      .catch(err => {
+        alert('포스트를 불러오는데 실패했습니다.');
+        router.push('/');
+      });
   }, []);
 
   return (
