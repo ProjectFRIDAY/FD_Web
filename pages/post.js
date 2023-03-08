@@ -29,8 +29,7 @@ const Post = () => {
   return (
     <AnimatedPage>
       {setMenu(1)}
-      Object.keys(notionData).length &&
-      <NotionRenderer blockMap={notionData} fullPage={true} />
+      {Object.keys(notionData).length && <NotionRenderer blockMap={notionData} fullPage={true} />}
       <ScrollToTopButton />
     </AnimatedPage>
   );
