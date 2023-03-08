@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { lighten, darken } from 'polished';
+import MyLink from '../components/MyLink';
 
 Button.propTypes = {
   color: PropTypes.string,
@@ -17,7 +18,7 @@ Button.defaultProps = {
   border: false,
 };
 
-const StyledButton = styled.a`
+const StyledButton = styled.span`
   ${props => {
     const COLOR = props.color;
     const BACKGROUND_COLOR = props.backgroundColor;
@@ -59,7 +60,10 @@ const StyledButton = styled.a`
   }}
 `;
 
-function Button({ children, ...rest }) {
+function Button({ children, href, ...rest }) {
+  if (href) {
+    children = (<MyLink href={href} fontSize="1rem" color="#01baae">{children}</MyLink>);
+  }
   return <StyledButton {...rest}>{children}</StyledButton>;
 }
 

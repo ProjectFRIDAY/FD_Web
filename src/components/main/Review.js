@@ -1,10 +1,11 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import ScrollAnimation from '../ScrollAnimation';
-import minaImg from '../../assets/images/review/mina.jpg';
-import wonheeImg from '../../assets/images/review/wonhee.jpg';
-import seonghwanImg from '../../assets/images/review/seonghwan.jpg';
-import jinyoungImg from '../../assets/images/review/jinyoung.jpg';
+
+const minaImg = "/assets/images/review/mina.jpg";
+const wonheeImg = "/assets/images/review/wonhee.jpg";
+const seonghwanImg = "/assets/images/review/seonghwan.jpg";
+const jinyoungImg = "/assets/images/review/jinyoung.jpg";
 
 const Positioner = styled.div`
   width: 100%;

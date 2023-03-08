@@ -36,6 +36,11 @@ const PageMenuList = ({fontSize = "1.3rem"}) => {
           CONTACT
         </MyLink>
       </VerticalLine>
+      <VerticalLine>
+        <MyLink fontSize={fontSize} to="/blog">
+          BLOG
+        </MyLink>
+      </VerticalLine>
     </MenuContainer>
   );
 };

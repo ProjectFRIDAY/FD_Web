@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import * as Text from './Text';
 import * as Job from './JobExplain';
-import designImg from '../../assets/images/job/design.jpg';
-import MobileImg from '../../assets/images/job/mobile.jpeg';
-import FrontEndImg from '../../assets/images/job/fe.jpg';
-import BackEndImg from '../../assets/images/job/be.jpg';
-import PmImg from '../../assets/images/job/pm.jpg';
+
+const designImg = '/assets/images/job/design.jpg';
+const MobileImg = '/assets/images/job/mobile.jpeg';
+const FrontEndImg = '/assets/images/job/fe.jpg';
+const BackEndImg = '/assets/images/job/be.jpg';
+const PmImg = '/assets/images/job/pm.jpg';
 
 const RecruitLayout = styled.div`
   display: flex;
