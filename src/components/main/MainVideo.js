@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Video from '../../assets/videos/tunnel.mp4';
-import Thumbnail from '../../assets/images/tunnel.jpg';
+
+const Thumbnail = '/assets/images/tunnel.jpg';
+const Video = '/assets/videos/tunnel.mp4';
 
 const FullVideos = styled.div`
   height: 100vh;

@@ -1,12 +1,12 @@
-import comentoIcon from '../assets/images/comento.png';
-import planDialIcon from '../assets/images/planDial.png';
-import fridayIcon from '../assets/images/FD_Web.png';
-import momTimer from '../assets/images/momTimer.png';
-import promise from '../assets/images/promise.png';
-import texti from '../assets/images/texti.png';
-import ootd from '../assets/images/ootd.png';
-import remoa from '../assets/images/remoa.png';
-import deliverN from '../assets/images/deliverN.png';
+const comentoIcon = '/assets/images/comento.png';
+const planDialIcon = '/assets/images/planDial.png';
+const fridayIcon = '/assets/images/FD_Web.png';
+const momTimer = '/assets/images/momTimer.png';
+const promise = '/assets/images/promise.png';
+const texti = '/assets/images/texti.png';
+const ootd = '/assets/images/ootd.png';
+const remoa = '/assets/images/remoa.png';
+const deliverN = '/assets/images/deliverN.png';
 
 const Icons = [
   {

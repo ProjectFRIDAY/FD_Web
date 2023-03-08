@@ -29,7 +29,7 @@ const FaqTitleContainer = styled.div`
   gap: 10px;
 `;
 
-const QuestionTitle = styled.p`
+const QuestionTitle = styled.div`
   font-weight: bold;
   font-size: 22px;
   display: flex;
