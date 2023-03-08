@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import 'react-notion/src/styles.css';
-import 'prismjs/themes/prism-tomorrow.css';
 import { getNotionPost } from '../src/data/source/notion';
 import AnimatedPage from '../src/components/template/AnimatedPage';
 import ScrollToTopButton from '../src/components/ScrollToTopButton';
+import { menuAtom } from '../src/recoil/atom';
+import { NotionRenderer } from 'react-notion';
+
+import 'react-notion/src/styles.css';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const Post = () => {
+  const setMenu = useSetRecoilState(menuAtom);
+
   const router = useRouter();
   const { id } = router.query;
 
