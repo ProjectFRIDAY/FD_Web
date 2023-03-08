@@ -13,7 +13,7 @@ import 'prismjs/themes/prism-tomorrow.css';
 
 const Container = styled.div`
   width: 100%;
-  background-color: #f1efef;
+  background-color: #fffcfa;
   min-height: 100vh;
   padding: 3rem 0;
 `;
@@ -46,7 +46,7 @@ const Post = () => {
         {Object.keys(notionData).length && <NotionRenderer blockMap={notionData} fullPage={true} />}
         <ScrollToTopButton />
       </Container>
-      <style>{'body { background-color: #f1efef; }'}</style>
+      <style>{'body { background-color: #fffcfa; }'}</style>
       <style>{'.notion-page-header { display: none; }'}</style>
     </AnimatedPage>
   );
