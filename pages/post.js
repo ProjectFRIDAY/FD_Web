@@ -10,12 +10,24 @@ import styled from 'styled-components';
 
 import 'react-notion/src/styles.css';
 import 'prismjs/themes/prism-tomorrow.css';
+import HitsBadge from '../src/components/blog/HitsBadge';
 
 const Container = styled.div`
   width: 100%;
-  background-color: #fffcfa;
-  min-height: 100vh;
   padding: 3rem 0;
+`;
+
+const cssOverrides = `
+  body {
+    background-color: #051614;
+  }
+  .notion-page-header {
+    display: none;
+  }
+  .notion {
+    color: #eee;
+    caret-color: #eee;
+  }
 `;
 
 const Post = () => {
@@ -40,14 +52,14 @@ const Post = () => {
   }, [id]);
 
   return (
-    <AnimatedPage blackHeader={true}>
+    <AnimatedPage>
+      <style>{cssOverrides}</style>
       <Container>
         {setMenu(1)}
         {Object.keys(notionData).length && <NotionRenderer blockMap={notionData} fullPage={true} />}
         <ScrollToTopButton />
+        <HitsBadge url={`https://fridayproject.co.kr/post?id=${id}`} />
       </Container>
-      <style>{'body { background-color: #fffcfa; }'}</style>
-      <style>{'.notion-page-header { display: none; }'}</style>
     </AnimatedPage>
   );
 };

@@ -17,7 +17,8 @@ const FaqLogo = styled.span`
   font-size: 23px;
   font-weight: bold;
   text-align: center;
-  padding-top: 7px;
+  padding: 10px;
+  margin: 10px 0;
 `;
 
 const FaqTitleContainer = styled.div`
@@ -38,6 +39,7 @@ const QuestionTitle = styled.div`
   width: 100%;
   text-align: left;
   gap: 10px;
+  line-height: 1.3;
 
   @media only screen and (max-width: 800px) {
     font-size: 17px;
