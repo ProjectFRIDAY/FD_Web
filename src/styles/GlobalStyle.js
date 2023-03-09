@@ -44,10 +44,6 @@ body {
   background-color: #000;
   text-decoration: none;
   color: #fff;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
 }
 
 a:link { 
@@ -75,6 +71,10 @@ a:hover {
   right: 0;
   top: 0;
   padding: 25px;
+}
+
+::selection {
+  background-color: rgba(1, 185, 173, 0.5);
 }
 `;
 

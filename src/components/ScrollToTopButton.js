@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const TopButton = styled.button`
   position: fixed;
   cursor: pointer;
-  right: 5%;
-  bottom: 5%;
+  right: 5vw;
+  bottom: 5vw;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(1rem);
@@ -35,7 +35,6 @@ export default function ScrollToTopButton() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
     });
   };
 
