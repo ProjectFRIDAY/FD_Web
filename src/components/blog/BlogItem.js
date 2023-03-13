@@ -100,14 +100,15 @@ const Placeholder = styled.div`
 `;
 
 export default function BlogItem({ blogItem }) {
-  let authorData = null;
+  const [authorData, setAuthorData] = React.useState(null);
   const tags = blogItem.tags ?? [null, null];
 
   if (blogItem.author) {
-    authorData = blogItem.author;
-    if (authorData.email) {
-      authorData += `(${authorData.email})`;
+    let author = blogItem.author;
+    if (blogItem.email) {
+      author += `(${blogItem.email})`;
     }
+    setAuthorData(author);
   }
 
   return (
@@ -133,7 +134,7 @@ export default function BlogItem({ blogItem }) {
       <InfoArea>
         <Info>
           <FontAwesomeIcon icon={faUser} />
-          {authorData ?? <Placeholder width="50px" />}
+          {authorData ?? <Placeholder width="100px" />}
         </Info>
         <Info>
           <FontAwesomeIcon icon={faClock} />
