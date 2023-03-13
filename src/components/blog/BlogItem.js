@@ -22,14 +22,17 @@ const BlogItemLayout = styled.div`
 
   ${props =>
     props.placeholder
-      ? css`-webkit-mask: linear-gradient(-60deg, #000 30%, rgba(255, 255, 255, 0.7), #000 70%) right/300% 100%;
-    background-repeat: no-repeat;
-    animation: ${shimmer} 2.5s infinite;
-    `
-      : css`&:hover {
-    background-color: rgba(255, 255, 255, 0.35);
-    width: 93vw;
-  }`}
+      ? css`
+          -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(255, 255, 255, 0.7), #000 70%) right/300% 100%;
+          background-repeat: no-repeat;
+          animation: ${shimmer} 2.5s infinite;
+        `
+      : css`
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.35);
+            width: 93vw;
+          }
+        `}
 `;
 
 const ThumbnailArea = styled.div`
@@ -100,15 +103,18 @@ const Placeholder = styled.div`
 `;
 
 export default function BlogItem({ blogItem }) {
-  let authorData = null;
+  const [authorData, setAuthorData] = React.useState(null);
   const tags = blogItem.tags ?? [null, null];
 
-  if (blogItem.author) {
-    authorData = blogItem.author;
-    if (authorData.email) {
-      authorData += `(${authorData.email})`;
+  React.useEffect(() => {
+    if (blogItem.author) {
+      let author = blogItem.author;
+      if (blogItem.email) {
+        author += `(${blogItem.email})`;
+      }
+      setAuthorData(author);
     }
-  }
+  }, [blogItem]);
 
   return (
     <BlogItemLayout
@@ -120,7 +126,7 @@ export default function BlogItem({ blogItem }) {
           });
         }
       }}
-      placeholder={!!!authorData}
+      placeholder={authorData === null}
     >
       <ThumbnailArea>{blogItem.icon ?? '🖤'}</ThumbnailArea>
       <TitleArea>{blogItem.title ?? <Placeholder width="90%" height="30px" />}</TitleArea>
@@ -133,7 +139,7 @@ export default function BlogItem({ blogItem }) {
       <InfoArea>
         <Info>
           <FontAwesomeIcon icon={faUser} />
-          {authorData ?? <Placeholder width="50px" />}
+          {authorData ?? <Placeholder width="100px" />}
         </Info>
         <Info>
           <FontAwesomeIcon icon={faClock} />
