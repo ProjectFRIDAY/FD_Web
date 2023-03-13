@@ -22,14 +22,17 @@ const BlogItemLayout = styled.div`
 
   ${props =>
     props.placeholder
-      ? css`-webkit-mask: linear-gradient(-60deg, #000 30%, rgba(255, 255, 255, 0.7), #000 70%) right/300% 100%;
-    background-repeat: no-repeat;
-    animation: ${shimmer} 2.5s infinite;
-    `
-      : css`&:hover {
-    background-color: rgba(255, 255, 255, 0.35);
-    width: 93vw;
-  }`}
+      ? css`
+          -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(255, 255, 255, 0.7), #000 70%) right/300% 100%;
+          background-repeat: no-repeat;
+          animation: ${shimmer} 2.5s infinite;
+        `
+      : css`
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.35);
+            width: 93vw;
+          }
+        `}
 `;
 
 const ThumbnailArea = styled.div`
@@ -103,13 +106,15 @@ export default function BlogItem({ blogItem }) {
   const [authorData, setAuthorData] = React.useState(null);
   const tags = blogItem.tags ?? [null, null];
 
-  if (blogItem.author) {
-    let author = blogItem.author;
-    if (blogItem.email) {
-      author += `(${blogItem.email})`;
+  React.useEffect(() => {
+    if (blogItem.author) {
+      let author = blogItem.author;
+      if (blogItem.email) {
+        author += `(${blogItem.email})`;
+      }
+      setAuthorData(author);
     }
-    setAuthorData(author);
-  }
+  }, [blogItem]);
 
   return (
     <BlogItemLayout
