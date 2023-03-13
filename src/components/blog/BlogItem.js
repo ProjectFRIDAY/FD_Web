@@ -116,7 +116,7 @@ export default function BlogItem({ blogItem }) {
         if (blogItem.id) {
           Router.push({
             pathname: '/post',
-            query: { id: blogItem.id },
+            query: { id: blogItem.id, title: blogItem.title },
           });
         }
       }}

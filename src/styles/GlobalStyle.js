@@ -62,6 +62,9 @@ a:hover {
   font-weight: normal;
   /* margin-top: 30px; */
 }
+.notion-emoji {
+  font-family: 'TossFace', 'Apple Color Emoji', 'SegoeUISymbol', sans-serif;
+}
 
 .icon {
   cursor: pointer;
