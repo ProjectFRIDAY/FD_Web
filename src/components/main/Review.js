@@ -101,7 +101,7 @@ const Highlight = styled.span`
 function Review() {
   const settings = {
     offset: 0,
-    animateIn: 'flash',
+    animateIn: 'animate__flash',
     duration: 2,
     animateOnce: false,
     initiallyVisible: true,

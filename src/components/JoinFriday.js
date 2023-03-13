@@ -16,7 +16,7 @@ const JoinBottom = styled.div`
 
 const JoinFriday = () => {
   const settings = {
-    animateIn: 'zoomIn',
+    animateIn: 'animate__zoomIn',
     animateOnce: false,
   };
 

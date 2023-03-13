@@ -18,7 +18,7 @@ const PhilosophyBox = styled.div`
 function PhilosophyText() {
   const settings = {
     offset: 0,
-    animateIn: 'fadeIn',
+    animateIn: 'animate__fadeIn',
     animateOnce: false,
   };
   return (
