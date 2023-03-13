@@ -1,8 +1,7 @@
 import React from 'react';
-// import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import 'animate.css/animate.min.css';
 
-export default function ScrollAnimation({ children, ...settings }) {
-  // return <AnimationOnScroll {...settings}></AnimationOnScroll>;
-  return <div {...settings}>{children}</div>;
+export default function ScrollAnimation({ ...settings }) {
+  return <AnimationOnScroll {...settings}></AnimationOnScroll>;
 }
