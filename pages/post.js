@@ -17,6 +17,13 @@ const Container = styled.div`
   padding: 3rem 0;
 `;
 
+const Placeholder = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const cssOverrides = `
   body {
     background-color: #051614;
@@ -27,6 +34,9 @@ const cssOverrides = `
   .notion {
     color: #eee;
     caret-color: #eee;
+  }
+  .notion-emoji {
+    font-family: 'TossFace', 'Apple Color Emoji', 'SegoeUISymbol', sans-serif;
   }
 `;
 
@@ -56,7 +66,11 @@ const Post = () => {
       <style>{cssOverrides}</style>
       <Container>
         {setMenu(1)}
-        {Object.keys(notionData).length && <NotionRenderer blockMap={notionData} fullPage={true} />}
+        {Object.keys(notionData).length > 0 ? (
+          <NotionRenderer blockMap={notionData} fullPage={true} />
+        ) : (
+          <Placeholder >Loading...</Placeholder>
+        )}
         <ScrollToTopButton />
         <HitsBadge url={`https://fridayproject.co.kr/post?id=${id}`} />
       </Container>

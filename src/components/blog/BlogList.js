@@ -19,9 +19,11 @@ export default function BlogList({ blogItems }) {
     transition: { duration: 0.3, ease: 'easeOut' },
   };
 
+  const items = blogItems.length > 0 ? blogItems : [{}, {}, {}];
+
   return (
     <BlogListLayout>
-      {blogItems.map((item, index) => (
+      {items.map((item, index) => (
         <AnimatePresence key={index} {...animationParams}>
           <BlogItem blogItem={item} />
         </AnimatePresence>

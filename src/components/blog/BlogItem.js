@@ -1,8 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faClock, faPenNib } from '@fortawesome/free-solid-svg-icons';
 import Router from 'next/router';
+
+const shimmer = keyframes`
+  100% {-webkit-mask-position:left}
+`;
 
 const BlogItemLayout = styled.div`
   width: 90vw;
@@ -16,10 +20,16 @@ const BlogItemLayout = styled.div`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
-  &:hover {
+  ${props =>
+    props.placeholder
+      ? css`-webkit-mask: linear-gradient(-60deg, #000 30%, rgba(255, 255, 255, 0.7), #000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: ${shimmer} 2.5s infinite;
+    `
+      : css`&:hover {
     background-color: rgba(255, 255, 255, 0.35);
     width: 93vw;
-  }
+  }`}
 `;
 
 const ThumbnailArea = styled.div`
@@ -51,6 +61,11 @@ const Tag = styled.span`
   font-weight: 600;
   text-shadow: #01baae 0 0 10px;
   align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
 `;
 
 const InfoArea = styled.div`
@@ -73,8 +88,20 @@ const Info = styled.span`
   line-height: 1;
 `;
 
+const Placeholder = styled.div`
+  display: inline-block;
+  width: ${props => props.width ?? '100%'};
+  height: ${props => props.height ?? '20px'};
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: ${shimmer} 2.5s infinite;
+`;
+
 export default function BlogItem({ blogItem }) {
-  let authorData = '';
+  let authorData = null;
+  const tags = blogItem.tags ?? [null, null];
 
   if (blogItem.author) {
     authorData = blogItem.author;
@@ -85,29 +112,36 @@ export default function BlogItem({ blogItem }) {
 
   return (
     <BlogItemLayout
-      onClick={() =>
-        Router.push({
-          pathname: '/post',
-          query: { id: blogItem.id },
-        })
-      }
+      onClick={() => {
+        if (blogItem.id) {
+          Router.push({
+            pathname: '/post',
+            query: { id: blogItem.id },
+          });
+        }
+      }}
+      placeholder={!!!authorData}
     >
-      <ThumbnailArea>{blogItem.icon ?? ''}</ThumbnailArea>
-      <TitleArea>{blogItem.title ?? ''}</TitleArea>
-      <TagArea>{blogItem.tags ? blogItem.tags.map((item, index) => <Tag key={index}>#{item}</Tag>) : ''}</TagArea>
+      <ThumbnailArea>{blogItem.icon ?? '🖤'}</ThumbnailArea>
+      <TitleArea>{blogItem.title ?? <Placeholder width="90%" height="30px" />}</TitleArea>
+      <TagArea>
+        {tags.map((item, index) => (
+          <Tag key={index}>#{item ?? <Placeholder width="50px" />}</Tag>
+        ))}
+      </TagArea>
       <div></div>
       <InfoArea>
         <Info>
           <FontAwesomeIcon icon={faUser} />
-          {authorData}
+          {authorData ?? <Placeholder width="50px" />}
         </Info>
         <Info>
           <FontAwesomeIcon icon={faClock} />
-          {dateToText(blogItem.createdAt) ?? ''}
+          {dateToText(blogItem.createdAt) ?? <Placeholder width="100px" />}
         </Info>
         <Info>
           <FontAwesomeIcon icon={faPenNib} />
-          {dateToText(blogItem.EditedAt) ?? ''}
+          {dateToText(blogItem.EditedAt) ?? <Placeholder width="100px" />}
         </Info>
       </InfoArea>
     </BlogItemLayout>
