@@ -120,7 +120,7 @@ export default function BlogItem({ blogItem }) {
           });
         }
       }}
-      placeholder={authorData !== null}
+      placeholder={authorData === null}
     >
       <ThumbnailArea>{blogItem.icon ?? '🖤'}</ThumbnailArea>
       <TitleArea>{blogItem.title ?? <Placeholder width="90%" height="30px" />}</TitleArea>
