@@ -35,6 +35,17 @@ const MyImg = styled.img`
   pointer-events: none;
 `;
 
+const Arrow = styled.div`
+  border: solid #01baae;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  z-index: 1;
+  transform: translateY(-20px) rotate(${props => (props.left ? 135 : 315)}deg);;
+`;
+
 function ProjectIntro() {
   const settings = {
     className: 'center',
@@ -45,7 +56,7 @@ function ProjectIntro() {
     speed: 400,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: 'ease-out',
@@ -69,7 +80,10 @@ function ProjectIntro() {
         },
       },
     ],
+    nextArrow: <Arrow right />,
+    prevArrow: <Arrow left />,
   };
+
   return (
     <Container>
       <TextContainer>
