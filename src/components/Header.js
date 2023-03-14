@@ -8,6 +8,8 @@ import MyLink from '../components/MyLink';
 import PageMenuList from './PageMenuList';
 import { motion } from 'framer-motion';
 
+const MINIMUM_SCROLL = 10;
+
 const FixedHeader = styled(motion.div)`
   height: 4rem;
   width: 100%;
@@ -20,7 +22,7 @@ const FixedHeader = styled(motion.div)`
   top: 0;
   z-index: 3;
   justify-content: space-between;
-  background-color: ${props => props.isBlack ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.2)'};
+  background-color: ${props => (props.isBlack ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.2)')};
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
 `;
@@ -69,37 +71,17 @@ const PageListContainer = styled.div`
 
 function Header({ blackHeader }) {
   const [menu, setMenu] = useRecoilState(menuAtom);
-  const [isScrollingDown, setIsScrollingDown] = React.useState(false);
+  const [isScrollTop, setIsScrollTop] = React.useState(true);
 
   // 스크롤 방향에 따라 헤더 숨기기
   React.useEffect(() => {
-    let lastScrollY = 0;
-    let ticking = false;
-
-    const updateScroiingDown = () => {
-      const scrollY = window.pageYOffset;
-
-      setIsScrollingDown(scrollY - lastScrollY >= 0);
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-      ticking = false;
-    };
-
-    const onScroll = throttle(() => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScroiingDown);
-        ticking = true;
-      }
-    }, 100);
-
+    const onScroll = throttle(() => setIsScrollTop(window.pageYOffset < MINIMUM_SCROLL), 50);
     window.addEventListener('scroll', onScroll);
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-    };
   }, []);
   // end 스크롤 방향에 따라 헤더 숨기기
 
   // 애니메이션 설정
-  const animationName = !isScrollingDown && menu ? 'hide' : 'show';
+  const animationName = isScrollTop && menu ? 'hide' : 'show';
   const headerAnimationVarients = {
     open: { height: '4rem', opacity: 1 },
     hide: { height: '0', opacity: 0 },

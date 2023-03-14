@@ -17,7 +17,6 @@ const BlogItemLayout = styled.div`
   grid-template-columns: 4.5rem auto;
   grid-template-rows: 1fr 1fr 1.2fr;
   gap: 0px 20px;
-  cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   ${props =>
@@ -28,6 +27,7 @@ const BlogItemLayout = styled.div`
           animation: ${shimmer} 2.5s infinite;
         `
       : css`
+          cursor: pointer;
           &:hover {
             background-color: rgba(255, 255, 255, 0.35);
             width: 93vw;

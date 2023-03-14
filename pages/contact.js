@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { menuAtom } from '../src/recoil/atom';
 import { useSetRecoilState } from 'recoil';
 import AnimatedPage from '../src/components/template/AnimatedPage';
+import { motion } from 'framer-motion';
 
 const mailIcon = "/assets/images/icons/gmail.png";
 const kakaoIcon = "/assets/images/icons/kakao.png";
@@ -31,7 +32,7 @@ const ContactLayout = styled.div`
   gap: 3rem 5rem;
 `;
 
-const ContactBox = styled.a`
+const ContactBox = styled(motion.a)`
   width: 16rem;
   height: 13rem;
   background-color: white;
@@ -98,6 +99,18 @@ const StyledH1 = styled.h1`
   }
 `;
 
+function AnimatedContactBox({ children, ...props }) {
+  return (
+    <ContactBox
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      {...props}
+    >
+      {children}
+    </ContactBox>
+  );
+}
+
 function Contact() {
   const setMenu = useSetRecoilState(menuAtom);
 
@@ -108,7 +121,7 @@ function Contact() {
         <Layout>
           <StyledH1 className="title">Contact</StyledH1>
           <ContactLayout>
-            <ContactBox href="mailto:fridayproj2@gmail.com" target="_blank">
+            <AnimatedContactBox href="mailto:fridayproj2@gmail.com" target="_blank">
               <Title>
                 <Icon src={mailIcon} />
                 <p>메일</p>
@@ -116,9 +129,9 @@ function Contact() {
               <ContactTo backgroundColor="#01baae">
                 <LinkName>fridayproj2@gmail.com</LinkName>
               </ContactTo>
-            </ContactBox>
+            </AnimatedContactBox>
 
-            <ContactBox href="https://open.kakao.com/o/sytyCGxe" target="_blank">
+            <AnimatedContactBox href="https://open.kakao.com/o/sytyCGxe" target="_blank">
               <Title>
                 <Icon src={kakaoIcon} />
                 <p>카카오톡</p>
@@ -126,9 +139,9 @@ function Contact() {
               <ContactTo backgroundColor="#f9e000">
                 <LinkName>@fridayproj</LinkName>
               </ContactTo>
-            </ContactBox>
+            </AnimatedContactBox>
 
-            <ContactBox href="https://www.instagram.com/fridayproj_/" target="_blank">
+            <AnimatedContactBox href="https://www.instagram.com/fridayproj_/" target="_blank">
               <Title>
                 <Icon src={instagramIcon} />
                 <p>인스타그램</p>
@@ -140,7 +153,7 @@ function Contact() {
               >
                 <LinkName>@fridayproj_</LinkName>
               </ContactTo>
-            </ContactBox>
+            </AnimatedContactBox>
           </ContactLayout>
         </Layout>
         <Welcome>🌟 여러분의 문의를 환영합니다. 🌟</Welcome>

@@ -79,6 +79,19 @@ a:hover {
 ::selection {
   background-color: rgba(1, 185, 173, 0.5);
 }
+
+.slick-prev {
+  left: 20px;
+}
+.slick-next {
+  right: 20px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  opacity: 0;
+  display: none;
+}
 `;
 
 export default GlobalStyle;

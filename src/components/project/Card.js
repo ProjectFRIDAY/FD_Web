@@ -1,6 +1,8 @@
+import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const Card = styled.div`
+const CardStyle = styled(motion.div)`
   cursor: pointer;
   width: max(10rem, 20vw);
   height: max(12rem, 24vw);
@@ -41,5 +43,9 @@ const Tag = styled.span`
     text-shadow: none;
   }
 `;
+
+const Card = ({ ...props }) => {
+  return <CardStyle whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} {...props}></CardStyle>;
+};
 
 export default { Card, ImageField, TagField, Tag };
