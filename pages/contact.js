@@ -25,7 +25,7 @@ const ContactLayout = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0rem;
+  margin-top: 3rem;
   padding: 0rem;
   flex-wrap: wrap;
   gap: 3rem 5rem;

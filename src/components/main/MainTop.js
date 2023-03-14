@@ -19,7 +19,7 @@ const TopContainer = styled.div`
 
 const StyledTitle = styled.div`
   font-size: 15vw;
-  margin-bottom: 5vw;
+  margin-bottom: 6vw;
 `;
 
 const MyButton = styled(Button)`
