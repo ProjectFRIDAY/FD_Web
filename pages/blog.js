@@ -55,8 +55,8 @@ const Blog = () => {
         setBlogItems(data);
       })
       .catch(err => {
-        // alert('포스트를 불러오는데 실패했습니다.');
-        // router.push('/');
+        alert('포스트를 불러오는데 실패했습니다.');
+        router.push('/');
       });
   }, []);
 
