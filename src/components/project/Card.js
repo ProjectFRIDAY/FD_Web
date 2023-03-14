@@ -12,7 +12,6 @@ const Card = styled.div`
 `;
 
 const ImageField = styled.img`
-  height: 20rem;
   background-color: '#ccc';
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -23,7 +22,7 @@ const TagField = styled.div`
   align-items: center;
   display: flex;
   background: white;
-  height: 5rem;
+  height: 100%;
   color: black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
