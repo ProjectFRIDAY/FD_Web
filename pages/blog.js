@@ -79,6 +79,7 @@ export const getStaticProps = async () => {
 const Blog = ({ blogItems, isError }) => {
   const router = useRouter();
   const setMenu = useSetRecoilState(menuAtom);
+  const isLoading = isError || router.isFallback;
 
   React.useEffect(() => {
     if (isError) {
@@ -95,7 +96,7 @@ const Blog = ({ blogItems, isError }) => {
         <BackgroundText>VALUABLE</BackgroundText>
       </TitleContainer>
       <Text className="title">Friday Blog</Text>
-      {!isError && <BlogList blogItems={blogItems} />}
+      {!isError && <BlogList blogItems={blogItems} isLoading={isLoading} />}
       <ScrollToTopButton />
     </AnimatedPage>
   );

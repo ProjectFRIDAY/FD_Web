@@ -26,6 +26,13 @@ const ContentContainer = styled.div`
   justify-content: center;
 `;
 
+const Placeholder = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Comment = styled(DiscussionEmbed)`
   margin-top: 5rem;
   width: 80vw;
@@ -68,7 +75,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({params}) => {
+export const getStaticProps = async ({ params }) => {
   const id = params.id;
   let notionData = {};
   let isError = false;
@@ -105,7 +112,9 @@ const Post = ({ id, notionData, isError }) => {
       <style>{cssOverrides}</style>
       <Container>
         {setMenu(1)}
-        {!isError && (
+        {router.isFallback || isError ? (
+          <Placeholder>Loading...</Placeholder>
+        ) : (
           <ContentContainer>
             <NotionRenderer blockMap={notionData ?? {}} fullPage={true} />
             <HitsBadge url={`https://fridayproject.co.kr/post/${id}`} />
