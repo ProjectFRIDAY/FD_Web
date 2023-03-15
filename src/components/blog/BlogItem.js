@@ -103,26 +103,21 @@ const Placeholder = styled.div`
 `;
 
 export default function BlogItem({ blogItem }) {
-  const [authorData, setAuthorData] = React.useState(null);
-  const tags = blogItem.tags ?? [null, null];
+  let authorData = null;
 
-  React.useEffect(() => {
-    if (blogItem.author) {
-      let author = blogItem.author;
-      if (blogItem.email) {
-        author += `(${blogItem.email})`;
-      }
-      setAuthorData(author);
+  if (blogItem.author) {
+    authorData = blogItem.author;
+    if (blogItem.email) {
+      authorData += `(${blogItem.email})`;
     }
-  }, [blogItem]);
+  }
 
   return (
     <BlogItemLayout
       onClick={() => {
         if (blogItem.id) {
           Router.push({
-            pathname: '/post',
-            query: { id: blogItem.id, title: blogItem.title },
+             pathname: `/post/${blogItem.id}`,
           });
         }
       }}
@@ -131,7 +126,7 @@ export default function BlogItem({ blogItem }) {
       <ThumbnailArea>{blogItem.icon ?? '🖤'}</ThumbnailArea>
       <TitleArea>{blogItem.title ?? <Placeholder width="90%" height="30px" />}</TitleArea>
       <TagArea>
-        {tags.map((item, index) => (
+        {blogItem.tags.map((item, index) => (
           <Tag key={index}>#{item ?? <Placeholder width="50px" />}</Tag>
         ))}
       </TagArea>
@@ -143,21 +138,13 @@ export default function BlogItem({ blogItem }) {
         </Info>
         <Info>
           <FontAwesomeIcon icon={faClock} />
-          {dateToText(blogItem.createdAt) ?? <Placeholder width="100px" />}
+          {blogItem.createdAt ?? <Placeholder width="100px" />}
         </Info>
         <Info>
           <FontAwesomeIcon icon={faPenNib} />
-          {dateToText(blogItem.EditedAt) ?? <Placeholder width="100px" />}
+          {blogItem.EditedAt ?? <Placeholder width="100px" />}
         </Info>
       </InfoArea>
     </BlogItemLayout>
   );
-}
-
-function dateToText(date) {
-  if (!date) return null;
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  return `${year}년 ${month}월 ${day}일`;
 }
