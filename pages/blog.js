@@ -44,20 +44,34 @@ const Text = styled.div`
   text-align: center;
 `;
 
-const Blog = () => {
+export const getStaticProps = async () => {
+  let blogItems = [];
+  let isError = false;
+
+  try {
+    blogItems = await getBlogItems();
+  } catch (err) {
+    isError = true;
+  }
+
+  return {
+    props: {
+      blogItems,
+      isError,
+    },
+    revalidate: 10,
+  };
+};
+
+const Blog = ({ blogItems, isError }) => {
   const router = useRouter();
   const setMenu = useSetRecoilState(menuAtom);
-  const [blogItems, setBlogItems] = React.useState([]);
 
   React.useEffect(() => {
-    getBlogItems()
-      .then(data => {
-        setBlogItems(data);
-      })
-      .catch(err => {
-        alert('포스트를 불러오는데 실패했습니다.');
-        router.push('/');
-      });
+    if (isError) {
+      alert('포스트를 불러오는데 실패했습니다.');
+      router.push('/');
+    }
   }, []);
 
   return (
@@ -68,7 +82,7 @@ const Blog = () => {
         <BackgroundText>VALUABLE</BackgroundText>
       </TitleContainer>
       <Text className="title">Friday Blog</Text>
-      <BlogList blogItems={blogItems} />
+      {!isError && <BlogList blogItems={blogItems} />}
       <ScrollToTopButton />
     </AnimatedPage>
   );
