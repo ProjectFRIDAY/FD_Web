@@ -14,7 +14,7 @@ const commonHeaders = {
 export async function getBlogItems() {
   try {
     const result = await axios.post(
-      `/databases/${notionDatabaseKey}/query`,
+      `https://api.notion.com/v1/databases/${notionDatabaseKey}/query`,
       {
         page_size: 100,
         sorts: [
@@ -35,7 +35,7 @@ export async function getBlogItems() {
 
 export async function getNotionPost(id) {
   try {
-    const result = await axios.get(`/page/${id}`);
+    const result = await axios.get(`https://notion-api.splitbee.io/v1/page/${id}`);
     return result.data;
   } catch (error) {
     throw new Error(error);
