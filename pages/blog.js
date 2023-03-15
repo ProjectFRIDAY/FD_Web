@@ -44,12 +44,25 @@ const Text = styled.div`
   text-align: center;
 `;
 
+function dateToText(date) {
+  if (!date) return null;
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  return `${year}년 ${month}월 ${day}일`;
+}
+
 export const getStaticProps = async () => {
-  let blogItems = [];
+  const blogItems = [];
   let isError = false;
 
   try {
-    blogItems = await getBlogItems();
+    const result = await getBlogItems();
+    for (const item of result) {
+      item.createdAt = dateToText(item.createdAt);
+      item.EditedAt = dateToText(item.EditedAt);
+      blogItems.push(JSON.parse(JSON.stringify(item)));
+    }
   } catch (err) {
     isError = true;
   }

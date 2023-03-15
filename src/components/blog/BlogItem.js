@@ -112,21 +112,13 @@ export default function BlogItem({ blogItem }) {
         </Info>
         <Info>
           <FontAwesomeIcon icon={faClock} />
-          {dateToText(blogItem.createdAt) ?? ''}
+          {blogItem.createdAt ?? ''}
         </Info>
         <Info>
           <FontAwesomeIcon icon={faPenNib} />
-          {dateToText(blogItem.EditedAt) ?? ''}
+          {blogItem.EditedAt ?? ''}
         </Info>
       </InfoArea>
     </BlogItemLayout>
   );
-}
-
-function dateToText(date) {
-  if (!date) return null;
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  return `${year}년 ${month}월 ${day}일`;
 }
