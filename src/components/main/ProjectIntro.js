@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import MyButton from '../Button';
-import Icons from '../Icons';
 import Carousel from '../Carousel';
 import Image from 'next/image';
+import Icons from '../../data/static/ProjectIcons';
 
 const Container = styled.div`
   height: 40rem;
@@ -26,14 +26,16 @@ const MySlider = styled(Carousel)`
   width: 100%;
 `;
 
-const MyImg = styled(Image)`
+const MyImgContainer = styled.div`
+  position: relative;
   width: 90%;
-  height: 90%;
+  aspect-ratio: 1/1;
   outline: none;
   border-radius: 20px;
   border: 1.5px solid ${props => props.theme.primaryColor};
   object-fit: cover;
   pointer-events: none;
+  overflow: hidden;
 `;
 
 const Arrow = styled.div`
@@ -93,33 +95,13 @@ function ProjectIntro() {
         </div>
       </TextContainer>
       <MySlider {...settings}>
-        <div>
-          <MyImg src={Icons[6].src} placeholder="blur" />
-        </div>
-        <div>
-          <MyImg src={Icons[7].src} placeholder="blur" />
-        </div>
-        <div>
-          <MyImg src={Icons[8].src} placeholder="blur" />
-        </div>
-        <div>
-          <MyImg src={Icons[0].src} placeholder="blur" />
-        </div>
-        <div>
-          <MyImg src={Icons[1].src} placeholder="blur" />
-        </div>
-        <div>
-          <MyImg src={Icons[2].src} placeholder="blur" />
-        </div>
-        <div>
-          <MyImg src={Icons[3].src} placeholder="blur" />
-        </div>
-        <div>
-          <MyImg src={Icons[4].src} placeholder="blur" />
-        </div>
-        <div>
-          <MyImg src={Icons[5].src} placeholder="blur" />
-        </div>
+        {Object.values(Icons).map((icon, index) => (
+          <div key={index}>
+            <MyImgContainer>
+              <Image fill src={icon} placeholder="blur" alt="프로젝트 이미지" />
+            </MyImgContainer>
+          </div>
+        ))}
       </MySlider>
       <MyButton href="/project" style={{ marginTop: '3rem' }} border color={'#01baae'} backgroundColor={'black'}>
         모든 프로젝트 보기

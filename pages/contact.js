@@ -5,10 +5,7 @@ import { useSetRecoilState } from 'recoil';
 import AnimatedPage from '../src/components/template/AnimatedPage';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-const mailIcon = '/assets/images/icons/gmail.png';
-const kakaoIcon = '/assets/images/icons/kakao.png';
-const instagramIcon = '/assets/images/icons/instagram.png';
+import Contacts from '../src/data/static/Contacts';
 
 const GradientBackground = styled.div`
   width: 100%;
@@ -69,7 +66,8 @@ const ContactTo = styled.div`
   font-weight: bold;
 `;
 
-const Icon = styled(Image)`
+const IconContainer = styled.div`
+  position: relative;
   width: 30px;
   height: 30px;
   margin: 1rem;
@@ -118,39 +116,19 @@ function Contact() {
         <Layout>
           <StyledH1 className="title">Contact</StyledH1>
           <ContactLayout>
-            <AnimatedContactBox href="mailto:fridayproj2@gmail.com" target="_blank">
-              <Title>
-                <Icon src={mailIcon} placeholder="blur" />
-                <p>메일</p>
-              </Title>
-              <ContactTo backgroundColor="#01baae">
-                <LinkName>fridayproj2@gmail.com</LinkName>
-              </ContactTo>
-            </AnimatedContactBox>
-
-            <AnimatedContactBox href="https://open.kakao.com/o/sytyCGxe" target="_blank">
-              <Title>
-                <Icon src={kakaoIcon} placeholder="blur" />
-                <p>카카오톡</p>
-              </Title>
-              <ContactTo backgroundColor="#f9e000">
-                <LinkName>@fridayproj</LinkName>
-              </ContactTo>
-            </AnimatedContactBox>
-
-            <AnimatedContactBox href="https://www.instagram.com/fridayproj_/" target="_blank">
-              <Title>
-                <Icon src={instagramIcon} placeholder="blur" />
-                <p>인스타그램</p>
-              </Title>
-              <ContactTo
-                backgroundColor="
-                radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , 
-                linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);"
-              >
-                <LinkName>@fridayproj_</LinkName>
-              </ContactTo>
-            </AnimatedContactBox>
+            {Contacts.map((contact, index) => (
+              <AnimatedContactBox href={contact.href} target="_blank" key={index}>
+                <Title>
+                  <IconContainer>
+                    <Image fill src={contact.icon} placeholder="blur" alt="연락처 아이콘" />
+                  </IconContainer>
+                  <p>{contact.title}</p>
+                </Title>
+                <ContactTo backgroundColor={contact.color}>
+                  <LinkName>{contact.linkName}</LinkName>
+                </ContactTo>
+              </AnimatedContactBox>
+            ))}
           </ContactLayout>
         </Layout>
         <Welcome>🌟 여러분의 문의를 환영합니다. 🌟</Welcome>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Thumbnail = '/assets/images/tunnel.jpg';
+const Thumbnail = '/assets/images/tunnel.jpeg';
 const Video = '/assets/videos/tunnel.mp4';
 
 const FullVideos = styled.div`

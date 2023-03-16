@@ -53,7 +53,7 @@ const FaqModal = styled(motion.p)`
   color: #ccc;
 `;
 
-const FaqContent = styled.p`
+const FaqContent = styled.span`
   margin: 10px 0;
 `;
 
@@ -101,7 +101,7 @@ function FAQ(props) {
       <AnimatePresence>
         {expanded && (
           <FaqModal {...modalAnimationParams}>
-            <FaqContent>{props.children}</FaqContent>
+            <FaqContent dangerouslySetInnerHTML={{ __html: props.content }}/>
           </FaqModal>
         )}
       </AnimatePresence>

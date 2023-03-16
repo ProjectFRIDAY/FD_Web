@@ -1,12 +1,10 @@
-import React from 'react';
-import { useRecoilState, useSetRecoilState } from 'recoil';
+import React, { useState } from 'react';
+import { useSetRecoilState } from 'recoil';
 import { menuAtom } from '../src/recoil/atom';
-import { prjState, visibleState } from '../src/recoil/atom';
 import styled from 'styled-components';
-import Icons from '../src/components/Icons';
-import card from '../src/components/project/Card';
+import Card from '../src/components/project/Card';
+import Projects from '../src/data/static/Projects';
 import Modal from '../src/components/project/Modal';
-import Projects from '../src/components/project/Projects';
 import JoinFriday from '../src/components/JoinFriday';
 import AnimatedPage from '../src/components/template/AnimatedPage';
 
@@ -56,13 +54,14 @@ const Wrapper = styled.div`
 `;
 
 function Project() {
-  const [visible, setVisible] = useRecoilState(visibleState);
-  const [prj, setPrj] = useRecoilState(prjState);
+  const [visible, setVisible] = useState(false);
+  const [projectIndex, setProjectIndex] = useState(0);
+  const setMenu = useSetRecoilState(menuAtom);
+
   const openModal = prj => {
-    setPrj(prj);
+    setProjectIndex(prj);
     setVisible(true);
   };
-  const setMenu = useSetRecoilState(menuAtom);
 
   return (
     <AnimatedPage>
@@ -73,96 +72,17 @@ function Project() {
       </TitleContainer>
       <Text className="title">Friday Projects</Text>
       <Wrapper>
-        <card.Card
-          onClick={() => {
-            openModal('OOTD');
-          }}
-        >
-          <card.ImageField src={Icons[6].src} placeholder="blur"></card.ImageField>
-
-          <card.TagField>
-            <card.Tag>#개발중</card.Tag>
-            <card.Tag>#Mobile</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('레모아');
-          }}
-        >
-          <card.ImageField src={Icons[7].src} placeholder="blur"></card.ImageField>
-          <card.TagField>
-            <card.Tag>#개발중</card.Tag>
-            <card.Tag>#Web</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('comento');
-          }}
-        >
-          <card.ImageField src={Icons[0].src} placeholder="blur"></card.ImageField>
-          <card.TagField>
-            <card.Tag>#개발중</card.Tag>
-            <card.Tag>#Web</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('플랜다이얼');
-          }}
-        >
-          <card.ImageField src={Icons[1].src} placeholder="blur"></card.ImageField>
-          <card.TagField>
-            <card.Tag>#개발완료</card.Tag>
-            <card.Tag>#Mobile</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('웹사이트');
-          }}
-        >
-          <card.ImageField src={Icons[2].src} placeholder="blur"></card.ImageField>
-          <card.TagField>
-            <card.Tag>#개발완료</card.Tag>
-            <card.Tag>#Web</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('엄마타이머');
-          }}
-        >
-          <card.ImageField src={Icons[3].src} placeholder="blur"></card.ImageField>
-          <card.TagField>
-            <card.Tag>#개발완료</card.Tag>
-            <card.Tag>#Mobile</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('텍스티');
-          }}
-        >
-          <card.ImageField src={Icons[5].src} placeholder="blur"></card.ImageField>
-          <card.TagField>
-            <card.Tag>#해커톤</card.Tag>
-            <card.Tag>#Web</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <card.Card
-          onClick={() => {
-            openModal('약속이');
-          }}
-        >
-          <card.ImageField src={Icons[4].src} placeholder="blur"></card.ImageField>
-          <card.TagField>
-            <card.Tag>#토이프로젝트</card.Tag>
-            <card.Tag>#Web</card.Tag>
-          </card.TagField>
-        </card.Card>
-        <Modal content={Projects[prj]} visible={visible}></Modal>
+        {Projects.map((prj, index) => (
+          <Card
+            imageSrc={prj.img}
+            tags={prj.tags.slice(0, 2)}
+            key={index}
+            onClick={() => {
+              openModal(index);
+            }}
+          />
+        ))}
+        <Modal content={Projects[projectIndex]} visible={visible} setVisible={setVisible}></Modal>
       </Wrapper>
       <JoinFriday />
     </AnimatedPage>

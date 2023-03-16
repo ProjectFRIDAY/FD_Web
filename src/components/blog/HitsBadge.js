@@ -13,7 +13,7 @@ export default function HitsBadge({ url }) {
 
   return (
     <HitsBadgeContainer>
-      <img src={imageUrl}/>
+      <img src={imageUrl} alt="방문자 수"/>
     </HitsBadgeContainer>
   );
 }
