@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 
 const HitsBadgeContainer = styled.div`
   display: flex;
@@ -14,7 +13,7 @@ export default function HitsBadge({ url }) {
 
   return (
     <HitsBadgeContainer>
-      <Image src={imageUrl} placeholder="blur"/>
+      <img src={imageUrl}/>
     </HitsBadgeContainer>
   );
 }
