@@ -1,6 +1,4 @@
 import React from 'react';
-import { useSetRecoilState } from 'recoil';
-import { visibleState } from '../../recoil/atom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faLink } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import Image from 'next/image';
+
+import aosImage from '../../../public/assets/images/aos.png';
+import iosImage from '../../../public/assets/images/ios.png';
 
 const ModalStyle = styled(motion.div)`
   background-color: rgba(255, 255, 255, 0.5);
@@ -32,11 +33,13 @@ const ModalStyle = styled(motion.div)`
   }
 `;
 
-const Img = styled(Image)`
+const ImageContainer = styled.div`
+  position: relative;
   border-radius: 10px;
   width: 200px;
   height: 200px;
   margin-right: 50px;
+  overflow: hidden;
 
   @media only screen and (max-width: 1000px) {
     display: none;
@@ -119,8 +122,11 @@ const ExitIcon = styled(FontAwesomeIcon)`
   }
 `;
 
-const DownloadImage = styled(Image)`
+const DownloadImageContainer = styled.div`
+  position: relative;
   width: 10rem;
+  height: 3rem;
+  overflow: hidden;
 `;
 
 const DownloadContainer = styled.div`
@@ -131,9 +137,7 @@ const DownloadContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-function Modal({ ...rest }) {
-  const setVisible = useSetRecoilState(visibleState);
-
+function Modal({ content, visible, setVisible, ...rest }) {
   const closeModal = () => {
     setVisible(false);
   };
@@ -147,23 +151,26 @@ function Modal({ ...rest }) {
 
   return (
     <AnimatePresence>
-      {rest.visible && (
-        <ModalStyle {...animationParams}>
+      {visible && (
+        <ModalStyle {...animationParams} {...rest}>
           <ExitIcon onClick={closeModal} icon={faXmark} className="icon" />
           <Wrapper>
-            <Img src={rest.content.img} placeholder="blur" />
+            <ImageContainer>
+              <Image fill src={content.img} placeholder="blur" alt="프로젝트 이미지" />
+            </ImageContainer>
+
             <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
               <TitleContainer>
-                <Title>{rest.content.title}</Title>
-                {rest.content.git ? (
-                  <LinkComp href={rest.content.git} target="_blank">
+                <Title>{content.title}</Title>
+                {content.git ? (
+                  <LinkComp href={content.git} target="_blank">
                     <FontAwesomeIcon icon={faGithub} color="black" />
                   </LinkComp>
                 ) : (
                   ''
                 )}
-                {rest.content.site ? (
-                  <LinkComp style={{ marginTop: 0 }} href={rest.content.site} target="_blank">
+                {content.site ? (
+                  <LinkComp style={{ marginTop: 0 }} href={content.site} target="_blank">
                     <FontAwesomeIcon icon={faLink} color="black" />
                   </LinkComp>
                 ) : (
@@ -171,23 +178,27 @@ function Modal({ ...rest }) {
                 )}
               </TitleContainer>
               <TagContainer>
-                <Text>{rest.content.team}</Text>
-                <Text>{rest.content.tag}</Text>
+                <Text>{content.team}</Text>
+                <Text>{content.tags}</Text>
               </TagContainer>
             </div>
           </Wrapper>
-          <Desc dangerouslySetInnerHTML={{ __html: rest.content.desc }}></Desc>
+          <Desc dangerouslySetInnerHTML={{ __html: content.desc }}></Desc>
           <DownloadContainer>
-            {rest.content.aos ? (
-              <LinkComp href={rest.content.aos} target="_blank">
-                <DownloadImage src="/assets/images/aos.png" placeholder="blur"></DownloadImage>
+            {content.aos ? (
+              <LinkComp href={content.aos} target="_blank">
+                <DownloadImageContainer>
+                  <Image fill src={aosImage} placeholder="blur" alt="AOS 다운로드" />
+                </DownloadImageContainer>
               </LinkComp>
             ) : (
               ''
             )}
-            {rest.content.ios ? (
-              <LinkComp href={rest.content.ios} target="_blank">
-                <DownloadImage src="/assets/images/ios.png" placeholder="blur"></DownloadImage>
+            {content.ios ? (
+              <LinkComp href={content.ios} target="_blank">
+                <DownloadImageContainer>
+                  <Image fill src={iosImage} placeholder="blur" alt="IOS 다운로드" />
+                </DownloadImageContainer>
               </LinkComp>
             ) : (
               ''

@@ -4,11 +4,11 @@ import * as Text from './Text';
 import * as Job from './JobExplain';
 import Image from 'next/image';
 
-const designImg = '/assets/images/job/design.jpg';
-const MobileImg = '/assets/images/job/mobile.jpeg';
-const FrontEndImg = '/assets/images/job/fe.jpg';
-const BackEndImg = '/assets/images/job/be.jpg';
-const PmImg = '/assets/images/job/pm.jpg';
+import designImg from '../../../public/assets/images/job/design.jpeg';
+import MobileImg from '../../../public/assets/images/job/mobile.jpeg';
+import FrontEndImg from '../../../public/assets/images/job/fe.jpeg';
+import BackEndImg from '../../../public/assets/images/job/be.jpeg';
+import PmImg from '../../../public/assets/images/job/pm.jpeg';
 
 const RecruitLayout = styled.div`
   display: flex;
@@ -41,7 +41,8 @@ const DevSelect = styled.div`
   gap: 10px;
 `;
 
-const RoleImage = styled(Image)`
+const RoleImageContainer = styled.div`
+  position: relative;
   width: 100%;
   height: 300px;
   margin-top: 30px;
@@ -86,16 +87,20 @@ function RecruitAreaCard() {
             Mobile
           </DevSelBtn>
         </DevSelect>
-        <RoleImage
-          src={
-            (jobSel === 0 && designImg) ||
-            (jobSel === 2 && PmImg) ||
-            (devSel === 0 && FrontEndImg) ||
-            (devSel === 1 && BackEndImg) ||
-            (devSel === 2 && MobileImg)
-          }
-          placeholder="blur"
-        />
+        <RoleImageContainer>
+          <Image
+            fill
+            src={
+              (jobSel === 0 && designImg) ||
+              (jobSel === 2 && PmImg) ||
+              (devSel === 0 && FrontEndImg) ||
+              (devSel === 1 && BackEndImg) ||
+              (devSel === 2 && MobileImg)
+            }
+            placeholder="blur"
+            alt="직무 이미지"
+          />
+        </RoleImageContainer>
       </SelectContainer>
       <ExplainContainer>
         {(jobSel === 0 && <Job.Designer />) ||

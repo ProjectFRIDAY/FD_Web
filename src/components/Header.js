@@ -22,7 +22,7 @@ const FixedHeader = styled(motion.div)`
   top: 0;
   z-index: 3;
   justify-content: space-between;
-  background-color: ${props => (props.isBlack ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.2)')};
+  background-color: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
 `;
@@ -69,7 +69,7 @@ const PageListContainer = styled.div`
   }
 `;
 
-function Header({ blackHeader }) {
+function Header() {
   const [menu, setMenu] = useRecoilState(menuAtom);
   const [isScrollTop, setIsScrollTop] = React.useState(true);
 
@@ -90,7 +90,7 @@ function Header({ blackHeader }) {
 
   return (
     <>
-      <FixedHeader animate={animationName} variants={headerAnimationVarients} isBlack={blackHeader}>
+      <FixedHeader animate={animationName} variants={headerAnimationVarients}>
         <MyLink fontSize="1.8rem" to="/">
           FRIDAY
         </MyLink>

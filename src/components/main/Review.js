@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components';
 import ScrollAnimation from '../ScrollAnimation';
 import Image from 'next/image';
 
-const minaImg = '/assets/images/review/mina.jpg';
-const wonheeImg = '/assets/images/review/wonhee.jpg';
-const seonghwanImg = '/assets/images/review/seonghwan.jpg';
-const jinyoungImg = '/assets/images/review/jinyoung.jpg';
+import minaImg from '../../../public/assets/images/review/mina.jpeg';
+import wonheeImg from '../../../public/assets/images/review/wonhee.jpeg';
+import seonghwanImg from '../../../public/assets/images/review/seonghwan.jpeg';
+import jinyoungImg from '../../../public/assets/images/review/jinyoung.jpeg';
 
 const Positioner = styled.div`
   width: 100%;
@@ -28,8 +28,7 @@ const Modal = styled.div`
       `;
     }}
   }
-  width: 20rem;
-  height: 30.2rem;
+  width: min(90vw, 20rem);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -38,15 +37,16 @@ const Modal = styled.div`
   margin: 3rem;
 `;
 
-const ImageField = styled(Image)`
-  height: 17rem;
+const ImageFieldContainer = styled.div`
+  position: relative;
+  aspect-ratio: 1/1;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit: cover;
+  overflow: hidden;
 `;
 
 const TextField = styled.div`
-  height: 13.2rem;
   padding: 0 1rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -122,7 +122,9 @@ function Review() {
         <p>FRIDAY와 함께하는 이야기</p>
       </TopText>
       <Modal xPosition={'8rem'}>
-        <ImageField src={minaImg} alt="민아님 이미지" placeholder="blur" />
+        <ImageFieldContainer>
+          <Image fill src={minaImg} alt="민아님 이미지" placeholder="blur" />
+        </ImageFieldContainer>
         <TextField>
           <p style={{ fontSize: '15px' }}>
             FRIDAY 활동을 하기 전에는 웹 디자인을 해보고 싶다고 막연하게만 생각했습니다. FRIDAY의 다양한 프로젝트를 통해{' '}
@@ -136,7 +138,10 @@ function Review() {
         </TextField>
       </Modal>
       <Modal xPosition={'-8rem'}>
-        <ImageField src={seonghwanImg} alt="승환님 이미지" placeholder="blur" />
+        <ImageFieldContainer>
+          <Image fill src={seonghwanImg} alt="승환님 이미지" placeholder="blur" />
+        </ImageFieldContainer>
+
         <TextField>
           <p style={{ fontSize: '15px' }}>
             목적 없는 열정은 FRIDAY를 만난 후 <Highlight>명확한 비전</Highlight>이 되었습니다. 드넓은 개발 세상 속
@@ -151,7 +156,10 @@ function Review() {
       </Modal>
 
       <Modal xPosition={'8rem'}>
-        <ImageField src={wonheeImg} alt="원희님 이미지" placeholder="blur" />
+        <ImageFieldContainer>
+          <Image fill src={wonheeImg} alt="원희님 이미지" placeholder="blur" />
+        </ImageFieldContainer>
+
         <TextField>
           <p style={{ fontSize: '15px' }}>
             <Highlight>“SW앱 개발의 프로젝트 매니징”</Highlight>이 PM의 주 업무입니다:) 말만 들어도 저 같은 문과생이
@@ -165,7 +173,10 @@ function Review() {
         </TextField>
       </Modal>
       <Modal xPosition={'-8rem'}>
-        <ImageField src={jinyoungImg} alt="진영님 이미지" placeholder="blur" />
+        <ImageFieldContainer>
+          <Image fill src={jinyoungImg} alt="진영님 이미지" placeholder="blur" />
+        </ImageFieldContainer>
+
         <TextField>
           <p style={{ fontSize: '15px' }}>
             <Highlight>프로젝트의 A부터 Z까지</Highlight> 함께할 수 있고,{' '}

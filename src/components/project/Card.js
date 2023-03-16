@@ -6,7 +6,6 @@ import Image from 'next/image';
 const CardStyle = styled(motion.div)`
   cursor: pointer;
   width: max(10rem, 20vw);
-  height: max(12rem, 24vw);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -14,22 +13,25 @@ const CardStyle = styled(motion.div)`
   background: #ccc;
 `;
 
-const ImageField = styled(Image)`
-  background-color: '#ccc';
+const ImageFieldContainer = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit: cover;
+  overflow: hidden;
 `;
 
 const TagField = styled.div`
   align-items: center;
   display: flex;
   background: white;
-  height: 100%;
   color: black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-left: 20px;
+  padding: 1vw 0 1vw 20px;
 `;
 
 const Tag = styled.span`
@@ -45,8 +47,25 @@ const Tag = styled.span`
   }
 `;
 
-const Card = ({ ...props }) => {
-  return <CardStyle whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} {...props}></CardStyle>;
+const ImageField = ({ ...props }) => {
+  return (
+    <ImageFieldContainer>
+      <Image fill {...props} />
+    </ImageFieldContainer>
+  );
 };
 
-export default { Card, ImageField, TagField, Tag };
+const Card = ({ imageSrc, tags, ...props }) => {
+  return (
+    <CardStyle whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} {...props}>
+      <ImageField src={imageSrc} placeholder="blur" alt="프로젝트 이미지"/>
+      <TagField>
+        {tags.map((tag, index) => {
+          return <Tag key={index}>#{tag}</Tag>;
+        })}
+      </TagField>
+    </CardStyle>
+  );
+};
+
+export default Card;

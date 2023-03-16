@@ -46,6 +46,10 @@ body {
   color: #fff;
 }
 
+img {
+  object-fit: cover;
+}
+
 a:link { 
  text-decoration: none;
 }
