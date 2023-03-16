@@ -123,7 +123,7 @@ function Review() {
       </TopText>
       <Modal xPosition={'8rem'}>
         <ImageFieldContainer>
-          <Image fill src={minaImg} alt="민아님 이미지" placeholder="blur" />
+          <Image fill src={minaImg} alt="민아님 이미지" placeholder="blur" sizes="min(90vw, 20rem)" />
         </ImageFieldContainer>
         <TextField>
           <p style={{ fontSize: '15px' }}>
@@ -139,7 +139,7 @@ function Review() {
       </Modal>
       <Modal xPosition={'-8rem'}>
         <ImageFieldContainer>
-          <Image fill src={seonghwanImg} alt="승환님 이미지" placeholder="blur" />
+          <Image fill src={seonghwanImg} alt="승환님 이미지" placeholder="blur" sizes="min(90vw, 20rem)" />
         </ImageFieldContainer>
 
         <TextField>
@@ -157,7 +157,7 @@ function Review() {
 
       <Modal xPosition={'8rem'}>
         <ImageFieldContainer>
-          <Image fill src={wonheeImg} alt="원희님 이미지" placeholder="blur" />
+          <Image fill src={wonheeImg} alt="원희님 이미지" placeholder="blur" sizes="min(90vw, 20rem)" />
         </ImageFieldContainer>
 
         <TextField>
@@ -174,7 +174,7 @@ function Review() {
       </Modal>
       <Modal xPosition={'-8rem'}>
         <ImageFieldContainer>
-          <Image fill src={jinyoungImg} alt="진영님 이미지" placeholder="blur" />
+          <Image fill src={jinyoungImg} alt="진영님 이미지" placeholder="blur" sizes="min(90vw, 20rem)" />
         </ImageFieldContainer>
 
         <TextField>

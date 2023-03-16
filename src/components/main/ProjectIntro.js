@@ -98,7 +98,7 @@ function ProjectIntro() {
         {Object.values(Icons).map((icon, index) => (
           <div key={index}>
             <MyImgContainer>
-              <Image fill src={icon} placeholder="blur" alt="프로젝트 이미지" />
+              <Image fill src={icon} placeholder="blur" alt="프로젝트 이미지" sizes="90vw"/>
             </MyImgContainer>
           </div>
         ))}

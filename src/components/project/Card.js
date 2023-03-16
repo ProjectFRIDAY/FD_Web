@@ -58,7 +58,7 @@ const ImageField = ({ ...props }) => {
 const Card = ({ imageSrc, tags, ...props }) => {
   return (
     <CardStyle whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} {...props}>
-      <ImageField src={imageSrc} placeholder="blur" alt="프로젝트 이미지"/>
+      <ImageField src={imageSrc} placeholder="blur" alt="프로젝트 이미지" sizes="max(10rem, 20vw)"/>
       <TagField>
         {tags.map((tag, index) => {
           return <Tag key={index}>#{tag}</Tag>;

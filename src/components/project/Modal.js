@@ -156,7 +156,7 @@ function Modal({ content, visible, setVisible, ...rest }) {
           <ExitIcon onClick={closeModal} icon={faXmark} className="icon" />
           <Wrapper>
             <ImageContainer>
-              <Image fill src={content.img} placeholder="blur" alt="프로젝트 이미지" />
+              <Image fill src={content.img} placeholder="blur" alt="프로젝트 이미지" sizes="200px"/>
             </ImageContainer>
 
             <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
@@ -188,7 +188,7 @@ function Modal({ content, visible, setVisible, ...rest }) {
             {content.aos ? (
               <LinkComp href={content.aos} target="_blank">
                 <DownloadImageContainer>
-                  <Image fill src={aosImage} placeholder="blur" alt="AOS 다운로드" />
+                  <Image fill src={aosImage} placeholder="blur" alt="AOS 다운로드" sizes="10rem"/>
                 </DownloadImageContainer>
               </LinkComp>
             ) : (
@@ -197,7 +197,7 @@ function Modal({ content, visible, setVisible, ...rest }) {
             {content.ios ? (
               <LinkComp href={content.ios} target="_blank">
                 <DownloadImageContainer>
-                  <Image fill src={iosImage} placeholder="blur" alt="IOS 다운로드" />
+                  <Image fill src={iosImage} placeholder="blur" alt="IOS 다운로드" sizes="10rem"/>
                 </DownloadImageContainer>
               </LinkComp>
             ) : (
