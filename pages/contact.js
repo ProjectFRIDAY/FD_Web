@@ -4,10 +4,11 @@ import { menuAtom } from '../src/recoil/atom';
 import { useSetRecoilState } from 'recoil';
 import AnimatedPage from '../src/components/template/AnimatedPage';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-const mailIcon = "/assets/images/icons/gmail.png";
-const kakaoIcon = "/assets/images/icons/kakao.png";
-const instagramIcon = "/assets/images/icons/instagram.png";
+const mailIcon = '/assets/images/icons/gmail.png';
+const kakaoIcon = '/assets/images/icons/kakao.png';
+const instagramIcon = '/assets/images/icons/instagram.png';
 
 const GradientBackground = styled.div`
   width: 100%;
@@ -68,7 +69,7 @@ const ContactTo = styled.div`
   font-weight: bold;
 `;
 
-const Icon = styled.img`
+const Icon = styled(Image)`
   width: 30px;
   height: 30px;
   margin: 1rem;
@@ -101,11 +102,7 @@ const StyledH1 = styled.h1`
 
 function AnimatedContactBox({ children, ...props }) {
   return (
-    <ContactBox
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      {...props}
-    >
+    <ContactBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} {...props}>
       {children}
     </ContactBox>
   );
@@ -123,7 +120,7 @@ function Contact() {
           <ContactLayout>
             <AnimatedContactBox href="mailto:fridayproj2@gmail.com" target="_blank">
               <Title>
-                <Icon src={mailIcon} />
+                <Icon src={mailIcon} placeholder="blur" />
                 <p>메일</p>
               </Title>
               <ContactTo backgroundColor="#01baae">
@@ -133,7 +130,7 @@ function Contact() {
 
             <AnimatedContactBox href="https://open.kakao.com/o/sytyCGxe" target="_blank">
               <Title>
-                <Icon src={kakaoIcon} />
+                <Icon src={kakaoIcon} placeholder="blur" />
                 <p>카카오톡</p>
               </Title>
               <ContactTo backgroundColor="#f9e000">
@@ -143,7 +140,7 @@ function Contact() {
 
             <AnimatedContactBox href="https://www.instagram.com/fridayproj_/" target="_blank">
               <Title>
-                <Icon src={instagramIcon} />
+                <Icon src={instagramIcon} placeholder="blur" />
                 <p>인스타그램</p>
               </Title>
               <ContactTo

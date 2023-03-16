@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const CardStyle = styled(motion.div)`
   cursor: pointer;
@@ -13,7 +14,7 @@ const CardStyle = styled(motion.div)`
   background: #ccc;
 `;
 
-const ImageField = styled.img`
+const ImageField = styled(Image)`
   background-color: '#ccc';
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;

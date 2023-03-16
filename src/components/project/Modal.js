@@ -7,6 +7,7 @@ import { faXmark, faLink } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ModalStyle = styled(motion.div)`
   background-color: rgba(255, 255, 255, 0.5);
@@ -31,7 +32,7 @@ const ModalStyle = styled(motion.div)`
   }
 `;
 
-const Img = styled.img`
+const Img = styled(Image)`
   border-radius: 10px;
   width: 200px;
   height: 200px;
@@ -118,7 +119,7 @@ const ExitIcon = styled(FontAwesomeIcon)`
   }
 `;
 
-const DownloadImage = styled.img`
+const DownloadImage = styled(Image)`
   width: 10rem;
 `;
 
@@ -150,7 +151,7 @@ function Modal({ ...rest }) {
         <ModalStyle {...animationParams}>
           <ExitIcon onClick={closeModal} icon={faXmark} className="icon" />
           <Wrapper>
-            <Img src={rest.content.img} />
+            <Img src={rest.content.img} placeholder="blur" />
             <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
               <TitleContainer>
                 <Title>{rest.content.title}</Title>
@@ -179,14 +180,14 @@ function Modal({ ...rest }) {
           <DownloadContainer>
             {rest.content.aos ? (
               <LinkComp href={rest.content.aos} target="_blank">
-                <DownloadImage src="/assets/images/aos.png"></DownloadImage>
+                <DownloadImage src="/assets/images/aos.png" placeholder="blur"></DownloadImage>
               </LinkComp>
             ) : (
               ''
             )}
             {rest.content.ios ? (
               <LinkComp href={rest.content.ios} target="_blank">
-                <DownloadImage src="/assets/images/ios.png"></DownloadImage>
+                <DownloadImage src="/assets/images/ios.png" placeholder="blur"></DownloadImage>
               </LinkComp>
             ) : (
               ''

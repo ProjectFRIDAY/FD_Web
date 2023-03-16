@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import * as Text from './Text';
 import * as Job from './JobExplain';
+import Image from 'next/image';
 
 const designImg = '/assets/images/job/design.jpg';
 const MobileImg = '/assets/images/job/mobile.jpeg';
@@ -40,7 +41,7 @@ const DevSelect = styled.div`
   gap: 10px;
 `;
 
-const RoleImage = styled.img`
+const RoleImage = styled(Image)`
   width: 100%;
   height: 300px;
   margin-top: 30px;
@@ -93,6 +94,7 @@ function RecruitAreaCard() {
             (devSel === 1 && BackEndImg) ||
             (devSel === 2 && MobileImg)
           }
+          placeholder="blur"
         />
       </SelectContainer>
       <ExplainContainer>
