@@ -27,7 +27,7 @@ const StyledH1 = styled.div`
 const BackgroundText = styled.div`
   opacity: 0.4;
   filter: blur(10px);
-  font-family: SegoeUISymbol;
+  font-family: 'SegoeUISymbol';
   font-size: 10vw;
   text-align: center;
   color: #f1efef;

@@ -120,7 +120,7 @@ function Contact() {
               <AnimatedContactBox href={contact.href} target="_blank" key={index}>
                 <Title>
                   <IconContainer>
-                    <Image fill src={contact.icon} placeholder="blur" alt="연락처 아이콘" />
+                    <Image fill src={contact.icon} placeholder="blur" alt="연락처 아이콘" sizes="30px"/>
                   </IconContainer>
                   <p>{contact.title}</p>
                 </Title>
