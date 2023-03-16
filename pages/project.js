@@ -78,7 +78,7 @@ function Project() {
             openModal('OOTD');
           }}
         >
-          <card.ImageField src={Icons[6].src}></card.ImageField>
+          <card.ImageField src={Icons[6].src} placeholder="blur"></card.ImageField>
 
           <card.TagField>
             <card.Tag>#개발중</card.Tag>
@@ -90,7 +90,7 @@ function Project() {
             openModal('레모아');
           }}
         >
-          <card.ImageField src={Icons[7].src}></card.ImageField>
+          <card.ImageField src={Icons[7].src} placeholder="blur"></card.ImageField>
           <card.TagField>
             <card.Tag>#개발중</card.Tag>
             <card.Tag>#Web</card.Tag>
@@ -101,7 +101,7 @@ function Project() {
             openModal('comento');
           }}
         >
-          <card.ImageField src={Icons[0].src}></card.ImageField>
+          <card.ImageField src={Icons[0].src} placeholder="blur"></card.ImageField>
           <card.TagField>
             <card.Tag>#개발중</card.Tag>
             <card.Tag>#Web</card.Tag>
@@ -112,7 +112,7 @@ function Project() {
             openModal('플랜다이얼');
           }}
         >
-          <card.ImageField src={Icons[1].src}></card.ImageField>
+          <card.ImageField src={Icons[1].src} placeholder="blur"></card.ImageField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
             <card.Tag>#Mobile</card.Tag>
@@ -123,7 +123,7 @@ function Project() {
             openModal('웹사이트');
           }}
         >
-          <card.ImageField src={Icons[2].src}></card.ImageField>
+          <card.ImageField src={Icons[2].src} placeholder="blur"></card.ImageField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
             <card.Tag>#Web</card.Tag>
@@ -134,7 +134,7 @@ function Project() {
             openModal('엄마타이머');
           }}
         >
-          <card.ImageField src={Icons[3].src}></card.ImageField>
+          <card.ImageField src={Icons[3].src} placeholder="blur"></card.ImageField>
           <card.TagField>
             <card.Tag>#개발완료</card.Tag>
             <card.Tag>#Mobile</card.Tag>
@@ -145,7 +145,7 @@ function Project() {
             openModal('텍스티');
           }}
         >
-          <card.ImageField src={Icons[5].src}></card.ImageField>
+          <card.ImageField src={Icons[5].src} placeholder="blur"></card.ImageField>
           <card.TagField>
             <card.Tag>#해커톤</card.Tag>
             <card.Tag>#Web</card.Tag>
@@ -156,7 +156,7 @@ function Project() {
             openModal('약속이');
           }}
         >
-          <card.ImageField src={Icons[4].src}></card.ImageField>
+          <card.ImageField src={Icons[4].src} placeholder="blur"></card.ImageField>
           <card.TagField>
             <card.Tag>#토이프로젝트</card.Tag>
             <card.Tag>#Web</card.Tag>

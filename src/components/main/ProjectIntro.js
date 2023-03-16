@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import MyButton from '../Button';
 import Icons from '../Icons';
 import Carousel from '../Carousel';
+import Image from 'next/image';
 
 const Container = styled.div`
   height: 40rem;
@@ -25,7 +26,7 @@ const MySlider = styled(Carousel)`
   width: 100%;
 `;
 
-const MyImg = styled.img`
+const MyImg = styled(Image)`
   width: 90%;
   height: 90%;
   outline: none;
@@ -43,7 +44,7 @@ const Arrow = styled.div`
   cursor: pointer;
   border-radius: 3px;
   z-index: 1;
-  transform: translateY(-20px) rotate(${props => (props.left ? 135 : 315)}deg);;
+  transform: translateY(-20px) rotate(${props => (props.left ? 135 : 315)}deg); ;
 `;
 
 function ProjectIntro() {
@@ -93,31 +94,31 @@ function ProjectIntro() {
       </TextContainer>
       <MySlider {...settings}>
         <div>
-          <MyImg src={Icons[6].src} />
+          <MyImg src={Icons[6].src} placeholder="blur" />
         </div>
         <div>
-          <MyImg src={Icons[7].src} />
+          <MyImg src={Icons[7].src} placeholder="blur" />
         </div>
         <div>
-          <MyImg src={Icons[8].src} />
+          <MyImg src={Icons[8].src} placeholder="blur" />
         </div>
         <div>
-          <MyImg src={Icons[0].src} />
+          <MyImg src={Icons[0].src} placeholder="blur" />
         </div>
         <div>
-          <MyImg src={Icons[1].src} />
+          <MyImg src={Icons[1].src} placeholder="blur" />
         </div>
         <div>
-          <MyImg src={Icons[2].src} />
+          <MyImg src={Icons[2].src} placeholder="blur" />
         </div>
         <div>
-          <MyImg src={Icons[3].src} />
+          <MyImg src={Icons[3].src} placeholder="blur" />
         </div>
         <div>
-          <MyImg src={Icons[4].src} />
+          <MyImg src={Icons[4].src} placeholder="blur" />
         </div>
         <div>
-          <MyImg src={Icons[5].src} />
+          <MyImg src={Icons[5].src} placeholder="blur" />
         </div>
       </MySlider>
       <MyButton href="/project" style={{ marginTop: '3rem' }} border color={'#01baae'} backgroundColor={'black'}>

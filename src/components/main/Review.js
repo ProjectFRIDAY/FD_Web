@@ -1,11 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import ScrollAnimation from '../ScrollAnimation';
+import Image from 'next/image';
 
-const minaImg = "/assets/images/review/mina.jpg";
-const wonheeImg = "/assets/images/review/wonhee.jpg";
-const seonghwanImg = "/assets/images/review/seonghwan.jpg";
-const jinyoungImg = "/assets/images/review/jinyoung.jpg";
+const minaImg = '/assets/images/review/mina.jpg';
+const wonheeImg = '/assets/images/review/wonhee.jpg';
+const seonghwanImg = '/assets/images/review/seonghwan.jpg';
+const jinyoungImg = '/assets/images/review/jinyoung.jpg';
 
 const Positioner = styled.div`
   width: 100%;
@@ -36,7 +37,8 @@ const Modal = styled.div`
   background: #ccc;
   margin: 3rem;
 `;
-const ImageField = styled.img`
+
+const ImageField = styled(Image)`
   height: 17rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -120,7 +122,7 @@ function Review() {
         <p>FRIDAY와 함께하는 이야기</p>
       </TopText>
       <Modal xPosition={'8rem'}>
-        <ImageField src={minaImg} alt="민아님 이미지" />
+        <ImageField src={minaImg} alt="민아님 이미지" placeholder="blur" />
         <TextField>
           <p style={{ fontSize: '15px' }}>
             FRIDAY 활동을 하기 전에는 웹 디자인을 해보고 싶다고 막연하게만 생각했습니다. FRIDAY의 다양한 프로젝트를 통해{' '}
@@ -134,7 +136,7 @@ function Review() {
         </TextField>
       </Modal>
       <Modal xPosition={'-8rem'}>
-        <ImageField src={seonghwanImg} alt="승환님 이미지" />
+        <ImageField src={seonghwanImg} alt="승환님 이미지" placeholder="blur" />
         <TextField>
           <p style={{ fontSize: '15px' }}>
             목적 없는 열정은 FRIDAY를 만난 후 <Highlight>명확한 비전</Highlight>이 되었습니다. 드넓은 개발 세상 속
@@ -149,7 +151,7 @@ function Review() {
       </Modal>
 
       <Modal xPosition={'8rem'}>
-        <ImageField src={wonheeImg} alt="원희님 이미지" />
+        <ImageField src={wonheeImg} alt="원희님 이미지" placeholder="blur" />
         <TextField>
           <p style={{ fontSize: '15px' }}>
             <Highlight>“SW앱 개발의 프로젝트 매니징”</Highlight>이 PM의 주 업무입니다:) 말만 들어도 저 같은 문과생이
@@ -163,7 +165,7 @@ function Review() {
         </TextField>
       </Modal>
       <Modal xPosition={'-8rem'}>
-        <ImageField src={jinyoungImg} alt="진영님 이미지" />
+        <ImageField src={jinyoungImg} alt="진영님 이미지" placeholder="blur" />
         <TextField>
           <p style={{ fontSize: '15px' }}>
             <Highlight>프로젝트의 A부터 Z까지</Highlight> 함께할 수 있고,{' '}
