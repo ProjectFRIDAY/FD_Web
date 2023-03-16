@@ -35,7 +35,7 @@ const TagField = styled.div`
 `;
 
 const Tag = styled.span`
-  font-family: SegoeUISymbol;
+  font-family: 'SegoeUISymbol';
   font-size: 15px;
   border-radius: 5px;
   padding-right: 7px;

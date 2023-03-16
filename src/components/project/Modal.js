@@ -179,7 +179,7 @@ function Modal({ content, visible, setVisible, ...rest }) {
               </TitleContainer>
               <TagContainer>
                 <Text>{content.team}</Text>
-                <Text>{content.tags}</Text>
+                <Text>{content.tags.map(tag => `#${tag} `)}</Text>
               </TagContainer>
             </div>
           </Wrapper>

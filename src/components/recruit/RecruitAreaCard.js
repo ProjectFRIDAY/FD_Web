@@ -100,6 +100,7 @@ function RecruitAreaCard() {
             placeholder="blur"
             alt="직무 이미지"
             sizes="min(500px, 95vw)"
+            key={`${jobSel}${devSel}`}
           />
         </RoleImageContainer>
       </SelectContainer>
