@@ -11,7 +11,6 @@ import jinyoungImg from '../../../public/assets/images/review/jinyoung.jpeg';
 const Positioner = styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -34,7 +33,7 @@ const Modal = styled.div`
   border-radius: 10px;
   box-shadow: 0 3px 40px 0 ${props => props.theme.primaryColor};
   background: #ccc;
-  margin: 3rem;
+  margin: 3rem 0;
 `;
 
 const ImageFieldContainer = styled.div`

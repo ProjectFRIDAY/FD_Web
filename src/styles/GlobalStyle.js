@@ -1,101 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
-
-const SegoeTTF = '/assets/fonts/SegoeUI.TTF';
-const SegoeEot = '/assets/fonts/SegoeUI.eot';
-const SegoeWoff = '/assets/fonts/SegoeUI.woff';
-const SegoeWoff2 = '/assets/fonts/SegoeUI.woff2';
-const TimesTTF = '/assets/fonts/TimesNewRomanMTStd.ttf';
-const TimesEot = '/assets/fonts/TimesNewRomanMTStd.eot';
-const TimesWoff = '/assets/fonts/TimesNewRomanMTStd.woff';
-const TimesWoff2 = '/assets/fonts/TimesNewRomanMTStd.woff2';
-const TossFace = '/assets/fonts/TossFaceFontMac.ttf';
+import FontStyle from './FontStyle';
+import NotionStyle from './NotionStyle';
+import ElementStyle from './ElementStyle';
+import SlickSliderStyle from './SlickSliderStyle';
 
 const GlobalStyle = createGlobalStyle`
-*, *::before, *::after {
-  box-sizing: border-box;
-} 
-@font-face {
-  font-family: 'SegoeUI', sans-serif;
-  src: url(${SegoeTTF}) format('truetype');
-  src: 
-  url(${SegoeWoff}) format('woff'),
-  url(${SegoeWoff2}) format('woff2'),
-      url(${SegoeEot}+'?iefix') format('embedded-opentype');
-}
-@font-face {
-    font-family: 'TimesNewRomanMTStd';
-    src: url(${TimesTTF}) format('truetype');
-    src: 
-    url(${TimesWoff}) format('woff'), 
-    url(${TimesWoff2}) format('woff2'), 
-    url(${TimesEot}+'?#iefix') format('embedded-opentype');
-  }
-@font-face {
-    font-family: 'TossFace';
-    src: url(${TossFace}) format('truetype');
-  }
-
-body {
-  max-width:100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'SegoeUI', sans-serif;
-  line-height: 1.7rem;
-  background-color: #000;
-  text-decoration: none;
-  color: #fff;
-}
-
-img {
-  object-fit: cover;
-}
-
-a:link { 
- text-decoration: none;
-}
- 
-a:visited { 
- text-decoration: none;
-}
- 
-a:hover { 
- text-decoration: none;
-}
-.title {
-  font-family: 'TimesNewRomanMTStd';
-  font-weight: normal;
-  /* margin-top: 30px; */
-}
-.notion-emoji {
-  font-family: 'TossFace', 'Apple Color Emoji', 'SegoeUISymbol', sans-serif;
-}
-
-.icon {
-  cursor: pointer;
-  font-size: 40px;
-  color: black;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 25px;
-}
-
-::selection {
-  background-color: rgba(1, 185, 173, 0.5);
-}
-
-.slick-prev {
-  left: 20px;
-}
-.slick-next {
-  right: 20px;
-}
-
-.slick-prev::before,
-.slick-next::before {
-  opacity: 0;
-  display: none;
-}
+  ${FontStyle}
+  ${ElementStyle}
+  ${NotionStyle}
+  ${SlickSliderStyle}
 `;
 
 export default GlobalStyle;

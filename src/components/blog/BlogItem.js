@@ -85,7 +85,6 @@ const Info = styled.span`
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   gap: 5px;
   flex-direction: row;
   line-height: 1;
