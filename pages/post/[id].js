@@ -42,14 +42,6 @@ const cssOverrides = css`
   body {
     background-color: #051614;
   }
-  .notion-page-header {
-    display: none;
-  }
-  .notion {
-    color: #eee;
-    caret-color: #eee;
-    width: 100%;
-  }
 `;
 
 export const getStaticPaths = async () => {
