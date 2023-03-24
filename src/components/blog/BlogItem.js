@@ -15,8 +15,7 @@ const BlogItemLayout = styled.div`
   padding: 1.5rem 1.5rem 2rem 1.5rem;
   display: grid;
   grid-template-columns: 4.5rem auto;
-  grid-template-rows: 1fr 1fr 1.2fr;
-  gap: 0px 20px;
+  gap: 10px 20px;
   transition: all 0.2s ease-in-out;
 
   ${props =>
