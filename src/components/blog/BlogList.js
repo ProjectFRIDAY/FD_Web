@@ -12,6 +12,10 @@ const BlogListLayout = styled(motion.div)`
   gap: 30px 0px;
 `;
 
+const defaultItem = {
+  tags: [null, null, null],
+};
+
 export default function BlogList({ blogItems, isLoading }) {
   const animationParams = {
     initial: { opacity: 0, y: -10 },
@@ -19,7 +23,7 @@ export default function BlogList({ blogItems, isLoading }) {
     transition: { duration: 0.3, ease: 'easeOut' },
   };
 
-  const items = isLoading ? [{}, {}, {}] : blogItems;
+  const items = isLoading ? [defaultItem, defaultItem, defaultItem] : blogItems;
 
   return (
     <BlogListLayout>
