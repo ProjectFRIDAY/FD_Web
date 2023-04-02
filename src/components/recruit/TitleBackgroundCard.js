@@ -17,7 +17,7 @@ const TitleContainer = styled.div`
 `;
 
 const RecruitButton = styled(Button)`
-  color: black;
+  color: rgba(255, 0, 0, 0.7);
   background-color: white;
 `;
 
@@ -29,8 +29,8 @@ function TitleBackgroundCard() {
   return (
     <TitleContainer>
       <StyledH1 className="title">FRIDAY 모집</StyledH1>
-      <RecruitButton gradient border={false} onClick={() => alert('5기 모집 기간이 아닙니다.')} target="_blank">
-        5기 지원하기
+      <RecruitButton gradient border={false} onClick={() => alert('모집 기간이 아닙니다.')} target="_blank">
+        신규 모집 계획이 없습니다
       </RecruitButton>
     </TitleContainer>
   );

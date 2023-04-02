@@ -46,7 +46,7 @@ function MainTop() {
         <TopContainer>
           <StyledTitle className="title">FRIDAY</StyledTitle>
           <MyButton color={'#01baae'} backgroundColor={'white'} border={true}>
-            <MyLink to="/recruit" fontSize="1rem" color="#01B9AD" hoverColor="#a1ede8">5기 지원하기</MyLink>
+            <MyLink to="/recruit" fontSize="1rem" color="#01B9AD" hoverColor="#a1ede8">모집 공고 확인하기</MyLink>
           </MyButton>
           <AnimationContainer>
             <Lottie options={defaultLottieOptions} width={600} isClickToPauseDisabled />
