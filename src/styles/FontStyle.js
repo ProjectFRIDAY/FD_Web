@@ -8,7 +8,7 @@ const TimesTTF = '/assets/fonts/TimesNewRomanMTStd.ttf';
 const TimesEot = '/assets/fonts/TimesNewRomanMTStd.eot';
 const TimesWoff = '/assets/fonts/TimesNewRomanMTStd.woff';
 const TimesWoff2 = '/assets/fonts/TimesNewRomanMTStd.woff2';
-const TossFace = '/assets/fonts/TossFaceFontMac.ttf';
+const TossFace = '/assets/fonts/TossFaceFontWeb.otf';
 
 const FontStyle = css`
   /* ===== Fonts ===== */
