@@ -13,8 +13,6 @@
   Member: 김동연, 서지호, 송승환, 송진영<br><br>
 - Design<br>
   Member: 김민아 <br><br>
-- Management <br>
-  Member: 도원희 <br><br>
   
 ## 사용한 프레임워크(FrameWork)
 
