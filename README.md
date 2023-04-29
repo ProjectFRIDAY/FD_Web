@@ -21,7 +21,7 @@
 ## Next.js 도입 (2023.03.08)
 + ~~Github Action을 이용한 CI/CD는 임시 비활성화해둔 상태입니다.~~(2023.04.29 적용)
 + Next.js는 라우팅을 기본으로 지원합니다. 각 화면에 대한 코드는 `pages` 폴더로 이동하였습니다.
-+ 관련 추가 내용은 [#39](https://github.com/ProjectFRIDAY/FD_Web/pull/39)를 참고해주세요.
++ 관련 추가 내용은 [#39](https://github.com/ProjectFRIDAY/FD_Web/pull/39)를 참고해주세요.<br><br>
 
 ## 배포 방식 변경 (AWS EC2 → Vercel) (2023.04.29)
 + AWS 프리티어 종료일 임박 이슈로 배포 방식을 변경하였습니다.
