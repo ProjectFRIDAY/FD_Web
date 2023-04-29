@@ -3,6 +3,7 @@ import GlobalStyle from '../src/styles/GlobalStyle';
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 const theme = {
   primaryColor: '#01baae',
@@ -30,6 +31,7 @@ export default function MyApp({ Component, pageProps }) {
           </ThemeProvider>
         </RecoilRoot>
       </div>
+      <Analytics />
     </React.StrictMode>
   );
 }
